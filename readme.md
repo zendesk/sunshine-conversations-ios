@@ -1,12 +1,11 @@
 # SupportKit
 
-# Installation
-----------
-## tl;dr
+# tl;dr
     pod 'SupportKit'
     pod update
     [SupportKit showInViewController:self withZendeskURL:@"https://supportkit.zendesk.com"];
 
+# Installation
 
 Installation of the SupportKit SDK is ridiculously simple and requires only one line of code. Quickly integrate the SupportKit SDK with your project through CocoaPods which also manages library dependencies and SDK updates. Alternatively, you can go the manual route and drop the SDK in your Xcode project.
 
@@ -16,13 +15,16 @@ Installation of the SupportKit SDK is ridiculously simple and requires only one 
 
 ### Step 1: Install CocoaPods.
 Run the following command line in Terminal if [CocoaPods](http://beta.cocoapods.org/?q=#install) isn't already installed:
+
     $ sudo gem install cocoapods
 
 
 ### Step 2: Run SupportKit's CocoaPod.
 In your XCode project directory, run the following:
+
      $ echo "pod 'SupportKit'" >> Podfile
      $ pod install
+
 Open the .xcworkspace file that Cocoapods generates or modifies in your project directory.
 
 
@@ -64,17 +66,20 @@ Time to insert one line of code and launch SupportKit. See section [Insert Code 
 ## Insert Code and Launch SupportKit from Your App
 <a name="Insert Code and Launch SupportKit from Your App"></a>
 Add the following import statement to the UIViewController that is launching SupportKit:
+
     #import <SupportKit/SupportKit.h>
+
 And insert this one line of code:
+
     [SupportKit showInViewController:self withZendeskURL:@"https://supportkit.zendesk.com"];
 
 Optionally, you can specify the specific URL to your ticket creation page (the SDK uses \<zendeskURL>/anonymous_requests/new by default). Passing nil will disable creating tickets.
+
     [SupportKit showInViewController:self withZendeskURL:@"https://supportkit.zendesk.com" andTicketURL:@"https://supportkit.zendesk.com/requests/new"];
 
 You're done. Build and launch your app.
 
-# Sample App
-Download our sample app [here](http://www.somewhere.com).
+# Demo App
+Download our demo app [here](https://github.com/radialpoint/SupportKit/archive/master.zip).
 # Support
-----------
 Have a look at our [API Documentation](http://www.somewhere.com). Still stuck? Want to suggest a new feature? Check out our [support center](http://supportkit.zendesk.com).
