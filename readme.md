@@ -1,6 +1,6 @@
 # SupportKit
 
-# tl; dr;
+# tl;dr
     pod 'SupportKit'
     pod update
     [SupportKit showInViewController:self withZendeskURL:@"https://supportkit.zendesk.com"];
@@ -82,4 +82,4 @@ You're done. Build and launch your app.
 # Demo App
 Download our demo app [here](https://github.com/radialpoint/SupportKit/archive/master.zip).
 # Support
-Have a look at our [API Documentation](http://www.radialpoint.com). Still stuck? Want to suggest a new feature? Check out our [support center](http://supportkit.zendesk.com).
+Have a look at our [API Documentation](http://www.somewhere.com). Still stuck? Want to suggest a new feature? Check out our [support center](http://supportkit.zendesk.com).
