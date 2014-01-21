@@ -35,7 +35,7 @@ Time to insert one line of code and launch SupportKit. See section [Insert Code 
 ## Installation via SDK package
 
 ### Step 1: Download and unzip.
-Download [SupportKit.tar.gz](https://github.com/radialpoint/SupportKit/raw/master/SupportKit.tar.gz) and unzip it into your project.
+Download the SDK package from here, and unzip it into your project.
 
 
 ### Step 2: Add SupportKit libraries to XCode.
