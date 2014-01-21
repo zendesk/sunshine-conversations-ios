@@ -13,8 +13,6 @@
 		DC0B628B1857AA300062B17F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0B628A1857AA300062B17F /* main.m */; };
 		DC0B628F1857AA300062B17F /* RPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0B628E1857AA300062B17F /* RPAppDelegate.m */; };
 		DC0B62911857AA300062B17F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0B62901857AA300062B17F /* Images.xcassets */; };
-		DC0B62AF1857AA520062B17F /* SupportKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DC0B62AD1857AA520062B17F /* SupportKit.bundle */; };
-		DC0B62B01857AA520062B17F /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62AE1857AA520062B17F /* SupportKit.framework */; };
 		DC0B62C61857B0BA0062B17F /* RPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0B62C51857B0BA0062B17F /* RPMainViewController.m */; };
 		DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62CD1857B2950062B17F /* CoreTelephony.framework */; };
 		DC0B62D01857B2990062B17F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */; };
@@ -25,6 +23,8 @@
 		DC31EC7518634A5900FFAFC2 /* RPMainContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7418634A5900FFAFC2 /* RPMainContentView.m */; };
 		DC31EC781863597C00FFAFC2 /* RPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC771863597C00FFAFC2 /* RPWelcomeViewController.m */; };
 		DC31EC7A186385DF00FFAFC2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC31EC79186385DF00FFAFC2 /* Security.framework */; };
+		DC80A390188EDBD800B6BF9F /* SupportKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */; };
+		DC80A391188EDBD800B6BF9F /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC80A38F188EDBD800B6BF9F /* SupportKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,6 @@
 		DC0B628D1857AA300062B17F /* RPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPAppDelegate.h; sourceTree = "<group>"; };
 		DC0B628E1857AA300062B17F /* RPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPAppDelegate.m; sourceTree = "<group>"; };
 		DC0B62901857AA300062B17F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DC0B62AD1857AA520062B17F /* SupportKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SupportKit.bundle; path = "../SupportKit/build/Release-iphoneos/SupportKit.bundle"; sourceTree = "<group>"; };
-		DC0B62AE1857AA520062B17F /* SupportKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SupportKit.framework; path = "../SupportKit/build/Release-iphoneos/SupportKit.framework"; sourceTree = "<group>"; };
 		DC0B62C41857B0BA0062B17F /* RPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPMainViewController.h; sourceTree = "<group>"; };
 		DC0B62C51857B0BA0062B17F /* RPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPMainViewController.m; sourceTree = "<group>"; };
 		DC0B62CD1857B2950062B17F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -54,6 +52,8 @@
 		DC31EC761863597C00FFAFC2 /* RPWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPWelcomeViewController.h; sourceTree = "<group>"; };
 		DC31EC771863597C00FFAFC2 /* RPWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPWelcomeViewController.m; sourceTree = "<group>"; };
 		DC31EC79186385DF00FFAFC2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SupportKit.bundle; sourceTree = "<group>"; };
+		DC80A38F188EDBD800B6BF9F /* SupportKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +66,10 @@
 				DC0B62D41857B2A10062B17F /* AdSupport.framework in Frameworks */,
 				DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */,
 				DC0B62D01857B2990062B17F /* SystemConfiguration.framework in Frameworks */,
+				DC80A391188EDBD800B6BF9F /* SupportKit.framework in Frameworks */,
 				DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */,
 				DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */,
 				DC0B62831857AA300062B17F /* UIKit.framework in Frameworks */,
-				DC0B62B01857AA520062B17F /* SupportKit.framework in Frameworks */,
 				DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,14 +97,14 @@
 		DC0B627D1857AA300062B17F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */,
+				DC80A38F188EDBD800B6BF9F /* SupportKit.framework */,
 				DC31EC79186385DF00FFAFC2 /* Security.framework */,
 				DC0B62D51857B2A50062B17F /* CoreText.framework */,
 				DC0B62D31857B2A10062B17F /* AdSupport.framework */,
 				DC0B62D11857B29D0062B17F /* libxml2.dylib */,
 				DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */,
 				DC0B62CD1857B2950062B17F /* CoreTelephony.framework */,
-				DC0B62AD1857AA520062B17F /* SupportKit.bundle */,
-				DC0B62AE1857AA520062B17F /* SupportKit.framework */,
 				DC0B627E1857AA300062B17F /* Foundation.framework */,
 				DC0B62801857AA300062B17F /* CoreGraphics.framework */,
 				DC0B62821857AA300062B17F /* UIKit.framework */,
@@ -193,8 +193,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC80A390188EDBD800B6BF9F /* SupportKit.bundle in Resources */,
 				DC0B62911857AA300062B17F /* Images.xcassets in Resources */,
-				DC0B62AF1857AA520062B17F /* SupportKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
