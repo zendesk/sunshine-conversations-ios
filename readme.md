@@ -73,6 +73,8 @@ And insert this one line of code:
 
     [SupportKit showInViewController:self withZendeskURL:@"https://supportkit.zendesk.com"];
 
+**Note:** When specifying your Zendesk URL, make sure to include the protocol (http:// or https://) that matches your Zendesk instance's configuration.
+
 Optionally, you can specify the specific URL to your ticket creation page (the SDK uses \<zendeskURL>/anonymous_requests/new by default). Passing nil will disable creating tickets.
 
     [SupportKit showInViewController:self withZendeskURL:@"https://supportkit.zendesk.com" andTicketURL:@"https://supportkit.zendesk.com/requests/new"];
