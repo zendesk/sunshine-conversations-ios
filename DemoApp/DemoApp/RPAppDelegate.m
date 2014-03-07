@@ -7,7 +7,9 @@
 //
 
 #import "RPAppDelegate.h"
-#import "RPWelcomeViewController.h"
+#import <SupportKit/SupportKit.h>
+#import "RPZendeskPickerView.h"
+#import "RPMainViewController.h"
 
 @implementation RPAppDelegate
 
@@ -15,10 +17,14 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    RPWelcomeViewController* mainController = [[RPWelcomeViewController alloc] init];
+    RPMainViewController* mainController = [[RPMainViewController alloc] init];
 
     self.window.rootViewController = mainController;
     [self.window makeKeyAndVisible];
+
+    SKTSettings* settings = [SKTSettings settingsWithKnowledgeBaseURL:SupportKitKnowledgeBaseURL
+                                                       andTicketURL:[SupportKitKnowledgeBaseURL stringByAppendingPathComponent:@"/hc/en-us/requests/new"]];
+    [SupportKit initWithSettings:settings];
     
     return YES;
 }

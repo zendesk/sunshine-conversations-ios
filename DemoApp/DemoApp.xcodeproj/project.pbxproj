@@ -21,10 +21,15 @@
 		DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D51857B2A50062B17F /* CoreText.framework */; };
 		DC31EC7218633B7600FFAFC2 /* RPZendeskPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7118633B7600FFAFC2 /* RPZendeskPickerView.m */; };
 		DC31EC7518634A5900FFAFC2 /* RPMainContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7418634A5900FFAFC2 /* RPMainContentView.m */; };
-		DC31EC781863597C00FFAFC2 /* RPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC771863597C00FFAFC2 /* RPWelcomeViewController.m */; };
 		DC31EC7A186385DF00FFAFC2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC31EC79186385DF00FFAFC2 /* Security.framework */; };
 		DC80A390188EDBD800B6BF9F /* SupportKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */; };
 		DC80A391188EDBD800B6BF9F /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC80A38F188EDBD800B6BF9F /* SupportKit.framework */; };
+		DCEABA7218C7B3BE00014CA4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEABA7118C7B3BE00014CA4 /* CoreMedia.framework */; };
+		DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */; };
+		DCEF37A818C0DD7800B5DD25 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCEF37A418C0DD7800B5DD25 /* logo@2x.png */; };
+		DCEF37AC18C0DDE200B5DD25 /* text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCEF37AA18C0DDE200B5DD25 /* text@2x.png */; };
+		DCEF37AF18C0E60200B5DD25 /* RPRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF37AE18C0E60200B5DD25 /* RPRoundedButton.m */; };
+		DCEF37B118C0F33000B5DD25 /* main-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCEF37B018C0F33000B5DD25 /* main-background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,11 +54,16 @@
 		DC31EC7118633B7600FFAFC2 /* RPZendeskPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPZendeskPickerView.m; sourceTree = "<group>"; };
 		DC31EC7318634A5900FFAFC2 /* RPMainContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPMainContentView.h; sourceTree = "<group>"; };
 		DC31EC7418634A5900FFAFC2 /* RPMainContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPMainContentView.m; sourceTree = "<group>"; };
-		DC31EC761863597C00FFAFC2 /* RPWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPWelcomeViewController.h; sourceTree = "<group>"; };
-		DC31EC771863597C00FFAFC2 /* RPWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPWelcomeViewController.m; sourceTree = "<group>"; };
 		DC31EC79186385DF00FFAFC2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SupportKit.bundle; sourceTree = "<group>"; };
 		DC80A38F188EDBD800B6BF9F /* SupportKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportKit.framework; sourceTree = "<group>"; };
+		DCEABA7118C7B3BE00014CA4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DCEF37A418C0DD7800B5DD25 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		DCEF37AA18C0DDE200B5DD25 /* text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text@2x.png"; sourceTree = "<group>"; };
+		DCEF37AD18C0E60200B5DD25 /* RPRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRoundedButton.h; sourceTree = "<group>"; };
+		DCEF37AE18C0E60200B5DD25 /* RPRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRoundedButton.m; sourceTree = "<group>"; };
+		DCEF37B018C0F33000B5DD25 /* main-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */,
+				DCEABA7218C7B3BE00014CA4 /* CoreMedia.framework in Frameworks */,
 				DC31EC7A186385DF00FFAFC2 /* Security.framework in Frameworks */,
 				DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */,
 				DC0B62D41857B2A10062B17F /* AdSupport.framework in Frameworks */,
@@ -81,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0B62841857AA300062B17F /* DemoApp */,
+				DCEF37A018C0DD7800B5DD25 /* Resources */,
 				DC0B627D1857AA300062B17F /* Frameworks */,
 				DC0B627C1857AA300062B17F /* Products */,
 			);
@@ -97,6 +110,8 @@
 		DC0B627D1857AA300062B17F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */,
+				DCEABA7118C7B3BE00014CA4 /* CoreMedia.framework */,
 				DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */,
 				DC80A38F188EDBD800B6BF9F /* SupportKit.framework */,
 				DC31EC79186385DF00FFAFC2 /* Security.framework */,
@@ -117,14 +132,14 @@
 			children = (
 				DC0B628D1857AA300062B17F /* RPAppDelegate.h */,
 				DC0B628E1857AA300062B17F /* RPAppDelegate.m */,
-				DC31EC761863597C00FFAFC2 /* RPWelcomeViewController.h */,
-				DC31EC771863597C00FFAFC2 /* RPWelcomeViewController.m */,
 				DC0B62C41857B0BA0062B17F /* RPMainViewController.h */,
 				DC0B62C51857B0BA0062B17F /* RPMainViewController.m */,
 				DC31EC7018633B7600FFAFC2 /* RPZendeskPickerView.h */,
 				DC31EC7118633B7600FFAFC2 /* RPZendeskPickerView.m */,
 				DC31EC7318634A5900FFAFC2 /* RPMainContentView.h */,
 				DC31EC7418634A5900FFAFC2 /* RPMainContentView.m */,
+				DCEF37AD18C0E60200B5DD25 /* RPRoundedButton.h */,
+				DCEF37AE18C0E60200B5DD25 /* RPRoundedButton.m */,
 				DC0B62901857AA300062B17F /* Images.xcassets */,
 				DC0B62851857AA300062B17F /* Supporting Files */,
 			);
@@ -139,6 +154,16 @@
 				DC0B628C1857AA300062B17F /* DemoApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCEF37A018C0DD7800B5DD25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DCEF37B018C0F33000B5DD25 /* main-background@2x.png */,
+				DCEF37AA18C0DDE200B5DD25 /* text@2x.png */,
+				DCEF37A418C0DD7800B5DD25 /* logo@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +218,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEF37A818C0DD7800B5DD25 /* logo@2x.png in Resources */,
 				DC80A390188EDBD800B6BF9F /* SupportKit.bundle in Resources */,
+				DCEF37AC18C0DDE200B5DD25 /* text@2x.png in Resources */,
+				DCEF37B118C0F33000B5DD25 /* main-background@2x.png in Resources */,
 				DC0B62911857AA300062B17F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +238,7 @@
 				DC31EC7518634A5900FFAFC2 /* RPMainContentView.m in Sources */,
 				DC0B628F1857AA300062B17F /* RPAppDelegate.m in Sources */,
 				DC0B628B1857AA300062B17F /* main.m in Sources */,
-				DC31EC781863597C00FFAFC2 /* RPWelcomeViewController.m in Sources */,
+				DCEF37AF18C0E60200B5DD25 /* RPRoundedButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

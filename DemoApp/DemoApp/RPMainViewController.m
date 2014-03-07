@@ -22,38 +22,6 @@
 
 @implementation RPMainViewController
 
-+ (UIImage *)menuImage {
-	static UIImage *defaultImage = nil;
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
-		UIGraphicsBeginImageContextWithOptions(CGSizeMake(20.f, 13.f), NO, 0.0f);
-		
-		[[UIColor blackColor] setFill];
-		[[UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 20, 1)] fill];
-		[[UIBezierPath bezierPathWithRect:CGRectMake(0, 5, 20, 1)] fill];
-		[[UIBezierPath bezierPathWithRect:CGRectMake(0, 10, 20, 1)] fill];
-		
-		[[UIColor whiteColor] setFill];
-		[[UIBezierPath bezierPathWithRect:CGRectMake(0, 1, 20, 2)] fill];
-		[[UIBezierPath bezierPathWithRect:CGRectMake(0, 6,  20, 2)] fill];
-		[[UIBezierPath bezierPathWithRect:CGRectMake(0, 11, 20, 2)] fill];
-		
-		defaultImage = UIGraphicsGetImageFromCurrentImageContext();
-		UIGraphicsEndImageContext();
-        
-	});
-    return defaultImage;
-}
-
--(id)initWithZendeskURL:(NSString*)zendeskURL
-{
-    self = [super init];
-    if(self){
-        self.initialURL = zendeskURL;
-    }
-    return self;
-}
-
 -(void)viewDidLoad
 {
     [super viewDidLoad];
@@ -61,16 +29,17 @@
     self.showingSidePanel = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self initContentView];
     [self initPickerView];
+    [self initContentView];
+    [self initGestureRecognizers];
 }
 
 -(void)initContentView
 {
     self.contentView = [[RPMainContentView alloc] initWithFrame:[self getContentViewFrame]];
     
-    UINavigationItem* navItem = [[UINavigationItem alloc] initWithTitle:@"We ❤️ Radialpoint"];
-    navItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[self.class menuImage] style:UIBarButtonItemStylePlain target:self action:@selector(showMenu)];
+    UINavigationItem* navItem = [[UINavigationItem alloc] initWithTitle:@""];
+    navItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Options" style:UIBarButtonItemStylePlain target:self action:@selector(showMenu)];
     navItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Help" style:UIBarButtonItemStylePlain target:self action:@selector(launch)];
     [self.contentView.navBar pushNavigationItem:navItem animated:NO];
     
@@ -84,13 +53,23 @@
 {
     self.pickerView = [[RPZendeskPickerView alloc] initWithFrame:[self getPickerViewFrame]];
     self.pickerView.hidden = YES;
-    self.pickerView.textField.text = self.initialURL;
-    self.pickerView.backgroundColor = [UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1];
+    self.pickerView.backgroundColor =  [UIColor colorWithRed:50.0/255 green:173.0/255 blue:95.0/255 alpha:1.0];
     
     [self.view addSubview:self.pickerView];
     
-    [self.pickerView.button addTarget:self action:@selector(launch) forControlEvents:UIControlEventTouchUpInside];
-    [self.pickerView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)]];
+    [self.pickerView.launchButton addTarget:self action:@selector(launch) forControlEvents:UIControlEventTouchUpInside];
+    [self.pickerView.showGestureHintButton addTarget:self action:@selector(launchHint) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)initGestureRecognizers
+{
+    UISwipeGestureRecognizer* swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(hideMenu)];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeft];
+    
+    UISwipeGestureRecognizer* swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showMenu)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
 }
 
 -(void)viewDidLayoutSubviews
@@ -103,11 +82,27 @@
 
 -(void)launch
 {
-    if([self.pickerView.textField.text isEqualToString:@"https://supportkit.zendesk.com"]){
-        [SupportKit showInViewController:self withZendeskURL:self.pickerView.textField.text andTicketURL:@"https://supportkit.zendesk.com/hc/en-us/requests/new"];
-    }else{
-        [SupportKit showInViewController:self withZendeskURL:self.pickerView.textField.text];
+    [self reinitializeSettings];
+    [SupportKit show];
+}
+
+-(void)launchHint
+{
+    [self reinitializeSettings];
+    [SupportKit showWithGestureHint];
+}
+
+-(void)reinitializeSettings
+{
+    SKTSettings* settings = [SKTSettings settingsWithKnowledgeBaseURL:self.pickerView.textField.text];
+    
+    if([self.pickerView.textField.text isEqualToString:SupportKitKnowledgeBaseURL]){
+        settings.ticketURL = [SupportKitKnowledgeBaseURL stringByAppendingPathComponent:@"/hc/en-us/requests/new"];
     }
+    
+    // WARNING: Do not call +initWithSettings: more than once in your app.
+    // We need to call it every time here to change the knowledge base URL based on the text field; your URL should be hardcoded.
+    [SupportKit initWithSettings:settings];
 }
 
 -(void)showMenu
@@ -124,7 +119,9 @@
 -(void)hideMenu
 {
     self.showingSidePanel = NO;
-    [self dismissKeyboard];
+    
+    // Hide the keyboard
+    [self.pickerView.textField resignFirstResponder];
     
     [UIView animateWithDuration:0.25 animations:^{
         self.contentView.frame = [self getContentViewFrame];
@@ -136,9 +133,9 @@
 
 -(CGRect)getPickerViewFrame
 {
-    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width * 0.7, self.view.bounds.size.height);
+    CGRect frame = CGRectMake(0, 0, floor(self.view.bounds.size.width * 0.85), self.view.bounds.size.height);
     if(!self.showingSidePanel){
-        frame = CGRectOffset(frame, -self.view.bounds.size.width * 0.7, 0);
+        frame = CGRectOffset(frame, -floor(self.view.bounds.size.width * 0.85), 0);
     }
     return frame;
 }
@@ -147,41 +144,9 @@
 {
     CGRect frame = self.view.bounds;
     if(self.showingSidePanel){
-        frame = CGRectOffset(frame, self.view.bounds.size.width * 0.7, 0);
+        frame = CGRectOffset(frame, floor(self.view.bounds.size.width * 0.85), 0);
     }
     return frame;
 }
-
-#pragma mark - Shake Gesture
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    // Enable the shake gesture
-    [self becomeFirstResponder];
-}
-
--(BOOL)canBecomeFirstResponder
-{
-    return YES;
-}
-
--(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if(event.type == UIEventSubtypeMotionShake){
-        [self launch];
-    }
-}
-
--(void)dismissKeyboard
-{
-    // Hide the keyboard
-    [self.pickerView.textField resignFirstResponder];
-    
-    // Re-enable the shake gesture
-    [self becomeFirstResponder];
-}
-
 
 @end

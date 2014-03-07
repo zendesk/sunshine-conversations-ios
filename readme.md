@@ -3,11 +3,14 @@
 # tl;dr
     pod 'SupportKit'
     pod update
-    [SupportKit showInViewController:self withZendeskURL:@"https://supportkit.zendesk.com"];
+    [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"]];
+    [SupportKit show];
+
+Our [APIs](http://cocoadocs.org/docsets/SupportKit/1.1/) and [Support Center](https://supportkit.zendesk.com).
 
 # Installation
 
-Installation of the SupportKit SDK is ridiculously simple and requires only one line of code. Quickly integrate the SupportKit SDK with your project through CocoaPods which also manages library dependencies and SDK updates. Alternatively, you can go the manual route and drop the SDK in your Xcode project.
+Installation of the SupportKit SDK is ridiculously simple. Quickly integrate the SupportKit SDK with your project through CocoaPods which also manages library dependencies and SDK updates. Alternatively, you can go the manual route and drop the SDK in your Xcode project.
 
 
 ## Installation via CocoaPods
@@ -29,7 +32,7 @@ Open the .xcworkspace file that Cocoapods generates or modifies in your project 
 
 
 ### Step 3: Insert code and launch SupportKit.
-Time to insert one line of code and launch SupportKit. See section [Insert Code and Launch SupportKit from Your App.](#Insert Code and Launch SupportKit from Your App)
+Time to insert code and launch SupportKit. See section [Insert Code and Launch SupportKit from Your App.](#Insert Code and Launch SupportKit from Your App)
 
 
 ## Installation via SDK package
@@ -46,15 +49,20 @@ Drag & drop both SupportKit.framework and SupportKit.bundle to your project in X
 
 ### Step 3: Add other library dependencies.
 Add the following frameworks & libs to your project (go to "Build phases" in your project target and select "Link Binary With Libraries"):
-- CoreText
-- AdSupport
-- SystemConfiguration
-- CoreTelephony
-- Foundation
-- CoreGraphics
-- UIKit
+- QuartzCore.framework
+- OpenGLES.framework
+- CoreMedia.framework
+- Security.framework
+- CoreText.framework
+- AdSupport.framework
 - libxml2.dylib
-- Security
+- SystemConfiguration.framework
+- CoreTelephony.framework
+- CoreGraphics.framework
+- UIKit.framework
+- Foundation.framework
+
+
 
 ![Xcode with linked frameworks](https://raw.github.com/radialpoint/SupportKit/master/readme_img/linked_framework.png)
 
@@ -65,23 +73,24 @@ Time to insert one line of code and launch SupportKit. See section [Insert Code 
 
 ## Insert Code and Launch SupportKit from Your App
 <a name="Insert Code and Launch SupportKit from Your App"></a>
-Add the following import statement to the UIViewController that is launching SupportKit:
+Add the following import statement:
 
     #import <SupportKit/SupportKit.h>
 
-And insert this one line of code:
+And insert the init code. This should be called only once in your application:didFinishLaunchingWithOptions:
 
-    [SupportKit showInViewController:self withZendeskURL:@"https://supportkit.zendesk.com"];
+    [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"]];
 
 **Note:** When specifying your Zendesk URL, make sure to include the protocol (http:// or https://) that matches your Zendesk instance's configuration.
 
 Optionally, you can specify the specific URL to your ticket creation page (the SDK uses \<zendeskURL>/anonymous_requests/new by default). Passing nil will disable creating tickets.
 
-    [SupportKit showInViewController:self withZendeskURL:@"https://supportkit.zendesk.com" andTicketURL:@"https://supportkit.zendesk.com/requests/new"];
+	[SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"
+	andTicketURL:@"https://supportkit.zendesk.com/requests/new"]];
 
-You're done. Build and launch your app.
+There are also other SKTSettings options you can customize. See our [API docs](http://cocoadocs.org/docsets/SupportKit/1.1/).
+
+You're done. Build and launch your app. Visit our [Support Center](https://supportkit.zendesk.com) if you run into trouble.
 
 # Demo App
-Download our demo app [here](https://github.com/radialpoint/SupportKit/archive/master.zip).
-# Support
-Have a look at our [API Documentation](http://www.somewhere.com). Still stuck? Want to suggest a new feature? Check out our [support center](http://supportkit.zendesk.com).
+Download our demo [app](https://github.com/radialpoint/SupportKit/archive/master.zip).

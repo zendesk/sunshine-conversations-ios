@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString* const SupportKitKnowledgeBaseURL;
+
 @interface RPZendeskPickerView : UIView
 
 @property UITextField* textField;
-@property UILabel* label;
-@property UIButton* button;
-@property UIButton* randomButton;
+@property UIButton* showGestureHintButton;
+@property UIButton* launchButton;
 
 @end

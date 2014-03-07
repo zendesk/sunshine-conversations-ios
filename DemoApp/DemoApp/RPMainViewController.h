@@ -10,6 +10,4 @@
 
 @interface RPMainViewController : UIViewController
 
--(id)initWithZendeskURL:(NSString*)zendeskURL;
-
 @end

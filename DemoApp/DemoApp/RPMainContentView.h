@@ -11,7 +11,6 @@
 @interface RPMainContentView : UIView
 
 @property UINavigationBar* navBar;
-@property UILabel* label;
 @property UIButton* button;
 
 @end
