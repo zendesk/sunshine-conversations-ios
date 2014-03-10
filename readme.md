@@ -1,4 +1,4 @@
-# SupportKit
+# [Radialpoint SupportKit](http://supportkit.radialpoint.com)
 
 # tl;dr
     pod 'SupportKit'
