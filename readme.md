@@ -97,7 +97,7 @@ You're done. Build and launch your app. Visit our [Support Center](https://suppo
 
 # (optional)SupportKit Console Setup
 
-Out of the box, the SDK will automatically send the following to the [Support Console](https://svbtle.com/Stop-probing-and-start-closing-tickets-with-the-new-supportkit-console) with each ticket submission: app screens that your customer visited, touch interactions with your app, device info, searches made to your knowledge base, and each article viewed for your support team. 
+Out of the box, the SDK will automatically send the following to the [Support Console](http://supportkit.svbtle.com/Stop-probing-and-start-closing-tickets-with-the-new-supportkit-console) with each ticket submission: app screens that your customer visited, touch interactions with your app, device info, searches made to your knowledge base, and each article viewed for your support team. 
 
 To have the SDK to also send your existing app logs, and custom events(events that you want your support team to see) please see our [app log guide](https://supportkit.zendesk.com/hc/en-us/articles/201747860-Reporting-logs-to-your-support-team), and [custom event guide](https://supportkit.zendesk.com/hc/en-us/articles/201626494-Custom-Event-track-API-Why-).
 
