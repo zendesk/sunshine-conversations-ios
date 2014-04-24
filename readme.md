@@ -93,4 +93,4 @@ There are also other SKTSettings options you can customize. See our [API docs](h
 You're done. Build and launch your app. Visit our [Support Center](https://supportkit.zendesk.com) if you run into trouble.
 
 # Demo App
-Download our demo [app](https://github.com/radialpoint/SupportKit/archive/master.zip).
+Download our demo [app](https://github.com/radialpoint/SupportKit/archive/master.zip). 
