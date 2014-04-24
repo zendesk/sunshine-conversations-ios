@@ -6,7 +6,9 @@
     [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"]];
     [SupportKit show];
 
-Our [APIs](http://cocoadocs.org/docsets/SupportKit/1.2.0/) and [Support Center](https://supportkit.zendesk.com).
+    (optional)SupportKit Console Setup
+
+Our [APIs](http://cocoadocs.org/docsets/SupportKit/1.3.0/) and [Support Center](https://supportkit.zendesk.com).
 
 # Installation
 
@@ -49,18 +51,20 @@ Drag & drop both SupportKit.framework and SupportKit.bundle to your project in X
 
 ### Step 3: Add other library dependencies.
 Add the following frameworks & libs to your project (go to "Build phases" in your project target and select "Link Binary With Libraries"):
-- QuartzCore.framework
-- OpenGLES.framework
-- CoreMedia.framework
-- Security.framework
-- CoreText.framework
 - AdSupport.framework
-- libxml2.dylib
-- SystemConfiguration.framework
-- CoreTelephony.framework
+- AVFoundation.framework
 - CoreGraphics.framework
-- UIKit.framework
+- CoreMedia.framework
+- CoreTelephony.framework
+- CoreText.framework
+- CoreVideo.framework
 - Foundation.framework
+- libxml2.dylib
+- OpenGLES.framework
+- QuartzCore.framework
+- Security.framework
+- SystemConfiguration.framework
+- UIKit.framework
 
 
 
@@ -85,12 +89,20 @@ And insert the init code. This should be called only once in your application:di
 
 Optionally, you can specify the specific URL to your ticket creation page (the SDK uses \<zendeskURL>/anonymous_requests/new by default). Passing nil will disable creating tickets.
 
-	[SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"
-	andTicketURL:@"https://supportkit.zendesk.com/requests/new"]];
+    [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"
+    andTicketURL:@"https://supportkit.zendesk.com/requests/new"]];
 
-There are also other SKTSettings options you can customize. See our [API docs](http://cocoadocs.org/docsets/SupportKit/1.2.0/).
+There are also other SKTSettings options you can customize. See our [API docs](http://cocoadocs.org/docsets/SupportKit/1.3.0/).
 
 You're done. Build and launch your app. Visit our [Support Center](https://supportkit.zendesk.com) if you run into trouble.
 
+
+# (optional)SupportKit Console Setup
+
+Out of the box, the SDK will automatically send the following to the [Support Console](https://svbtle.com/Stop-probing-and-start-closing-tickets-with-the-new-supportkit-console) with each ticket submission: app screens that your customer visited, touch interactions with your app, device info, searches made to your knowledge base, and each article viewed for your support team. 
+
+To have the SDK to also send your existing app logs, and custom events(events that you want your support team to see) please see our [app log guide](https://supportkit.zendesk.com/hc/en-us/articles/201747860-Reporting-logs-to-your-support-team), and [custom event guide](https://supportkit.zendesk.com/hc/en-us/articles/201626494-Custom-Event-track-API-Why-).
+
+
 # Demo App
-Download our demo [app](https://github.com/radialpoint/SupportKit/archive/master.zip). 
+Download our demo [app](https://github.com/radialpoint/SupportKit/archive/master.zip).

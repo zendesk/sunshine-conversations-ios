@@ -19,6 +19,8 @@
 		DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D11857B29D0062B17F /* libxml2.dylib */; };
 		DC0B62D41857B2A10062B17F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D31857B2A10062B17F /* AdSupport.framework */; };
 		DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D51857B2A50062B17F /* CoreText.framework */; };
+		DC25348818F59E1A0065C6B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348718F59E1A0065C6B4 /* AVFoundation.framework */; };
+		DC25348A18F59EAA0065C6B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348918F59EAA0065C6B4 /* QuartzCore.framework */; };
 		DC31EC7218633B7600FFAFC2 /* RPZendeskPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7118633B7600FFAFC2 /* RPZendeskPickerView.m */; };
 		DC31EC7518634A5900FFAFC2 /* RPMainContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7418634A5900FFAFC2 /* RPMainContentView.m */; };
 		DC31EC7A186385DF00FFAFC2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC31EC79186385DF00FFAFC2 /* Security.framework */; };
@@ -50,6 +52,8 @@
 		DC0B62D11857B29D0062B17F /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		DC0B62D31857B2A10062B17F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		DC0B62D51857B2A50062B17F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DC25348718F59E1A0065C6B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DC25348918F59EAA0065C6B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DC31EC7018633B7600FFAFC2 /* RPZendeskPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPZendeskPickerView.h; sourceTree = "<group>"; };
 		DC31EC7118633B7600FFAFC2 /* RPZendeskPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPZendeskPickerView.m; sourceTree = "<group>"; };
 		DC31EC7318634A5900FFAFC2 /* RPMainContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPMainContentView.h; sourceTree = "<group>"; };
@@ -71,18 +75,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */,
-				DCEABA7218C7B3BE00014CA4 /* CoreMedia.framework in Frameworks */,
-				DC31EC7A186385DF00FFAFC2 /* Security.framework in Frameworks */,
-				DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */,
 				DC0B62D41857B2A10062B17F /* AdSupport.framework in Frameworks */,
-				DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */,
-				DC0B62D01857B2990062B17F /* SystemConfiguration.framework in Frameworks */,
-				DC80A391188EDBD800B6BF9F /* SupportKit.framework in Frameworks */,
-				DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */,
+				DC25348818F59E1A0065C6B4 /* AVFoundation.framework in Frameworks */,
 				DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */,
-				DC0B62831857AA300062B17F /* UIKit.framework in Frameworks */,
+				DCEABA7218C7B3BE00014CA4 /* CoreMedia.framework in Frameworks */,
+				DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */,
+				DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */,
 				DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */,
+				DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */,
+				DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */,
+				DC25348A18F59EAA0065C6B4 /* QuartzCore.framework in Frameworks */,
+				DC31EC7A186385DF00FFAFC2 /* Security.framework in Frameworks */,
+				DC80A391188EDBD800B6BF9F /* SupportKit.framework in Frameworks */,
+				DC0B62D01857B2990062B17F /* SystemConfiguration.framework in Frameworks */,
+				DC0B62831857AA300062B17F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +116,8 @@
 		DC0B627D1857AA300062B17F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC25348918F59EAA0065C6B4 /* QuartzCore.framework */,
+				DC25348718F59E1A0065C6B4 /* AVFoundation.framework */,
 				DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */,
 				DCEABA7118C7B3BE00014CA4 /* CoreMedia.framework */,
 				DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */,
@@ -193,7 +201,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RP;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Radialpoint;
 			};
 			buildConfigurationList = DC0B62761857AA300062B17F /* Build configuration list for PBXProject "DemoApp" */;
@@ -249,7 +257,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -288,7 +295,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -325,6 +331,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
@@ -344,6 +351,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
