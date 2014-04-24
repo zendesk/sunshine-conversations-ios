@@ -6,8 +6,6 @@
     [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"]];
     [SupportKit show];
 
-    (optional)SupportKit Console Setup
-
 Our [APIs](http://cocoadocs.org/docsets/SupportKit/1.3.0/) and [Support Center](https://supportkit.zendesk.com).
 
 # Installation
