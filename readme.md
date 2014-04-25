@@ -6,7 +6,7 @@
     [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"]];
     [SupportKit show];
 
-Our [APIs](http://cocoadocs.org/docsets/SupportKit/1.2.0/) and [Support Center](https://supportkit.zendesk.com).
+Our [APIs](http://cocoadocs.org/docsets/SupportKit/1.3.0/) and [Support Center](https://supportkit.zendesk.com).
 
 # Installation
 
@@ -90,7 +90,7 @@ Optionally, you can specify the specific URL to your ticket creation page (the S
     [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"
     andTicketURL:@"https://supportkit.zendesk.com/requests/new"]];
 
-There are also other SKTSettings options you can customize. See our [API docs](http://cocoadocs.org/docsets/SupportKit/1.2.0/).
+There are also other SKTSettings options you can customize. See our [API docs](http://cocoadocs.org/docsets/SupportKit/1.3.0/).
 
 You're done. Build and launch your app. Visit our [Support Center](https://supportkit.zendesk.com) if you run into trouble.
 
