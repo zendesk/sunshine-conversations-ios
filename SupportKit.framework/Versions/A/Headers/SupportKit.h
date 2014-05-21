@@ -1,6 +1,6 @@
 //
 //  SupportKit
-//  version : 1.3.0
+//  version : 1.4.0
 //
 //  Copyright (c) 2013 Radialpoint. All rights reserved.
 //
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SKTSettings.h"
 
-#define SUPPORTKIT_VERSION @"1.3.0"
+#define SUPPORTKIT_VERSION @"1.4.0"
 
 /**
  *  Logs a message to be included with your users' support requests. This function calls through to NSLog (to avoid this, use SKTSilentLog instead).
@@ -89,5 +89,24 @@ void SKTSilentLog(NSString* format, ...);
  *  @param ticketURL Fully qualified URL, or nil to disable creating support tickets.
  */
 +(void)showInViewController:(UIViewController *)viewController withZendeskURL:(NSString *)zendeskURL andTicketURL:(NSString *)ticketURL __attribute((deprecated("use +initWithSettings: and +show instead")));
+
+/**
+*  Set a list of recommendations that the user will see upon launching SupportKit.
+*  The array should be a list of NSString's representing the URLs to the recommendations.
+*
+*  @param urlStrings The array of url strings.
+*/
++(void)setDefaultRecommendations:(NSArray*)urlStrings;
+
+/**
+*  Sets the top recommendation that will appear at the beginning of the list of recommendations. 
+*  This should be used when there is a one-to-one mapping between an event that occurred in the app, and a corresponding article describing that event.
+*
+*  Calling this method more than once will replace the previous top recommendation.
+*  Passing nil will remove the current top recommendation.
+*
+*  @param urlString The url of the article to be displayed.
+*/
++(void)setTopRecommendation:(NSString*)urlString;
 
 @end

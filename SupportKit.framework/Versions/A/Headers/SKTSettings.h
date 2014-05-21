@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    SKTSearchResultIsIn,
+    SKTSearchResultIsNotIn,
+} SKTSearchResultsFilterMode;
+
 @interface SKTSettings : NSObject
 
 /**
@@ -26,6 +31,19 @@
  *  @param ticketURL Fully qualified URL, or nil to disable creating support tickets.
  */
 +(instancetype)settingsWithKnowledgeBaseURL:(NSString*)knowledgeBaseURL andTicketURL:(NSString*)ticketURL;
+
+/**
+ *  Sets the filtering policy applied to user search results based on the given filter mode.
+ *
+ *  SKTSearchResultIsIn : Filter out search results if they belong to any of the passed section ids.
+ *  
+ *  SKTSearchResultIsNotIn : Filter out search results if they do not belong to any of the passed section ids.
+ *
+ *  @param filterMode The filter mode to use.
+ *  @param categories Array of category ids on which to filter search results. Can be objects of type NSString or NSNumber.
+ *  @param sections Array of section ids on which to filter search results. Can be objects of type NSString or NSNumber.
+ */
+-(void)excludeSearchResultsIf:(SKTSearchResultsFilterMode)filterMode categories:(NSArray*)categories sections:(NSArray*)sections;
 
 /**
  *  The base URL of your knowledge base, to be used in constructing the search endpoint. The URL must be fully qualified, including http or https (ex: "https://supportkit.zendesk.com").
@@ -68,4 +86,12 @@
  */
 @property BOOL enableTouchEventRecording;
 
+/**
+ *  A boolean value that indicates whether to upload a user session when closing SupportKit.
+ *
+ *  This flag is only relevant when using an Xcode simulator and is meant for testing the SupportKit Agent Console.
+ *
+ *  The default value is NO.
+ */
+@property BOOL uploadContextWhenClosingSupportKit;
 @end
