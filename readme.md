@@ -6,7 +6,7 @@
     [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"]];
     [SupportKit show];
 
-Our [APIs](http://cocoadocs.org/docsets/SupportKit/1.3.0/) and [Support Center](https://supportkit.zendesk.com).
+Our [APIs](http://cocoadocs.org/docsets/SupportKit/1.4.0/) and [Support Center](https://supportkit.zendesk.com).
 
 # Installation
 
@@ -90,17 +90,44 @@ Optionally, you can specify the specific URL to your ticket creation page (the S
     [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"
     andTicketURL:@"https://supportkit.zendesk.com/requests/new"]];
 
-There are also other SKTSettings options you can customize. See our [API docs](http://cocoadocs.org/docsets/SupportKit/1.3.0/).
+There are also other SKTSettings options you can customize. See our [API docs](http://cocoadocs.org/docsets/SupportKit/1.4.0/).
 
 You're done. Build and launch your app. Visit our [Support Center](https://supportkit.zendesk.com) if you run into trouble.
 
 
-# (optional)SupportKit Console Setup
+# Optional Setup
 
-Out of the box, the SDK will automatically send the following to the [Support Console](http://supportkit.svbtle.com/Stop-probing-and-start-closing-tickets-with-the-new-supportkit-console) with each ticket submission: app screens that your customer visited, touch interactions with your app, device info, searches made to your knowledge base, and each article viewed for your support team. 
+## SupportKit Console
 
-To have the SDK to also send your existing app logs, and custom events(events that you want your support team to see) please see our [app log guide](https://supportkit.zendesk.com/hc/en-us/articles/201747860-Reporting-logs-to-your-support-team), and [custom event guide](https://supportkit.zendesk.com/hc/en-us/articles/201626494-Custom-Event-track-API-Why-).
+Out of the box, the SDK will automatically send the following to the [Support Console](http://supportkit.svbtle.com/Stop-probing-and-start-closing-tickets-with-the-new-supportkit-console) with each ticket submission: app screens that your customer visited, touch interactions with your app, device info, searches made to your knowledge base, and each article viewed for your support team.
 
+To have the SDK to also send your existing app logs, and custom events(events that you want your support team to see) please see our [app log guide](https://supportkit.zendesk.com/hc/en-us/articles/201747860-Reporting-logs-to-your-support-team), and [custom event guide](https://supportkit.zendesk.com/hc/en-us/articles/201626494-Custom-Event-track-API-Why-).  You can test out this feature on a simulator using the uploadContextWhenClosingSupportKit SKTSettings api.  Setting it to YES will mimic a ticket submission when closing SupportKit.  This will upload all app logs and custom events that were fired in the recent app session.  A session URL to the SupportKit Console will be logged in your debug console.
+
+## Recommendations
+
+SupportKit provides two APIs for recommending content to your users. These recommendations are immediately visible when the user launches the SupportKit UI.
+
+The `setDefaultRecommendations` API is used to configure a static list of recommendations that can provide your users with more information about your app (basic usage instructions, cool features, solutions to common problems, etc...).
+
+    [SupportKit setDefaultRecommendations:@[ @"https://yourdomain.zendesk.com/hc/en-us/articles/000000000-recommendation-1", @"https://yourdomain.zendesk.com/hc/en-us/articles/000000000-recommendation-2" ]];
+
+The `setTopRecommendation` API is used to configure a context-specific recommendation (for example, if a user fails to log in, you may choose to recommend an article explaining the various types of login errors that can occur). The top recommendation appears at the beginning of the recommendations list, followed by the list of defaults (if any).
+
+    [SupportKit setTopRecommendation:@"https://yourdomain.zendesk.com/hc/en-us/articles/000000000-context-driven-recommendation"];
+
+## Search Result Filtering
+
+For Zendesk domains that are shared by multiple apps, it's often useful to filter out some of the knowledge base content from SupportKit's search results. The SupportKit filtering API provides a means to accomplish this, and allows filtering of search results based on sections (Zendesk knowledge bases are organized in three tiers: Category -> Section -> Article).
+
+    -(void)excludeSearchResultsIf:(SKTSearchResultsFilterMode)filterMode sections:(NSArray*)sections;
+
+There are two filtering modes available.
+* SKTSearchResultIsInSection: Used to remove results that belong to specific sections (ex: exclude all articles in the billing section).
+* SKTSearchResultIsNotInSection : Used to remove results that _do not_ belong to specific sections (ex: only include articles in the billing section).
+
+Note that these two are mutually exclusive, and only one filter mode can be active at a time.
+
+For instructions on how to find section ids, check out our [knowledge base article](https://supportkit.zendesk.com/hc/en-us/articles/201900224) on the subject.
 
 # Demo App
 Download our demo [app](https://github.com/radialpoint/SupportKit/archive/master.zip).
