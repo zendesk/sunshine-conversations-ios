@@ -6,7 +6,7 @@
     [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"]];
     [SupportKit show];
 
-Our [APIs](http://cocoadocs.org/docsets/SupportKit/1.4.0/) and [Support Center](https://supportkit.zendesk.com).
+Our [APIs](http://console.supportkit.radialpoint.com/doc/v1.4.0/) and [Support Center](https://supportkit.zendesk.com).
 
 # Installation
 
@@ -90,7 +90,7 @@ Optionally, you can specify the specific URL to your ticket creation page (the S
     [SupportKit initWithSettings:[SKTSettings settingsWithKnowledgeBaseURL:@"https://supportkit.zendesk.com"
     andTicketURL:@"https://supportkit.zendesk.com/requests/new"]];
 
-There are also other SKTSettings options you can customize. See our [API docs](http://cocoadocs.org/docsets/SupportKit/1.4.0/).
+There are also other SKTSettings options you can customize. See our [API docs](http://console.supportkit.radialpoint.com/doc/v1.4.0/).
 
 You're done. Build and launch your app. Visit our [Support Center](https://supportkit.zendesk.com) if you run into trouble.
 
@@ -115,19 +115,15 @@ The `setTopRecommendation` API is used to configure a context-specific recommend
 
     [SupportKit setTopRecommendation:@"https://yourdomain.zendesk.com/hc/en-us/articles/000000000-context-driven-recommendation"];
 
+See our [release post](http://supportkit.svbtle.com/get-your-users-the-right-answer-at-the-right-time-without-a-search-query) for more details and a demo.
+
 ## Search Result Filtering
 
-For Zendesk domains that are shared by multiple apps, it's often useful to filter out some of the knowledge base content from SupportKit's search results. The SupportKit filtering API provides a means to accomplish this, and allows filtering of search results based on sections (Zendesk knowledge bases are organized in three tiers: Category -> Section -> Article).
+For Zendesk domains that are shared by multiple apps, it's often useful to filter out some of the knowledge base content from SupportKit's search results. The SupportKit [filtering API](http://console.supportkit.radialpoint.com/doc/v1.4.0/Classes/SKTSettings.html#//api/name/excludeSearchResultsIf:categories:sections:) provides a means to accomplish this, and allows filtering of search results based on categories or sections (Zendesk knowledge bases are organized in three tiers: Category -> Section -> Article).
 
-    -(void)excludeSearchResultsIf:(SKTSearchResultsFilterMode)filterMode sections:(NSArray*)sections;
+    - (void)excludeSearchResultsIf:(SKTSearchResultsFilterMode)filterMode categories:(NSArray *)categories sections:(NSArray *)sections
 
-There are two filtering modes available.
-* SKTSearchResultIsInSection: Used to remove results that belong to specific sections (ex: exclude all articles in the billing section).
-* SKTSearchResultIsNotInSection : Used to remove results that _do not_ belong to specific sections (ex: only include articles in the billing section).
-
-Note that these two are mutually exclusive, and only one filter mode can be active at a time.
-
-For instructions on how to find section ids, check out our [knowledge base article](https://supportkit.zendesk.com/hc/en-us/articles/201900224) on the subject.
+For more details, check out our [knowledge base article](https://supportkit.zendesk.com/hc/en-us/articles/201900224) on the subject.
 
 # Demo App
 Download our demo [app](https://github.com/radialpoint/SupportKit/archive/master.zip).

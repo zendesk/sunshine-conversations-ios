@@ -26,6 +26,15 @@
                                                        andTicketURL:[SupportKitKnowledgeBaseURL stringByAppendingPathComponent:@"/hc/en-us/requests/new"]];
     [SupportKit initWithSettings:settings];
     
+    [SupportKit setDefaultRecommendations:@[
+                                            @"https://supportkit.zendesk.com/hc/en-us/articles/201747860-Reporting-logs-to-your-support-team",
+                                            @"https://supportkit.zendesk.com/hc/en-us/articles/201900704-Recommendations",
+                                            @"https://supportkit.zendesk.com/hc/en-us/articles/201900224-Filtering-Search-Results-by-Category-or-Section",
+                                            @"https://supportkit.zendesk.com/hc/en-us/articles/201616304-SKTSettings-What-do-they-do-",
+                                            @"https://supportkit.zendesk.com/hc/en-us/articles/201626494-Custom-Event-track-API-Why-",
+                                            ]];
+    
+    
     return YES;
 }
 
