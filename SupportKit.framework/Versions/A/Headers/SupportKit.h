@@ -1,6 +1,6 @@
 //
 //  SupportKit
-//  version : 1.4.0
+//  version : 1.4.1
 //
 //  Copyright (c) 2013 Radialpoint. All rights reserved.
 //
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SKTSettings.h"
 
-#define SUPPORTKIT_VERSION @"1.4.0"
+#define SUPPORTKIT_VERSION @"1.4.1"
 
 /**
  *  Logs a message to be included with your users' support requests. This function calls through to NSLog (to avoid this, use SKTSilentLog instead).
