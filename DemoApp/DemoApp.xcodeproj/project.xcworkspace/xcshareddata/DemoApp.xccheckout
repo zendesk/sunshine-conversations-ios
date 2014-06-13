@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>699C55E3-AA51-4C67-892A-A0E2CBE27A25</string>
+	<string>E52814D1-0FBF-4AED-8188-D2A05F2E010A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DemoApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>614B71AB-29E8-404E-B825-94885118209F</key>
+		<key>D1EF6E72-D5AB-4DFB-9695-65F66D8C9578</key>
 		<string>http://git.rp.corp/scm/csa/help-center-sdk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DemoApp/DemoApp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>614B71AB-29E8-404E-B825-94885118209F</key>
+		<key>D1EF6E72-D5AB-4DFB-9695-65F66D8C9578</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>614B71AB-29E8-404E-B825-94885118209F</string>
+	<string>D1EF6E72-D5AB-4DFB-9695-65F66D8C9578</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>614B71AB-29E8-404E-B825-94885118209F</string>
+			<string>D1EF6E72-D5AB-4DFB-9695-65F66D8C9578</string>
 			<key>IDESourceControlWCCName</key>
 			<string>help-center-sdk</string>
 		</dict>

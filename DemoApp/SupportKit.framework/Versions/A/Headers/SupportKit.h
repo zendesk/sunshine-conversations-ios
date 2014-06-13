@@ -1,6 +1,6 @@
 //
 //  SupportKit
-//  version : 1.4.1
+//  version : 1.5.0
 //
 //  Copyright (c) 2013 Radialpoint. All rights reserved.
 //
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SKTSettings.h"
 
-#define SUPPORTKIT_VERSION @"1.4.1"
+#define SUPPORTKIT_VERSION @"1.5.0"
 
 /**
  *  Logs a message to be included with your users' support requests. This function calls through to NSLog (to avoid this, use SKTSilentLog instead).
@@ -108,5 +108,30 @@ void SKTSilentLog(NSString* format, ...);
 *  @param urlString The url of the article to be displayed.
 */
 +(void)setTopRecommendation:(NSString*)urlString;
+
+/**
+ *  Predefined fields that can be used with fillTicketWith:.
+ */
+extern NSString* const SKTPredefinedFieldEmail;
+extern NSString* const SKTPredefinedFieldSubject;
+extern NSString* const SKTPredefinedFieldDescription;
+extern NSString* const SKTPrefefinedFieldUsername;
+
+/**
+ *  Automatically fill Zendesk ticket fields.
+ *
+ *  Supported field types : text, checkbox and dropdown.
+ *
+ *  Values are passed in an NSDictionary where the keys must be the form field names found in the Zendesk ticket form HTML.
+ *
+ *  Example:
+ *
+ *      [SupportKit fillTicketWith:@{SKTPredefinedFieldSubject:@"Help me!", @"comment[value]":@"I need help with your app!", @"ticket[fields][23905543]":@"yes4"}];
+ *
+ *  Calling this method multiple times will overwrite existing key-value pairs and add new ones.
+ *
+ *  @param formData The dictionnary of form field names and their given values.
+ */
++(void)fillTicketWith:(NSDictionary*)formData;
 
 @end
