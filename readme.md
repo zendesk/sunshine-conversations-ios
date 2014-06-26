@@ -49,7 +49,6 @@ Drag & drop both SupportKit.framework and SupportKit.bundle to your project in X
 
 ### Step 3: Add other library dependencies.
 Add the following frameworks & libs to your project (go to "Build phases" in your project target and select "Link Binary With Libraries"):
-- AdSupport.framework
 - AVFoundation.framework
 - CoreGraphics.framework
 - CoreMedia.framework

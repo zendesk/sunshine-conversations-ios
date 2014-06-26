@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27B7D7EC195C8D9A00A7E55A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B7D7EB195C8D9A00A7E55A /* CoreVideo.framework */; };
 		DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B627E1857AA300062B17F /* Foundation.framework */; };
 		DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62801857AA300062B17F /* CoreGraphics.framework */; };
 		DC0B62831857AA300062B17F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62821857AA300062B17F /* UIKit.framework */; };
@@ -17,7 +18,6 @@
 		DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62CD1857B2950062B17F /* CoreTelephony.framework */; };
 		DC0B62D01857B2990062B17F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */; };
 		DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D11857B29D0062B17F /* libxml2.dylib */; };
-		DC0B62D41857B2A10062B17F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D31857B2A10062B17F /* AdSupport.framework */; };
 		DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D51857B2A50062B17F /* CoreText.framework */; };
 		DC25348818F59E1A0065C6B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348718F59E1A0065C6B4 /* AVFoundation.framework */; };
 		DC25348A18F59EAA0065C6B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348918F59EAA0065C6B4 /* QuartzCore.framework */; };
@@ -35,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27B7D7EB195C8D9A00A7E55A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		DC0B627B1857AA300062B17F /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0B627E1857AA300062B17F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC0B62801857AA300062B17F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,7 +51,6 @@
 		DC0B62CD1857B2950062B17F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DC0B62D11857B29D0062B17F /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		DC0B62D31857B2A10062B17F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		DC0B62D51857B2A50062B17F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DC25348718F59E1A0065C6B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DC25348918F59EAA0065C6B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -75,12 +75,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC0B62D41857B2A10062B17F /* AdSupport.framework in Frameworks */,
 				DC25348818F59E1A0065C6B4 /* AVFoundation.framework in Frameworks */,
 				DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */,
 				DCEABA7218C7B3BE00014CA4 /* CoreMedia.framework in Frameworks */,
 				DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */,
 				DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */,
+				27B7D7EC195C8D9A00A7E55A /* CoreVideo.framework in Frameworks */,
 				DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */,
 				DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */,
 				DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */,
@@ -116,15 +116,15 @@
 		DC0B627D1857AA300062B17F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */,
+				DC80A38F188EDBD800B6BF9F /* SupportKit.framework */,
+				27B7D7EB195C8D9A00A7E55A /* CoreVideo.framework */,
 				DC25348918F59EAA0065C6B4 /* QuartzCore.framework */,
 				DC25348718F59E1A0065C6B4 /* AVFoundation.framework */,
 				DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */,
 				DCEABA7118C7B3BE00014CA4 /* CoreMedia.framework */,
-				DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */,
-				DC80A38F188EDBD800B6BF9F /* SupportKit.framework */,
 				DC31EC79186385DF00FFAFC2 /* Security.framework */,
 				DC0B62D51857B2A50062B17F /* CoreText.framework */,
-				DC0B62D31857B2A10062B17F /* AdSupport.framework */,
 				DC0B62D11857B29D0062B17F /* libxml2.dylib */,
 				DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */,
 				DC0B62CD1857B2950062B17F /* CoreTelephony.framework */,
