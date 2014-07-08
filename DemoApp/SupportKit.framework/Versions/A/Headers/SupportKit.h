@@ -1,6 +1,6 @@
 //
 //  SupportKit
-//  version : 1.5.2
+//  version : 1.5.3
 //
 //  Copyright (c) 2013 Radialpoint. All rights reserved.
 //
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SKTSettings.h"
 
-#define SUPPORTKIT_VERSION @"1.5.2"
+#define SUPPORTKIT_VERSION @"1.5.3"
 
 /**
  *  Logs a message to be included with your users' support requests. This function calls through to NSLog (to avoid this, use SKTSilentLog instead).
@@ -115,14 +115,14 @@ void SKTSilentLog(NSString* format, ...);
 extern NSString* const SKTPredefinedFieldEmail;
 extern NSString* const SKTPredefinedFieldSubject;
 extern NSString* const SKTPredefinedFieldDescription;
-extern NSString* const SKTPrefefinedFieldUsername;
+extern NSString* const SKTPredefinedFieldUsername;
 
 /**
  *  Automatically fill Zendesk ticket fields.
  *
  *  Supported field types : text, checkbox and dropdown.
  *
- *  Values are passed in an NSDictionary where the keys must be the form field names found in the Zendesk ticket form HTML.
+ *  Values are passed in an NSDictionary where the keys must be the form field names found in the Zendesk ticket form HTML, and may include the predefined fields SKTPredefinedFieldEmail, SKTPredefinedFieldSubject, SKTPredefinedFieldDescription, and SKTPredefinedFieldUsername.
  *
  *  Example:
  *
