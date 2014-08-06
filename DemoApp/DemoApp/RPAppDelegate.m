@@ -22,8 +22,8 @@
     self.window.rootViewController = mainController;
     [self.window makeKeyAndVisible];
 
-    SKTSettings* settings = [SKTSettings settingsWithKnowledgeBaseURL:SupportKitKnowledgeBaseURL
-                                                       andTicketURL:[SupportKitKnowledgeBaseURL stringByAppendingPathComponent:@"/hc/en-us/requests/new"]];
+    SKTSettings* settings = [SKTSettings settingsWithAppToken:@""];
+    settings.knowledgeBaseURL = SupportKitKnowledgeBaseURL;
     [SupportKit initWithSettings:settings];
     
     [SupportKit setDefaultRecommendations:@[

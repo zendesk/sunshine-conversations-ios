@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27B7D7EC195C8D9A00A7E55A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B7D7EB195C8D9A00A7E55A /* CoreVideo.framework */; };
 		DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B627E1857AA300062B17F /* Foundation.framework */; };
 		DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62801857AA300062B17F /* CoreGraphics.framework */; };
 		DC0B62831857AA300062B17F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62821857AA300062B17F /* UIKit.framework */; };
@@ -19,7 +18,6 @@
 		DC0B62D01857B2990062B17F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */; };
 		DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D11857B29D0062B17F /* libxml2.dylib */; };
 		DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D51857B2A50062B17F /* CoreText.framework */; };
-		DC25348818F59E1A0065C6B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348718F59E1A0065C6B4 /* AVFoundation.framework */; };
 		DC25348A18F59EAA0065C6B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348918F59EAA0065C6B4 /* QuartzCore.framework */; };
 		DC31EC7218633B7600FFAFC2 /* RPZendeskPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7118633B7600FFAFC2 /* RPZendeskPickerView.m */; };
 		DC31EC7518634A5900FFAFC2 /* RPMainContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7418634A5900FFAFC2 /* RPMainContentView.m */; };
@@ -75,12 +73,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC25348818F59E1A0065C6B4 /* AVFoundation.framework in Frameworks */,
 				DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */,
 				DCEABA7218C7B3BE00014CA4 /* CoreMedia.framework in Frameworks */,
 				DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */,
 				DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */,
-				27B7D7EC195C8D9A00A7E55A /* CoreVideo.framework in Frameworks */,
 				DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */,
 				DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */,
 				DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */,

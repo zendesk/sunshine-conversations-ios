@@ -94,11 +94,8 @@
 
 -(void)reinitializeSettings
 {
-    SKTSettings* settings = [SKTSettings settingsWithKnowledgeBaseURL:self.pickerView.textField.text];
-    
-    if([self.pickerView.textField.text isEqualToString:SupportKitKnowledgeBaseURL]){
-        settings.ticketURL = [SupportKitKnowledgeBaseURL stringByAppendingPathComponent:@"/hc/en-us/requests/new"];
-    }
+    SKTSettings* settings = [[SKTSettings alloc] init];
+    settings.knowledgeBaseURL = self.pickerView.textField.text;
     
     // WARNING: Do not call +initWithSettings: more than once in your app.
     // We need to call it every time here to change the knowledge base URL based on the text field; your URL should be hardcoded.
