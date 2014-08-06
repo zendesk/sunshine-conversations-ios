@@ -8,29 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSUInteger, SKTSearchResultsFilterMode) {
     SKTSearchResultIsIn,
-    SKTSearchResultIsNotIn,
-} SKTSearchResultsFilterMode;
+    SKTSearchResultIsNotIn
+};
 
 @interface SKTSettings : NSObject
 
 /**
- *  Initializes a settings object with the given knowledge base URL. The URL must be fully qualified, including http or https (ex: "https://supportkit.zendesk.com").
+ *  Initializes a settings object with the given app token.
  *
- *  The default ticket creation page is constructed from the knowledge base URL as follows: "knowledgeBaseURL/anonymous_requests/new". To change this value, use +settingsWithKnowledgeBaseURL:andTicketURL: instead.
- *
- *  @param knowledgeBaseURL Fully qualified URL to your knowledge base.
+ *  @param appToken A valid app token retrieved from the SupportKit web portal.
  */
-+(instancetype)settingsWithKnowledgeBaseURL:(NSString*)knowledgeBaseURL;
-
-/**
- *  Initializes a settings object with the given knowledge base URL and ticket URL. Both URLs must be fully qualified, including http or https (ex: "https://supportkit.zendesk.com").
- *
- *  @param knowledgeBaseURL Fully qualified URL to your knowledge base.
- *  @param ticketURL Fully qualified URL, or nil to disable creating support tickets.
- */
-+(instancetype)settingsWithKnowledgeBaseURL:(NSString*)knowledgeBaseURL andTicketURL:(NSString*)ticketURL;
++(instancetype)settingsWithAppToken:(NSString*)appToken;
 
 /**
  *  Sets the filtering policy applied to user search results based on the given filter mode.
@@ -46,16 +36,17 @@ typedef enum {
 -(void)excludeSearchResultsIf:(SKTSearchResultsFilterMode)filterMode categories:(NSArray*)categories sections:(NSArray*)sections;
 
 /**
- *  The base URL of your knowledge base, to be used in constructing the search endpoint. The URL must be fully qualified, including http or https (ex: "https://supportkit.zendesk.com").
+ *  The app token corresponding to your application. App tokens are issued on the SupportKit web portal.
  */
-@property(copy) NSString* knowledgeBaseURL;
+@property(copy) NSString* appToken;
 
 /**
- *  Specifies the location of the ticket creation page. The URL must be fully qualified, including http or https (ex: "https://supportkit.zendesk.com/anonymous_requests/new").
- *
- *  Setting to nil will disable creating tickets.
+ *  The base URL of your Zendesk knowledge base, to be used in constructing the search endpoint. The URL must be fully qualified, including http or https (ex: "https://supportkit.zendesk.com").
+ *  
+ *  If the knowledgeBaseURL is not specified, search is disabled.
+ *  The default value is nil.
  */
-@property(copy) NSString* ticketURL;
+@property(copy) NSString* knowledgeBaseURL;
 
 /**
  *  A boolean property that indicates whether to enable the app-wide gesture (two-finger swipe down) to present the SupportKit UI. Use option shift (⌥⇧) drag to perform the gesture on the simulator.
@@ -72,26 +63,11 @@ typedef enum {
 @property BOOL enableGestureHintOnFirstLaunch;
 
 /**
- *  A Boolean property that indicates whether to show a local OS notification that brings your user into the ticket submission page once tapped.
- *  The local OS notification is only shown if a user searched for help and left the app within 20 seconds, but without reading any KB articles or attempting to create a support ticket.
+ *  A Boolean property that indicates whether to show a local OS notification that brings your user into the conversation page once tapped.
+ *  The local OS notification is only shown if a user searched for help and left the app within 20 seconds, but without reading any KB articles or attempting to start a conversation.
  *
  *  The default value is YES.
  */
 @property BOOL enableLocalNotification;
 
-/**
- *  A boolean value specifying whether SupportKit should record touch events and include them with users' support requests.
- *
- *  The default value is YES.
- */
-@property BOOL enableTouchEventRecording;
-
-/**
- *  A boolean value that indicates whether to upload a user session when closing SupportKit.
- *
- *  This flag is only relevant when using an Xcode simulator and is meant for testing the SupportKit Agent Console.
- *
- *  The default value is NO.
- */
-@property BOOL uploadContextWhenClosingSupportKit;
 @end
