@@ -22,18 +22,19 @@
     self.window.rootViewController = mainController;
     [self.window makeKeyAndVisible];
 
-    SKTSettings* settings = [SKTSettings settingsWithAppToken:@""];
+    //This is where you would put your token that was generated for your app on the SupportKit console website.
+    SKTSettings* settings = [SKTSettings settingsWithAppToken:@"4z6ruil9xi9kixnf4ezztf1kl"];
     settings.knowledgeBaseURL = SupportKitKnowledgeBaseURL;
     [SupportKit initWithSettings:settings];
     
     [SupportKit setDefaultRecommendations:@[
-                                            @"https://supportkit.zendesk.com/hc/en-us/articles/201747860-Reporting-logs-to-your-support-team",
                                             @"https://supportkit.zendesk.com/hc/en-us/articles/201900704-Recommendations",
+                                            @"http://docs.supportkit.io/hc/en-us/articles/202882550",
+                                            @"http://docs.supportkit.io/hc/en-us/articles/202893700",
                                             @"https://supportkit.zendesk.com/hc/en-us/articles/201900224-Filtering-Search-Results-by-Category-or-Section",
-                                            @"https://supportkit.zendesk.com/hc/en-us/articles/201616304-SKTSettings-What-do-they-do-",
-                                            @"https://supportkit.zendesk.com/hc/en-us/articles/201626494-Custom-Event-track-API-Why-",
+                                            @"http://docs.supportkit.io/hc/en-us/articles/202584634",
+                                            @"http://supportkit.io"
                                             ]];
-    
     
     return YES;
 }

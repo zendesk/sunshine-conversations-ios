@@ -2,7 +2,6 @@
 //  SKTSettings.h
 //  SupportKit
 //
-//  Created by Michael Spensieri on 2/7/14.
 //  Copyright (c) 2014 Radialpoint. All rights reserved.
 //
 
