@@ -1,14 +1,16 @@
 //
+//  SupportKit.h
 //  SupportKit
-//  version : 2.0.0
+//  version : 2.1.0
 //
-//  Copyright (c) 2013 Radialpoint. All rights reserved.
+//  Copyright (c) 2014 Radialpoint. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "SKTSettings.h"
+#import "SKTUser.h"
 
-#define SUPPORTKIT_VERSION @"2.0.0"
+#define SUPPORTKIT_VERSION @"2.1.0"
 
 @interface SupportKit : NSObject
 
@@ -66,7 +68,9 @@
 +(void)setTopRecommendation:(NSString*)urlString;
 
 /**
-*  Sets the current user's first and last name to be used as a display name when sending messages.
+*  Sets the current user's first and last name to be used as a display name when sending messages. 
+*
+*  This is a shortcut for -setFirstName and -setLastName on [SKTUser currentUser]
 *
 *  @param firstName The first name of the user
 *  @param lastName The last name of the user
