@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		271246DD199BE90400DB2875 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271246DC199BE90400DB2875 /* MobileCoreServices.framework */; };
 		DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B627E1857AA300062B17F /* Foundation.framework */; };
 		DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62801857AA300062B17F /* CoreGraphics.framework */; };
 		DC0B62831857AA300062B17F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62821857AA300062B17F /* UIKit.framework */; };
@@ -22,7 +21,6 @@
 		DC25348A18F59EAA0065C6B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348918F59EAA0065C6B4 /* QuartzCore.framework */; };
 		DC31EC7218633B7600FFAFC2 /* RPZendeskPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7118633B7600FFAFC2 /* RPZendeskPickerView.m */; };
 		DC31EC7518634A5900FFAFC2 /* RPMainContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7418634A5900FFAFC2 /* RPMainContentView.m */; };
-		DC31EC7A186385DF00FFAFC2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC31EC79186385DF00FFAFC2 /* Security.framework */; };
 		DC80A390188EDBD800B6BF9F /* SupportKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */; };
 		DC80A391188EDBD800B6BF9F /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC80A38F188EDBD800B6BF9F /* SupportKit.framework */; };
 		DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */; };
@@ -33,7 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		271246DC199BE90400DB2875 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		27B7D7EB195C8D9A00A7E55A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		DC0B627B1857AA300062B17F /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0B627E1857AA300062B17F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,7 +54,6 @@
 		DC31EC7118633B7600FFAFC2 /* RPZendeskPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPZendeskPickerView.m; sourceTree = "<group>"; };
 		DC31EC7318634A5900FFAFC2 /* RPMainContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPMainContentView.h; sourceTree = "<group>"; };
 		DC31EC7418634A5900FFAFC2 /* RPMainContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPMainContentView.m; sourceTree = "<group>"; };
-		DC31EC79186385DF00FFAFC2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SupportKit.bundle; sourceTree = "<group>"; };
 		DC80A38F188EDBD800B6BF9F /* SupportKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportKit.framework; sourceTree = "<group>"; };
 		DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -73,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				271246DD199BE90400DB2875 /* MobileCoreServices.framework in Frameworks */,
 				DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */,
 				DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */,
 				DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */,
@@ -81,7 +76,6 @@
 				DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */,
 				DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */,
 				DC25348A18F59EAA0065C6B4 /* QuartzCore.framework in Frameworks */,
-				DC31EC7A186385DF00FFAFC2 /* Security.framework in Frameworks */,
 				DC80A391188EDBD800B6BF9F /* SupportKit.framework in Frameworks */,
 				DC0B62D01857B2990062B17F /* SystemConfiguration.framework in Frameworks */,
 				DC0B62831857AA300062B17F /* UIKit.framework in Frameworks */,
@@ -112,14 +106,12 @@
 		DC0B627D1857AA300062B17F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				271246DC199BE90400DB2875 /* MobileCoreServices.framework */,
 				DC80A38E188EDBD800B6BF9F /* SupportKit.bundle */,
 				DC80A38F188EDBD800B6BF9F /* SupportKit.framework */,
 				27B7D7EB195C8D9A00A7E55A /* CoreVideo.framework */,
 				DC25348918F59EAA0065C6B4 /* QuartzCore.framework */,
 				DC25348718F59E1A0065C6B4 /* AVFoundation.framework */,
 				DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */,
-				DC31EC79186385DF00FFAFC2 /* Security.framework */,
 				DC0B62D51857B2A50062B17F /* CoreText.framework */,
 				DC0B62D11857B29D0062B17F /* libxml2.dylib */,
 				DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */,

@@ -29,10 +29,10 @@
     
     [SupportKit setDefaultRecommendations:@[
                                             @"https://supportkit.zendesk.com/hc/en-us/articles/201900704-Recommendations",
-                                            @"http://docs.supportkit.io/hc/en-us/articles/202882550",
-                                            @"http://docs.supportkit.io/hc/en-us/articles/202893700",
+                                            @"https://supportkit.zendesk.com/hc/en-us/articles/202882550",
+                                            @"https://supportkit.zendesk.com/hc/en-us/articles/202893700",
                                             @"https://supportkit.zendesk.com/hc/en-us/articles/201900224-Filtering-Search-Results-by-Category-or-Section",
-                                            @"http://docs.supportkit.io/hc/en-us/articles/202584634",
+                                            @"https://supportkit.zendesk.com/hc/en-us/articles/202584634",
                                             @"http://supportkit.io"
                                             ]];
     
