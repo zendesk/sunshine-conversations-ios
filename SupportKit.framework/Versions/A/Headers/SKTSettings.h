@@ -5,7 +5,7 @@
 //  Copyright (c) 2014 Radialpoint. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, SKTSearchResultsFilterMode) {
     SKTSearchResultIsIn,
@@ -27,6 +27,8 @@ typedef NS_ENUM(NSUInteger, SKTSearchResultsFilterMode) {
  *  SKTSearchResultIsIn : Filter out search results if they belong to any of the passed section ids.
  *  
  *  SKTSearchResultIsNotIn : Filter out search results if they do not belong to any of the passed section ids.
+ *
+ *  NOTE: Filtering by category is only possible for Zendesk instances that are using HelpCenter.
  *
  *  @param filterMode The filter mode to use.
  *  @param categories Array of category ids on which to filter search results. Can be objects of type NSString or NSNumber.
@@ -68,5 +70,20 @@ typedef NS_ENUM(NSUInteger, SKTSearchResultsFilterMode) {
  *  The default value is YES.
  */
 @property BOOL enableLocalNotification;
+
+/**
+ *  The accent color for the conversation screen. Used as the color of user message bubbles, as well as the color of the send button and text input caret.
+ *
+ *  The default value is #00B0FF.
+ */
+@property UIColor* conversationAccentColor;
+
+/**
+ *  The status bar style to use on the conversation screen. 
+ *  You should use this property if your app uses UIAppearance to style UINavigationBar, and your styling requires a specific status bar color.
+ * 
+ *  The default value is UIStatusBarStyleDefault.
+ */
+@property UIStatusBarStyle conversationStatusBarStyle;
 
 @end
