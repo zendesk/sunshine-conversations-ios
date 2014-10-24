@@ -9,13 +9,11 @@
 #import "RPZendeskPickerView.h"
 #import <stdlib.h>
 #import "RPRoundedButton.h"
-
-NSString* const SupportKitKnowledgeBaseURL = @"https://supportkit.zendesk.com";
+#import "RPAppDelegate.h"
 
 @interface RPZendeskPickerView()
 
 @property UILabel* label;
-@property UIButton* randomButton;
 
 @end
 
@@ -34,7 +32,6 @@ NSString* const SupportKitKnowledgeBaseURL = @"https://supportkit.zendesk.com";
 {
     [self initLabel];
     [self initTextField];
-    [self initRandomButton];
     [self initLaunchButton];
     [self initShowGestureHintButton];
     
@@ -44,7 +41,7 @@ NSString* const SupportKitKnowledgeBaseURL = @"https://supportkit.zendesk.com";
 -(void)initLabel
 {
     self.label = [[UILabel alloc] init];
-    self.label.text = @"To see your knowledge base content, enter your Zendesk URL below and launch help.";
+    self.label.text = @"To see your knowledge base content, change the code in RPAppDelegate to use your own Zendesk URL.";
     self.label.backgroundColor = [UIColor clearColor];
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.font = [UIFont systemFontOfSize:14];
@@ -60,23 +57,12 @@ NSString* const SupportKitKnowledgeBaseURL = @"https://supportkit.zendesk.com";
     self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
     self.textField.borderStyle = UITextBorderStyleRoundedRect;
-    self.textField.text = SupportKitKnowledgeBaseURL;
+    self.textField.text = KnowledgeBaseURL;
     self.textField.backgroundColor = [UIColor whiteColor];
     self.textField.font = [UIFont systemFontOfSize:14];
+    [self.textField setEnabled:NO];
     
     [self addSubview:self.textField];
-}
-
--(void)initRandomButton
-{
-    self.randomButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [self.randomButton setTitle:@"Random" forState:UIControlStateNormal];
-    [self.randomButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
-    self.randomButton.tintColor = [UIColor whiteColor];
-    
-    [self.randomButton addTarget:self action:@selector(randomizeURL) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self addSubview:self.randomButton];
 }
 
 -(void)initLaunchButton
@@ -108,42 +94,11 @@ NSString* const SupportKitKnowledgeBaseURL = @"https://supportkit.zendesk.com";
     self.textField.frame = CGRectMake(0, CGRectGetMaxY(self.label.frame) + 20, self.bounds.size.width - 20, 30);
     self.textField.center = CGPointMake(floor(CGRectGetMidX(self.bounds)), self.textField.center.y);
     
-    self.randomButton.frame = CGRectMake(self.textField.frame.origin.x + 5, CGRectGetMaxY(self.textField.frame) + 10, 200, 25);
-    [self.randomButton sizeToFit];
-    
-    self.launchButton.frame = CGRectMake(self.bounds.size.width - 110, 0, 100, 25);
-    self.launchButton.center = CGPointMake(self.launchButton.center.x, self.randomButton.center.y);
+    self.launchButton.frame = CGRectMake(self.bounds.size.width - 110, CGRectGetMaxY(self.textField.frame) + 10, 100, 25);
     
     self.showGestureHintButton.frame = CGRectMake(0, CGRectGetMaxY(self.frame) - 70, 200, 46);
     [self.showGestureHintButton sizeToFit];
     self.showGestureHintButton.center = CGPointMake(floor(CGRectGetMidX(self.bounds)), self.showGestureHintButton.center.y);
-}
-
--(void)randomizeURL
-{
-    static NSArray* zendeskURLs;
-    if(!zendeskURLs){
-        zendeskURLs = @[
-                        SupportKitKnowledgeBaseURL,
-                        @"https://fixmestick.zendesk.com",
-                        @"https://prezi.zendesk.com",
-                        @"https://mortgagecoach.zendesk.com",
-                        @"https://topify.zendesk.com",
-                        @"https://winshuttle.zendesk.com",
-                        @"https://dyknow.zendesk.com",
-                        @"https://picaboo.zendesk.com",
-                        @"https://shootproof.zendesk.com",
-                        @"https://huddle.zendesk.com",
-                        @"https://streamtime.zendesk.com"
-                       ];
-    }
-    
-    int index;
-    do{
-        index = arc4random() % zendeskURLs.count;
-    } while([self.textField.text isEqualToString:[zendeskURLs objectAtIndex:index]]);
-            
-    self.textField.text = zendeskURLs[index];
 }
 
 @end

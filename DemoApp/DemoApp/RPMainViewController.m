@@ -82,24 +82,12 @@
 
 -(void)launch
 {
-    [self reinitializeSettings];
     [SupportKit show];
 }
 
 -(void)launchHint
 {
-    [self reinitializeSettings];
     [SupportKit showWithGestureHint];
-}
-
--(void)reinitializeSettings
-{
-    SKTSettings* settings = [[SKTSettings alloc] init];
-    settings.knowledgeBaseURL = self.pickerView.textField.text;
-    
-    // WARNING: Do not call +initWithSettings: more than once in your app.
-    // We need to call it every time here to change the knowledge base URL based on the text field; your URL should be hardcoded.
-    [SupportKit initWithSettings:settings];
 }
 
 -(void)showMenu

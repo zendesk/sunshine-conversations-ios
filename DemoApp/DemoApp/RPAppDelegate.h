@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString* const KnowledgeBaseURL;
+
 @interface RPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

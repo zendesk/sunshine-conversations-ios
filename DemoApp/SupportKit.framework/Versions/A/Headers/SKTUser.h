@@ -10,14 +10,14 @@
 @interface SKTUser : NSObject
 
 /**
- *  Returns the object representing the current user.
+ *  @abstract Returns the object representing the current user.
  */
 +(instancetype)currentUser;
 
 /**
- *  Adds custom properties to the user. This info is used to provide more context around who a user is.
+ *  @abstract Adds custom properties to the user. This info is used to provide more context around who a user is.
  *
- *  Keys must be of type NSString, and values must be of type NSString or NSNumber; any other type will be converted to NSString using the -description method.
+ *  @discussion Keys must be of type NSString, and values must be of type NSString or NSNumber; any other type will be converted to NSString using the -description method.
  *  
  *  Example:
  *
@@ -32,12 +32,12 @@
 -(void)addProperties:(NSDictionary*)properties;
 
 /**
- *  The user's first name, to be used as part of the display name when sending messages.
+ *  @abstract The user's first name, to be used as part of the display name when sending messages.
  */
 @property(copy) NSString* firstName;
 
 /**
- *  The user's last name, to be used as part of the display name when sending messages.
+ *  @abstract The user's last name, to be used as part of the display name when sending messages.
  */
 @property(copy) NSString* lastName;
 
