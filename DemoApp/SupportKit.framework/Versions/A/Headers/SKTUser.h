@@ -41,4 +41,9 @@
  */
 @property(copy) NSString* lastName;
 
+/**
+ *  @abstract The user's email, to be used to display a gravatar.
+ */
+@property(copy) NSString* email;
+
 @end
