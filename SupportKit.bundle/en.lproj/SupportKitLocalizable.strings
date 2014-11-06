@@ -1,9 +1,9 @@
-/* 
-  SupportKitLocalizable.strings
-  SupportKit
-
-  Copyright (c) 2014 Radialpoint. All rights reserved.
-*/
+/*
+ SupportKitLocalizable.strings
+ SupportKit
+ 
+ Copyright (c) 2014 Radialpoint. All rights reserved.
+ */
 
 /* Search bar placeholder */
 "Search %@ Help" = "Search %@ Help";
