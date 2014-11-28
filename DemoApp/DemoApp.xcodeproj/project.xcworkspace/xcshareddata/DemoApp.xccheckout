@@ -14,7 +14,7 @@
 		<string>http://git.rp.corp/scm/csa/help-center-sdk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DemoApp/DemoApp.xcodeproj/project.xcworkspace</string>
+	<string>DemoApp/DemoApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>60DD32EAF42B75918A9C32A28D4ED2826020C075</key>
