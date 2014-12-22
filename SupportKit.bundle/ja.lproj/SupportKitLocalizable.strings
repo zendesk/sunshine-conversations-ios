@@ -73,3 +73,6 @@
 
 /* Failure text for chat messages that fail to upload */
 "Message not delivered. Tap to retry." = "メッセージが送信されませんでした。タップで再試行します。";
+
+/* Status text for chat messages */
+"Sending..." = "送信...";
