@@ -73,3 +73,6 @@
 
 /* Failure text for chat messages that fail to upload */
 "Message not delivered. Tap to retry." = "پیام تحویل داده نشد. برای ارسال مجدد، ضربه بزنید.";
+
+/* Status text for chat messages */
+"Sending..." = "ارسال...";

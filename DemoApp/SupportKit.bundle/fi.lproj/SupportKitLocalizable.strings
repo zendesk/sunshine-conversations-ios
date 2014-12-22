@@ -73,3 +73,6 @@
 
 /* Failure text for chat messages that fail to upload */
 "Message not delivered. Tap to retry." = "Viestiä ei voitu lähettää. Kosketa yrittääksesi uudelleen.";
+
+/* Status text for chat messages */
+"Sending..." = "Lähettäminen...";

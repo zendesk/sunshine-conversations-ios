@@ -73,3 +73,6 @@
 
 /* Failure text for chat messages that fail to upload */
 "Message not delivered. Tap to retry." = "訊息未成功送出，請點撃重送.";
+
+/* Status text for chat messages */
+"Sending..." = "發出...";

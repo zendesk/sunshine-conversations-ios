@@ -73,3 +73,6 @@
 
 /* Failure text for chat messages that fail to upload */
 "Message not delivered. Tap to retry." = "Mensaje no entregado. Toca para intentarlo de nuevo.";
+
+/* Status text for chat messages */
+"Sending..." = "Envío...";
