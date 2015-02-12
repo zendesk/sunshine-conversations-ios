@@ -47,8 +47,7 @@ NSString* const KnowledgeBaseURL = @"https://supportkit.zendesk.com";
                                             @"https://supportkit.zendesk.com/hc/en-us/articles/202882550",
                                             @"https://supportkit.zendesk.com/hc/en-us/articles/202893700",
                                             @"https://supportkit.zendesk.com/hc/en-us/articles/201900224-Filtering-Search-Results-by-Category-or-Section",
-                                            @"https://supportkit.zendesk.com/hc/en-us/articles/202584634",
-                                            @"http://supportkit.io"
+                                            @"https://supportkit.zendesk.com/hc/en-us/articles/202584634"
                                             ]];
     
     [SupportKit setUserFirstName:@"Demo" lastName:@"App"];

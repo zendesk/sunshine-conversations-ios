@@ -53,7 +53,7 @@
 {
     self.pickerView = [[RPZendeskPickerView alloc] initWithFrame:[self getPickerViewFrame]];
     self.pickerView.hidden = YES;
-    self.pickerView.backgroundColor =  [UIColor colorWithRed:50.0/255 green:173.0/255 blue:95.0/255 alpha:1.0];
+    self.pickerView.backgroundColor = [UIColor colorWithRed:145.0/255 green:45.0/255 blue:141.0/255 alpha:1.0];
     
     [self.view addSubview:self.pickerView];
     

@@ -9,16 +9,14 @@
 #import "RPMainContentView.h"
 #import "RPRoundedButton.h"
 
-static const int kLogoBottomPadding = 15;
-static const int kFooterTextBottomPadding = 20;
+static const int kLogoBottomPadding = 30;
 
 @interface RPMainContentView()
 
 @property UILabel* titleLabel;
 @property UILabel* subtitleLabel;
-@property UIImageView* background;
+@property CAGradientLayer* background;
 @property UIImageView* logo;
-@property UIImageView* footerText;
 
 @end
 
@@ -36,12 +34,11 @@ static const int kFooterTextBottomPadding = 20;
 -(void)initializator
 {
     [self initNavBar];
-    [self initBackgroundImage];
+    [self initBackgroundColor];
     [self initLogo];
     [self initTitleLabel];
     [self initSubtitleLabel];
     [self initButton];
-    [self initFooterText];
     [self initShadow];
 }
 
@@ -50,16 +47,23 @@ static const int kFooterTextBottomPadding = 20;
     self.navBar = [[UINavigationBar alloc] init];
     
     if([self isIOS7OrLater]){
-        self.navBar.tintColor = [UIColor colorWithRed:50.0/255 green:173.0/255 blue:95.0/255 alpha:1.0];
+        self.navBar.tintColor = [UIColor colorWithRed:145.0/255 green:45.0/255 blue:141.0/255 alpha:1.0];
     }
     
     [self addSubview:self.navBar];
 }
 
--(void)initBackgroundImage
+-(void)initBackgroundColor
 {
-    self.background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"main-background"]];
-    [self addSubview:self.background];
+    if (self.background) return;
+    self.background = [CAGradientLayer layer];
+    UIColor *purple = [UIColor colorWithRed:215.0/255 green:171.0/255 blue:207.0/255 alpha:1.0];
+    UIColor *pink = [UIColor colorWithRed:248.0/255 green:179.0/255 blue:174.0/255 alpha:1.0];
+    self.background.colors = [NSArray arrayWithObjects:(id)purple.CGColor, (id)pink.CGColor, nil];
+    self.background.startPoint = CGPointMake(0, 0.5);
+    self.background.endPoint = CGPointMake(1, 0.5);
+    self.background.frame = self.bounds;
+    [self.layer insertSublayer:self.background atIndex:0];
 }
 
 -(void)initLogo
@@ -71,7 +75,7 @@ static const int kFooterTextBottomPadding = 20;
 -(void)initTitleLabel
 {
     self.titleLabel = [[UILabel alloc] init];
-    self.titleLabel.textColor = [UIColor whiteColor];
+    self.titleLabel.textColor = [self textColor];
     self.titleLabel.text = @"Welcome to SupportKit";
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.titleLabel.font = [UIFont boldSystemFontOfSize:22];
@@ -83,7 +87,7 @@ static const int kFooterTextBottomPadding = 20;
 -(void)initSubtitleLabel
 {
     self.subtitleLabel = [[UILabel alloc] init];
-    self.subtitleLabel.textColor = [UIColor whiteColor];
+    self.subtitleLabel.textColor = [self textColor];
     self.subtitleLabel.text = @"You can invoke SupportKit from interactions made with your app, such as a button tap, or on specific events where help is required.";
     self.subtitleLabel.textAlignment = NSTextAlignmentCenter;
     self.subtitleLabel.font = [UIFont systemFontOfSize:15];
@@ -97,14 +101,10 @@ static const int kFooterTextBottomPadding = 20;
 {
     self.button = [RPRoundedButton new];
     [self.button setTitle:@"Launch Help" forState:UIControlStateNormal];
-    
+    // Make the button purple
+    self.button.backgroundColor = [self buttonColor];
+    self.button.layer.borderColor = [self buttonColor].CGColor;
     [self addSubview:self.button];
-}
-
--(void)initFooterText
-{
-    self.footerText = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"text"]];
-    [self addSubview:self.footerText];
 }
 
 -(void)initShadow
@@ -124,10 +124,8 @@ static const int kFooterTextBottomPadding = 20;
     CGFloat navBarHeight = [self getNavBarHeight];
     self.navBar.frame = CGRectMake(0, 0, self.bounds.size.width, navBarHeight);
     
-    // Scale the image to fit the width of the screen, but keep the aspect ratio
-    float scale = self.frame.size.width / self.background.frame.size.width;
-    int newHeight = ceil(self.background.frame.size.height * scale);
-    self.background.frame = CGRectMake(0, navBarHeight, self.frame.size.width, newHeight);
+    // Resize the gradient to fit the screensize when switching between landscape/portrait
+    self.background.frame = self.frame;
     
     self.subtitleLabel.frame = CGRectMake(0, 0, MIN(self.bounds.size.width - 50, 320), 500);
     [self.subtitleLabel sizeToFit];
@@ -136,15 +134,16 @@ static const int kFooterTextBottomPadding = 20;
     [self.titleLabel sizeToFit];
     self.titleLabel.center = CGPointMake(self.subtitleLabel.center.x, self.subtitleLabel.frame.origin.y - 5 - floor(self.titleLabel.frame.size.height / 2));
     
-    self.logo.frame = CGRectMake(0, self.titleLabel.frame.origin.y - self.logo.frame.size.height - kLogoBottomPadding, self.logo.frame.size.width, self.logo.frame.size.height);
+    // Switch to a smaller logo when the phone is in landscape mode
+    if ([self isLayoutPhoneInLandscape]) {
+        self.logo.frame = CGRectMake(0, self.titleLabel.frame.origin.y - self.logo.frame.size.height/2 - kLogoBottomPadding, self.logo.image.size.width/2, self.logo.image.size.height/2);
+    } else {
+        self.logo.frame = CGRectMake(0, self.titleLabel.frame.origin.y - self.logo.frame.size.height - kLogoBottomPadding, self.logo.image.size.width, self.logo.image.size.height);
+    }
     self.logo.center = CGPointMake(self.titleLabel.center.x, self.logo.center.y);
     
     self.button.frame = CGRectMake(0,CGRectGetMaxY(self.subtitleLabel.frame) + 10, 200, 46);
     self.button.center = CGPointMake(floor(CGRectGetMidX(self.bounds)), self.button.center.y);
-    
-    self.footerText.hidden = [self isLayoutPhoneInLandscape];
-    self.footerText.frame = CGRectMake(0, CGRectGetMaxY(self.frame) - self.footerText.frame.size.height - kFooterTextBottomPadding, self.footerText.frame.size.width, self.footerText.frame.size.height);
-    self.footerText.center = CGPointMake(floor(CGRectGetMidX(self.bounds)), self.footerText.center.y);
 }
 
 -(CGFloat)getNavBarHeight
@@ -170,6 +169,14 @@ static const int kFooterTextBottomPadding = 20;
 -(BOOL)isLayoutPhoneInLandscape
 {
     return UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone;
+}
+
+-(UIColor*)textColor {
+    return [UIColor colorWithRed:38.0/255 green:38.0/255 blue:38.0/255 alpha:1.0];
+}
+
+-(UIColor*)buttonColor {
+    return [UIColor colorWithRed:145.0/255 green:45.0/255 blue:141.0/255 alpha:1.0];
 }
 
 @end
