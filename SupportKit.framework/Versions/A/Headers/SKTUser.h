@@ -17,13 +17,13 @@
 /**
  *  @abstract Adds custom properties to the user. This info is used to provide more context around who a user is.
  *
- *  @discussion Keys must be of type NSString, and values must be of type NSString or NSNumber; any other type will be converted to NSString using the -description method.
+ *  @discussion Keys must be of type NSString, and values must be of type NSString, NSNumber, or NSDate; any other type will be converted to NSString using the -description method.
  *  
  *  Example:
  *
  *      [user addProperties:@{ @"nickname" : @"Lil' Big Daddy Slim",  @"weight" : @650, @"premiumUser" : @YES }];
  *
- *  Changes to user properties will be uploaded each time the user sends a message, and will be displayed in the email you receive.
+ *  Changes to user properties are uploaded in batches every 60 seconds, or when the app is sent to the background.
  *
  *  This API is additive, and subsequent calls will override values for the provided keys.
  *
@@ -45,5 +45,10 @@
  *  @abstract The user's email, to be used to display a gravatar.
  */
 @property(copy) NSString* email;
+
+/**
+ *  @abstract The date the user started using your service. This can be used to create Whispers for user onboarding.
+ */
+@property(copy) NSDate* signedUpAt;
 
 @end
