@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>ED510FBB-33BF-40CF-92E6-CCAC288AA198</string>
+	<string>79AB503E-04D2-46B3-9972-220801914255</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DemoApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>60DD32EAF42B75918A9C32A28D4ED2826020C075</key>
-		<string>ssh://git.rp.corp:7999/sk/supportkit-ios.git</string>
+		<string>http://git.rp.corp/scm/csa/help-center-sdk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DemoApp/DemoApp.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://git.rp.corp:7999/sk/supportkit-ios.git</string>
+	<string>http://git.rp.corp/scm/csa/help-center-sdk.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>60DD32EAF42B75918A9C32A28D4ED2826020C075</string>
 			<key>IDESourceControlWCCName</key>
-			<string>supportkit-ios</string>
+			<string>help-center-sdk</string>
 		</dict>
 	</array>
 </dict>
