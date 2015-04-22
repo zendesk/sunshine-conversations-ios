@@ -1,9 +1,9 @@
 //
 //  SupportKit.h
 //  SupportKit
-//  version : 2.6.3
+//  version : 2.7.0
 //
-//  Copyright (c) 2014 Radialpoint. All rights reserved.
+//  Copyright (c) 2015 Radialpoint. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SUPPORTKIT_VERSION @"2.6.3"
+#define SUPPORTKIT_VERSION @"2.7.0"
 
 @interface SupportKit : NSObject
 
@@ -53,11 +53,20 @@
 /**
  *  @abstract Presents the SupportKit Conversation page
  *
- *  @discussion Uses the top-most view controller of the application's main window as presenting view controller.
+ *  @discussion Uses the top-most view controller of the application's main window as presenting view controller. For more fine-grained control over the presenting view controller, use +showConversationFromViewController: instead.
  *
  *  +initWithSettings: must have been called prior to calling showConversation.
  */
 +(void)showConversation;
+
+/**
+ *  @abstract Presents the SupportKit conversation page, using the given view controller as presenting view controller.
+ *
+ *  @discussion In most cases, it is better to use +showConversation. If you need more fine-grained control over which view controller is used as presenting view controller, use this method instead.
+ *
+ *  +initWithSettings: must have been called prior to calling +showConversationFromViewController:.
+ */
++(void)showConversationFromViewController:(UIViewController*)viewController;
 
 /**
  *  @abstract Displays the SupportKit gesture hint.

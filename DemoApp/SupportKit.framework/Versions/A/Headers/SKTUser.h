@@ -2,7 +2,7 @@
 //  SKTUser.h
 //  SupportKit
 //
-//  Copyright (c) 2014 Radialpoint. All rights reserved.
+//  Copyright (c) 2015 Radialpoint. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -21,7 +21,7 @@
  *  
  *  Example:
  *
- *      [user addProperties:@{ @"nickname" : @"Lil' Big Daddy Slim",  @"weight" : @650, @"premiumUser" : @YES }];
+ *  `[user addProperties:@{ @"nickname" : @"Lil' Big Daddy Slim",  @"weight" : @650, @"premiumUser" : @YES }];`
  *
  *  Changes to user properties are uploaded in batches every 60 seconds, or when the app is sent to the background.
  *

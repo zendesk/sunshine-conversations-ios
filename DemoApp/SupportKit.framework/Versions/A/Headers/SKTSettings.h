@@ -2,7 +2,7 @@
 //  SKTSettings.h
 //  SupportKit
 //
-//  Copyright (c) 2014 Radialpoint. All rights reserved.
+//  Copyright (c) 2015 Radialpoint. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
