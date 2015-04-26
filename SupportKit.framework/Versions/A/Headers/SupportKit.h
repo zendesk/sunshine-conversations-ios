@@ -1,7 +1,7 @@
 //
 //  SupportKit.h
 //  SupportKit
-//  version : 2.7.0
+//  version : 2.7.1
 //
 //  Copyright (c) 2015 Radialpoint. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SUPPORTKIT_VERSION @"2.7.0"
+#define SUPPORTKIT_VERSION @"2.7.1"
 
 @interface SupportKit : NSObject
 
