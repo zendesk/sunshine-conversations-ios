@@ -85,4 +85,13 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
  */
 @property(readonly) SKTMessageUploadStatus uploadStatus;
 
+/**
+ *  @abstract An array of SKTMessageAction objects representing the actions associated with this message (if any)
+ *
+ *  @discussion This array may be nil or empty, so check the length of the array to know if a message has actions or not.
+ *
+ *  @see SKTMessageAction
+ */
+@property(readonly) NSArray* actions;
+
 @end

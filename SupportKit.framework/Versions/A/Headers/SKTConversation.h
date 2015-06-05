@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SKTMessage.h"
+#import "SKTMessageAction.h"
 @protocol SKTConversationDelegate;
 
 /**
