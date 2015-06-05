@@ -1,7 +1,7 @@
 //
 //  SupportKit.h
 //  SupportKit
-//  version : 2.7.2
+//  version : 2.8.0
 //
 //  Copyright (c) 2015 Radialpoint. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SUPPORTKIT_VERSION @"2.7.2"
+#define SUPPORTKIT_VERSION @"2.8.0"
 
 @interface SupportKit : NSObject
 
@@ -67,6 +67,15 @@
  *  +initWithSettings: must have been called prior to calling +showConversationFromViewController:.
  */
 +(void)showConversationFromViewController:(UIViewController*)viewController;
+
+/**
+ *  @abstract Creates and returns a SupportKit conversation view controller.
+ *
+ *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose.
+ *
+ *  @return A new instance of the SupportKit conversation view controller class.
+ */
++(UIViewController*)newConversationViewController;
 
 /**
  *  @abstract Displays the SupportKit gesture hint.
