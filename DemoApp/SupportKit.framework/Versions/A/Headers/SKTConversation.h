@@ -10,6 +10,9 @@
 #import "SKTMessageAction.h"
 @protocol SKTConversationDelegate;
 
+typedef void (^SKTImageUploadProgressBlock)(double progress);
+typedef void (^SKTImageUploadCompletionBlock)(NSError *error, SKTMessage *message);
+
 /**
  *  @discussion Represents various actions the user takes when interacting with SupportKit UI components.
  */
@@ -124,6 +127,23 @@ extern NSString* const SKTConversationNewMessagesKey;
  *  @see SKTMessageUploadCompletedNotification
  */
 -(void)sendMessage:(SKTMessage*)message;
+
+/**
+ *  @abstract Adds an image message to the conversation.
+ *
+ *  @discussion Use the progress block to track the progress of the upload. Progress is reported as a number between 0 and 1.
+ *
+ *  The completion block is called when the operation completes, either in success or failure. Both blocks are guaranteed to be called on the main thread.
+ *
+ *  In case of success, the error parameter will be nil, and the message parameter will contain the newly created message. The message will already be part of the messages array when this block is called.
+ *
+ *  In case of failure, the message parameter will be nil, and the error parameter will contain the error that occurred.
+ *
+ *  @param image The image to upload. Must not be nil.
+ *  @param progressBlock Called to report progress updates. May be nil.
+ *  @param completionBlock Called when the upload completes or fails. May be nil.
+ */
+-(void)sendImage:(UIImage *)image withProgress:(SKTImageUploadProgressBlock)progressBlock completion:(SKTImageUploadCompletionBlock)completionBlock;
 
 /**
  *  @abstract Retries a message that failed to send.

@@ -5,7 +5,7 @@
 //  Copyright (c) 2015 Radialpoint. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**
  *  @abstract Notification that is fired when a message fails to upload.
@@ -93,5 +93,10 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
  *  @see SKTMessageAction
  */
 @property(readonly) NSArray* actions;
+
+/**
+ *  @abstract The url to the image asset, if applicable. Returns nil if the message is not an image message.
+ */
+@property(readonly) NSString* mediaUrl;
 
 @end
