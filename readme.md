@@ -7,7 +7,7 @@
 # tl;dr
 
 
-Sign up and get an app token: [From this link](https://app.supportkit.io/signup).
+Sign up and get an app token: [https://app.supportkit.io/signup](https://app.supportkit.io/signup).
 
 CocoaPods:
 
