@@ -108,4 +108,18 @@ typedef NS_ENUM(NSUInteger, SKTSearchResultsFilterMode) {
  */
 @property UIStatusBarStyle conversationStatusBarStyle;
 
+/**
+ *  @abstract The distinct id of the current user, if known.
+ *
+ *  @discussion The default value is nil.
+ */
+@property NSString* userId;
+
+/**
+ *  @abstract Optional jwt used to prove the origin of the login request.
+ *
+ *  @discussion Used only if userId is not nil. The default value is nil.
+ */
+@property NSString* jwt;
+
 @end
