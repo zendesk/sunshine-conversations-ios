@@ -1,7 +1,7 @@
 //
 //  SupportKit.h
 //  SupportKit
-//  version : 2.9.0
+//  version : 2.10.0
 //
 //  Copyright (c) 2015 Radialpoint. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SUPPORTKIT_VERSION @"2.9.0"
+#define SUPPORTKIT_VERSION @"2.10.0"
 
 @interface SupportKit : NSObject
 
@@ -144,5 +144,30 @@
  *  @return Current conversation, or nil if +initWithSettings: hasn't been called yet.
  */
 +(SKTConversation*)conversation;
+
+/**
+ *  @abstract Logs in a new SupportKit user.
+ *
+ *  @discussion You can either use this method to transition from logged out state to logged in, or to switch the currently logged in user to a different one.
+ *
+ *  +initWithSettings: must have been called prior to calling login.
+ *
+*  You may not call login while the conversation screen is shown. Doing so will result in a no-op.
+ *
+ *  @param userId The distinct id of the user to login. Must not be nil.
+ *  @param jwt Optional jwt used to prove the origin of the login request. May be nil.
+ */
++(void)login:(NSString*)userId jwt:(NSString*)jwt;
+
+/**
+ *  @abstract Logs out the current user.
+ *
+ *  @discussion This method will automatically login an anonymous user after logging out the current user.
+ *
+ *  Calling this method while already in anonymous state has no effect.
+ *
+ *  You may not call logout while the conversation screen is shown. Doing so will result in a no-op.
+ */
++(void)logout;
 
 @end
