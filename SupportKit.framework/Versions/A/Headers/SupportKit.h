@@ -1,7 +1,7 @@
 //
 //  SupportKit.h
 //  SupportKit
-//  version : 2.10.3
+//  version : 2.11.0
 //
 //  Copyright (c) 2015 Radialpoint. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SUPPORTKIT_VERSION @"2.10.3"
+#define SUPPORTKIT_VERSION @"2.11.0"
 
 @interface SupportKit : NSObject
 
@@ -46,16 +46,25 @@
  *
  *  @discussion Calling this method with search disabled and no recommendations configured is equivalent to calling +showConversation.
  *
- *  +initWithSettings: must have been called prior to calling show.
+ *  +initWithSettings: must have been called prior to calling this method.
  */
 +(void)show;
+
+/**
+ *  @abstract Dismisses any SupportKit UI currently on screen.
+ *
+ *  @discussion Note: If a view controller was created and presented using `newConversationViewController`, calling this method will have no effect.
+ *
+ *  +initWithSettings: must have been called prior to calling this method.
+ */
++(void)close;
 
 /**
  *  @abstract Presents the SupportKit Conversation page
  *
  *  @discussion Uses the top-most view controller of the application's main window as presenting view controller. For more fine-grained control over the presenting view controller, use +showConversationFromViewController: instead.
  *
- *  +initWithSettings: must have been called prior to calling showConversation.
+ *  +initWithSettings: must have been called prior to calling this method.
  */
 +(void)showConversation;
 
@@ -64,7 +73,7 @@
  *
  *  @discussion In most cases, it is better to use +showConversation. If you need more fine-grained control over which view controller is used as presenting view controller, use this method instead.
  *
- *  +initWithSettings: must have been called prior to calling +showConversationFromViewController:.
+ *  +initWithSettings: must have been called prior to calling this method.
  */
 +(void)showConversationFromViewController:(UIViewController*)viewController;
 
@@ -72,6 +81,8 @@
  *  @abstract Creates and returns a SupportKit conversation view controller.
  *
  *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose.
+ *
+ *  Note: It is the responsibility of the caller to show, hide, and maintain a reference to this view controller. Calling `close` will not dismiss a view controller created in this way.
  *
  *  @return A new instance of the SupportKit conversation view controller class.
  */
@@ -82,7 +93,7 @@
  *
  *  @discussion Upon completing (or skipping) the hint, the user will land on the SupportKit Home screen (equivalent to calling +show)
  *
- *  +initWithSettings: must have been called prior to calling showWithGestureHint.
+ *  +initWithSettings: must have been called prior to calling this method.
  */
 +(void)showWithGestureHint;
 
@@ -150,7 +161,7 @@
  *
  *  @discussion You can either use this method to transition from logged out state to logged in, or to switch the currently logged in user to a different one.
  *
- *  +initWithSettings: must have been called prior to calling login.
+ *  +initWithSettings: must have been called prior to calling this method.
  *
 *  You may not call login while the conversation screen is shown. Doing so will result in a no-op.
  *
