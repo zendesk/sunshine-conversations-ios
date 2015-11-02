@@ -10,15 +10,13 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using SKMiniJSON;
 
-namespace SupportKitiOS
+namespace SmoochiOS
 {
-	public class SupportKit
+	public class Smooch
 	{
 
 		[DllImport ("__Internal")]
 		private static extern void sktInit(string appToken, string settingsDictionaryString);
-		[DllImport ("__Internal")]
-		private static extern void sktShowConversation ();
 		[DllImport ("__Internal")]
 		private static extern void sktTrack(string eventName);
 		[DllImport ("__Internal")]
@@ -30,7 +28,7 @@ namespace SupportKitiOS
 		[DllImport ("__Internal")]
 		private static extern void sktAddProperties(string propertyDictionaryString);
 
-		public SupportKit () {
+		public Smooch () {
 		}
 
 		public void init (string appToken, Dictionary<string, object> settings) {
@@ -39,10 +37,6 @@ namespace SupportKitiOS
 			} else {
 				sktInit (appToken, Json.Serialize(settings));
 			}
-		}
-
-		public void showConversation() {
-			sktShowConversation();
 		}
 
 		public void track (string eventName) {

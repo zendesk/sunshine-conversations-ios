@@ -5,45 +5,43 @@ from mod_pbxproj import XcodeProject
 import shutil
 
 """
-Script to automatically add SupportKit to an XCode project
+Script to automatically add Smooch to an XCode project
 
 To run this script:
    $ python PostprocessBuildPlayer
 
 """
 XCODE_PROJECT_PATH = sys.argv[1] + '/Unity-iPhone.xcodeproj/'
-SUPPORTKIT_SDK_PATH = 'FULL_PATH_TO_SUPPORTKIT_GOES_HERE'
+SMOOCH_SDK_PATH = 'FULL_PATH_TO_SMOOCH_GOES_HERE'
 
-print("Adding SupportKit...");
+print("Adding Smooch...");
 
 print("XCODE_PROJECT_PATH - " + XCODE_PROJECT_PATH)
-print("SUPPORTKIT_SDK_PATH - " + SUPPORTKIT_SDK_PATH)
+print("SMOOCH_SDK_PATH - " + SMOOCH_SDK_PATH)
 
 project = XcodeProject.Load(XCODE_PROJECT_PATH +'/project.pbxproj')
 
 print('Step 1: Adding Dependency Libraries')
-shutil.copytree(SUPPORTKIT_SDK_PATH + 'SupportKit.framework', XCODE_PROJECT_PATH + '/../Libraries/SupportKit.framework')
+shutil.copytree(SMOOCH_SDK_PATH + 'Smooch.framework', XCODE_PROJECT_PATH + '/../Libraries/Smooch.framework')
 framework_group = project.get_or_create_group('Frameworks')
 project.add_file_if_doesnt_exist('System/Library/Frameworks/CoreGraphics.framework', tree='SDKROOT', parent=framework_group)
 project.add_file_if_doesnt_exist('System/Library/Frameworks/CoreTelephony.framework', tree='SDKROOT', parent=framework_group)
 project.add_file_if_doesnt_exist('System/Library/Frameworks/CoreText.framework', tree='SDKROOT', parent=framework_group)
 project.add_file_if_doesnt_exist('System/Library/Frameworks/Foundation.framework', tree='SDKROOT', parent=framework_group)
-project.add_file_if_doesnt_exist('System/Library/Frameworks/OpenGLES.framework', tree='SDKROOT', parent=framework_group)
 project.add_file_if_doesnt_exist('System/Library/Frameworks/QuartzCore.framework', tree='SDKROOT', parent=framework_group)
 project.add_file_if_doesnt_exist('System/Library/Frameworks/SystemConfiguration.framework', tree='SDKROOT', parent=framework_group)
 project.add_file_if_doesnt_exist('System/Library/Frameworks/UIKit.framework', tree='SDKROOT', parent=framework_group)
-project.add_file_if_doesnt_exist('usr/lib/libxml2.dylib', tree='SDKROOT', parent=framework_group)
 
-print('Step 2: Doing the SupportKit magic to your XCode project')
-remove_group = project.get_groups_by_name('SupportKit')
+print('Step 2: Doing the Smooch magic to your XCode project')
+remove_group = project.get_groups_by_name('Smooch')
 if remove_group and remove_group.count > 0:
     project.remove_file(remove_group[0])
-sk_group = project.get_or_create_group('SupportKit')
-project.add_file(XCODE_PROJECT_PATH + '/../Libraries/SupportKit.framework', parent=sk_group)
-project.add_file(SUPPORTKIT_SDK_PATH + '/SupportKit.bundle', parent=sk_group)
+sk_group = project.get_or_create_group('Smooch')
+project.add_file(XCODE_PROJECT_PATH + '/../Libraries/Smooch.framework', parent=sk_group)
+project.add_file(SMOOCH_SDK_PATH + '/Smooch.bundle', parent=sk_group)
 
 if project.modified:
     project.backup()
     project.save()
 
-print("Finished adding SupportKit");
+print("Finished adding Smooch");

@@ -1,24 +1,26 @@
-# [SupportKit](http://www.supportkit.io)
+# [Smooch](http://www.smooch.io)
 
-[![Pod Version](http://img.shields.io/cocoapods/v/SupportKit.svg)](http://cocoadocs.org/docsets/SupportKit/)
-[![Platform](http://img.shields.io/cocoapods/p/SupportKit.svg)](http://cocoadocs.org/docsets/SupportKit/)
-[![License](http://img.shields.io/cocoapods/l/SupportKit.svg)](http://supportkit.io/terms.html)
+[![Pod Version](http://img.shields.io/cocoapods/v/Smooch.svg)](http://cocoadocs.org/docsets/Smooch/)
+[![Platform](http://img.shields.io/cocoapods/p/Smooch.svg)](http://cocoadocs.org/docsets/Smooch/)
+[![License](http://img.shields.io/cocoapods/l/Smooch.svg)](http://smooch.io/terms.html)
 
-Sign up and get an app token: [https://app.supportkit.io/signup](https://app.supportkit.io/signup).
+Sign up and get an app token: [https://app.smooch.io/signup](https://app.smooch.io/signup).
 
 CocoaPods:
 
-    pod 'SupportKit'
+    pod 'Smooch'
     pod update
     
 Obj-C:
     
-    [SupportKit initWithSettings:[SKTSettings settingsWithAppToken:@"YOURAPPTOKEN"]];
-    [SupportKit show];
+    [Smooch initWithSettings:[SKTSettings settingsWithAppToken:@"YOURAPPTOKEN"]];
+    [Smooch show];
     
 Swift:
 
-    SupportKit.initWithSettings("YOURAPPTOKEN")
-    SupportKit.show()
+    Smooch.initWithSettings("YOURAPPTOKEN")
+    Smooch.show()
 
-Our [Docs and full install guide](http://docs.supportkit.io).
+Our [Docs and full install guide](http://docs.smooch.io).
+
+Also, check out [Smooch Help Kit](https://github.com/smooch/smooch-helpkit-ios) for even more features!
