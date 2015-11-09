@@ -19,7 +19,9 @@
 /**
  *  @abstract The app token corresponding to your application.
  *
- *  @discussion App tokens are issued on the Smooch web portal. This value may only be set once, and must be set at init time.
+ *  @discussion App tokens are issued on the Smooch web portal. 
+ *
+ *  This value may only be set once, and must be set at init time.
  */
 @property(nonatomic, copy) NSString* appToken;
 
@@ -30,7 +32,7 @@
  *
  *  The default value is #00B0FF.
  */
-@property UIColor* conversationAccentColor;
+@property(nonatomic, strong) UIColor* conversationAccentColor;
 
 /**
  *  @abstract The status bar style to use on the conversation screen.
@@ -45,15 +47,23 @@
  *  @abstract The distinct id of the current user, if known.
  *
  *  @discussion The default value is nil.
+ *
+ *  This value may only be set once, and must be set at init time. To change at runtime, use Smooch.login instead.
+ *
+ *  @see Smooch
  */
-@property NSString* userId;
+@property(nonatomic, copy) NSString* userId;
 
 /**
  *  @abstract Optional jwt used to prove the origin of the login request.
  *
- *  @discussion Used only if userId is not nil. The default value is nil.
+ *  @discussion Used only if userId is not nil. The default value is nil. 
+ *
+ *  This value may only be set once, and must be set at init time. To change at runtime, use Smooch.login instead.
+ *
+ *  @see Smooch
  */
-@property NSString* jwt;
+@property(nonatomic, copy) NSString* jwt;
 
 /**
  *  @abstract Maximum number of seconds to display in-app notifications before dismissing.
