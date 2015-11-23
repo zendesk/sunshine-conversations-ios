@@ -20,6 +20,9 @@
 /* Error message shown in conversation view */
 "Could not connect to server" = "Impossible de se connecter au serveur";
 
+/* Error message shown in conversation view */
+"Reconnecting..." = "Impossible de se connecter au serveur";
+
 /* Fallback used by the in app notification when no message author name is found */
 "%@ Team" = "Équipe de %@";
 

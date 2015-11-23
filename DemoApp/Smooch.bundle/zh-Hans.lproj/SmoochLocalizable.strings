@@ -1,0 +1,90 @@
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
+
+/* Nav bar right button, action sheet cancel button */
+"Cancel" = "取消";
+
+/* Conversation title */
+"Messages" = "消息";
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "这是你和%@团队对话的开头。我们会与你保持联系来帮助你充分利用你的应用程序。\n如果你有任何的意见想法请给我们留言，我们会尽快反馈你的疑问，建议或其他任何事。";
+
+/* Error message shown in conversation view */
+"No Internet connection" = "无网络连接";
+
+/* Error message shown in conversation view */
+"Could not connect to server" = "无法连接到服务器";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "无法连接到服务器";
+
+/* Fallback used by the in app notification when no message author name is found */
+"%@ Team" = "%@团队";
+
+/* Conversation send button */
+"Send" = "发送";
+
+/* Conversation text input place holder */
+"Type a message..." = "输入信息······";
+
+/* Conversation nav bar left button */
+"Done" = "完成";
+
+/* Failure text for chat messages that fail to upload */
+"Message not delivered. Tap to retry." = "信息无法送达。请点击重试。";
+
+/* Status text for chat messages */
+"Sending..." = "发送······";
+
+/* Action sheet button label */
+"Take Photo" = "拍照片";
+
+/* Action sheet button label */
+"Use Last Photo Taken" = "使用上一张拍摄的照片";
+
+/* Action sheet button label */
+"Choose from Library" = "从库中选择";
+
+/* Action sheet button label */
+"Resend" = "重发";
+
+/* Action sheet button label */
+"View Image" = "查看照片";
+
+/* Error displayed in message bubble if image failed to download */
+"Tap to reload image" = "点击重新加载图片";
+
+/* Error title when user selects "use latest photo", but no photos exist */
+"No Photos Found" = "没有发现照片";
+
+/* Error description when user selects "use latest photo", but no photos exist */
+"Your photo library seems to be empty." = "你的照片库似乎是空的";
+
+/* Error title when user attempts to upload a photo but Photos access is denied */
+"Can't Access Photos" = "无法访问照片";
+
+/* Error description when user attempts to upload a photo but Photos access is denied */
+"Make sure to allow photos access for this app in your privacy settings." = "请确保在隐私设置里允许此应用访问照片";
+
+/* Error title when user attempts to take a photo but camera access is denied */
+"Can't Access Camera" = "无法访问相机";
+
+/* Error description when user attempts to take a photo but camera access is denied */
+"Make sure to allow camera access for this app in your privacy settings." = "请确保在隐私设置里允许此应用访问相机";
+
+/* Generic error title when user attempts to upload an image and it fails for an unknown reason */
+"Can't Retrieve Photo" = "无法恢复照片";
+
+/* Generic error description when user attempts to upload an image and it fails for an unknown reason */
+"Please try again or select a new photo." = "请重试或选择一张新的照片";
+
+/* UIAlertView button title to link to Settings app */
+"Settings" = "设置";
+
+/* UIAlertView button title to dismiss */
+"Dismiss" = "忽略";

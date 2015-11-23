@@ -10,6 +10,7 @@
 		270EE2E61B43091400218B06 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270EE2E51B43091400218B06 /* AssetsLibrary.framework */; };
 		270EE2E81B43091A00218B06 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270EE2E71B43091A00218B06 /* Photos.framework */; };
 		2777DBEC1B4AD03000AB9E6D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348718F59E1A0065C6B4 /* AVFoundation.framework */; };
+		27E9A8F71BF3D1B400CA6BFF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E9A8F61BF3D1B400CA6BFF /* CFNetwork.framework */; };
 		81B085A41A8025A20040E15D /* launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B085A61A8025A20040E15D /* launch.xib */; };
 		DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B627E1857AA300062B17F /* Foundation.framework */; };
 		DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62801857AA300062B17F /* CoreGraphics.framework */; };
@@ -20,13 +21,11 @@
 		DC0B62C61857B0BA0062B17F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0B62C51857B0BA0062B17F /* MainViewController.m */; };
 		DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62CD1857B2950062B17F /* CoreTelephony.framework */; };
 		DC0B62D01857B2990062B17F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */; };
-		DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D11857B29D0062B17F /* libxml2.dylib */; };
 		DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62D51857B2A50062B17F /* CoreText.framework */; };
 		DC25348A18F59EAA0065C6B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348918F59EAA0065C6B4 /* QuartzCore.framework */; };
 		DC31EC7518634A5900FFAFC2 /* MainContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC31EC7418634A5900FFAFC2 /* MainContentView.m */; };
 		DC80A390188EDBD800B6BF9F /* Smooch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DC80A38E188EDBD800B6BF9F /* Smooch.bundle */; };
 		DC80A391188EDBD800B6BF9F /* Smooch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC80A38F188EDBD800B6BF9F /* Smooch.framework */; };
-		DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */; };
 		DCEF37A818C0DD7800B5DD25 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCEF37A418C0DD7800B5DD25 /* logo@2x.png */; };
 		DCEF37AF18C0E60200B5DD25 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF37AE18C0E60200B5DD25 /* RoundedButton.m */; };
 /* End PBXBuildFile section */
@@ -34,7 +33,7 @@
 /* Begin PBXFileReference section */
 		270EE2E51B43091400218B06 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		270EE2E71B43091A00218B06 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		27B7D7EB195C8D9A00A7E55A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		27E9A8F61BF3D1B400CA6BFF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		81B085A51A8025A20040E15D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/launch.xib; sourceTree = "<group>"; };
 		DC0B627B1857AA300062B17F /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0B627E1857AA300062B17F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,7 +49,6 @@
 		DC0B62C51857B0BA0062B17F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		DC0B62CD1857B2950062B17F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		DC0B62D11857B29D0062B17F /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		DC0B62D51857B2A50062B17F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DC25348718F59E1A0065C6B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DC25348918F59EAA0065C6B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -58,7 +56,6 @@
 		DC31EC7418634A5900FFAFC2 /* MainContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContentView.m; sourceTree = "<group>"; };
 		DC80A38E188EDBD800B6BF9F /* Smooch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Smooch.bundle; sourceTree = "<group>"; };
 		DC80A38F188EDBD800B6BF9F /* Smooch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Smooch.framework; sourceTree = "<group>"; };
-		DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		DCEF37A418C0DD7800B5DD25 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		DCEF37AD18C0E60200B5DD25 /* RoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedButton.h; sourceTree = "<group>"; };
 		DCEF37AE18C0E60200B5DD25 /* RoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
@@ -69,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E9A8F71BF3D1B400CA6BFF /* CFNetwork.framework in Frameworks */,
 				2777DBEC1B4AD03000AB9E6D /* AVFoundation.framework in Frameworks */,
 				270EE2E81B43091A00218B06 /* Photos.framework in Frameworks */,
 				270EE2E61B43091400218B06 /* AssetsLibrary.framework in Frameworks */,
@@ -76,8 +74,6 @@
 				DC0B62CE1857B2950062B17F /* CoreTelephony.framework in Frameworks */,
 				DC0B62D61857B2A50062B17F /* CoreText.framework in Frameworks */,
 				DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */,
-				DC0B62D21857B29D0062B17F /* libxml2.dylib in Frameworks */,
-				DCEABA7418C7B3C300014CA4 /* OpenGLES.framework in Frameworks */,
 				DC25348A18F59EAA0065C6B4 /* QuartzCore.framework in Frameworks */,
 				DC80A391188EDBD800B6BF9F /* Smooch.framework in Frameworks */,
 				DC0B62D01857B2990062B17F /* SystemConfiguration.framework in Frameworks */,
@@ -109,20 +105,18 @@
 		DC0B627D1857AA300062B17F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				270EE2E71B43091A00218B06 /* Photos.framework */,
-				270EE2E51B43091400218B06 /* AssetsLibrary.framework */,
 				DC80A38E188EDBD800B6BF9F /* Smooch.bundle */,
 				DC80A38F188EDBD800B6BF9F /* Smooch.framework */,
-				27B7D7EB195C8D9A00A7E55A /* CoreVideo.framework */,
-				DC25348918F59EAA0065C6B4 /* QuartzCore.framework */,
+				270EE2E51B43091400218B06 /* AssetsLibrary.framework */,
 				DC25348718F59E1A0065C6B4 /* AVFoundation.framework */,
-				DCEABA7318C7B3C300014CA4 /* OpenGLES.framework */,
-				DC0B62D51857B2A50062B17F /* CoreText.framework */,
-				DC0B62D11857B29D0062B17F /* libxml2.dylib */,
-				DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */,
-				DC0B62CD1857B2950062B17F /* CoreTelephony.framework */,
-				DC0B627E1857AA300062B17F /* Foundation.framework */,
+				27E9A8F61BF3D1B400CA6BFF /* CFNetwork.framework */,
 				DC0B62801857AA300062B17F /* CoreGraphics.framework */,
+				DC0B62CD1857B2950062B17F /* CoreTelephony.framework */,
+				DC0B62D51857B2A50062B17F /* CoreText.framework */,
+				DC0B627E1857AA300062B17F /* Foundation.framework */,
+				270EE2E71B43091A00218B06 /* Photos.framework */,
+				DC25348918F59EAA0065C6B4 /* QuartzCore.framework */,
+				DC0B62CF1857B2990062B17F /* SystemConfiguration.framework */,
 				DC0B62821857AA300062B17F /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -286,6 +280,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-licucore";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -317,6 +312,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-licucore";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

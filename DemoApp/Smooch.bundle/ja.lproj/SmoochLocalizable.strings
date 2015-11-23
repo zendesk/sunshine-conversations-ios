@@ -20,6 +20,9 @@
 /* Error message shown in conversation view */
 "Could not connect to server" = "サーバーに接続できませんでした";
 
+/* Error message shown in conversation view */
+"Reconnecting..." = "サーバーに接続できませんでした";
+
 /* Fallback used by the in app notification when no message author name is found */
 "%@ Team" = "%@ チーム";
 

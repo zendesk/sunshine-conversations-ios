@@ -1,0 +1,90 @@
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
+
+/* Nav bar right button, action sheet cancel button */
+"Cancel" = "Cancelar";
+
+/* Conversation title */
+"Messages" = "Mensagens";
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "Isto é o começo da sua conversa com a equipa %@. Vamos ficar em contacto, para o ajudar a aproveitar ao máximo a sua aplicação.\nNão hesite em deixar-nos uma mensagem sobre o que quer que seja que lhe passe pela cabeça. Daremos resposta, o mais rapidamente possível, às suas perguntas, sugestões, ou a qualquer outra coisa que tenha em mente ";
+
+/* Error message shown in conversation view */
+"No Internet connection" = "Sem ligação à Internet";
+
+/* Error message shown in conversation view */
+"Could not connect to server" = "não foi possível ligar ao servidor";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "não foi possível ligar ao servidor";
+
+/* Fallback used by the in app notification when no message author name is found */
+"%@ Team" = "Equipa%@";
+
+/* Conversation send button */
+"Send" = "Enviar";
+
+/* Conversation text input place holder */
+"Type a message..." = "Digite uma mensagem...";
+
+/* Conversation nav bar left button */
+"Done" = "Concluído";
+
+/* Failure text for chat messages that fail to upload */
+"Message not delivered. Tap to retry." = "A mensagem não foi entregue. Toque para tentar novamente.";
+
+/* Status text for chat messages */
+"Sending..." = "A enviar...";
+
+/* Action sheet button label */
+"Take Photo" = "Tire uma Fotografia";
+
+/* Action sheet button label */
+"Use Last Photo Taken" = "Utilize a Última Fotografia que Tirou";
+
+/* Action sheet button label */
+"Choose from Library" = "Seleccione a partir da Biblioteca";
+
+/* Action sheet button label */
+"Resend" = "Reenviar";
+
+/* Action sheet button label */
+"View Image" = "Ver Imagem";
+
+/* Error displayed in message bubble if image failed to download */
+"Tap to reload image" = "Toque para recarregar a Imagem ";
+
+/* Error title when user selects ""use latest photo, but no photos exist */
+"No Photos Found" = "Não foram encontradas fotografias";
+
+/* Error description when user selects "use latest photo", but no photos exist */
+"Your photo library seems to be empty." = "Aparentemente, a sua biblioteca de fotografias está vazia.";
+
+/* Error title when user attempts to upload a photo but Photos access is denied */
+"Can't Access Photos" = "Não Consigo Acededer às Fotografias";
+
+/* Error description when user attempts to upload a photo but Photos access is denied */
+"Make sure to allow photos access for this app in your privacy settings." = "Certifique-se de que, nas suas definições de privacidade, permitiu o acesso desta aplicação às suas fotografias. ";
+
+/* Error title when user attempts to take a photo but camera access is denied */
+"Can't Access Camera" = "Não Consigo Ter Acesso à Câmara";
+
+/* Error description when user attempts to take a photo but camera access is denied */
+"Make sure to allow camera access for this app in your privacy settings." = "Certifique-se de que, nas suas definições de privacidade, permitiu, para esta aplicação o acesso à câmara.";
+
+/* Generic error title when user attempts to upload an image and it fails for an unknown reason */
+"Can't Retrieve Photo" = "Não Consigo Recuperar a Fotografia";
+
+/* Generic error description when user attempts to upload an image and it fails for an unknown reason */
+"Please try again or select a new photo." = "Por favor, tente novamente, ou seleccione outra fotografia.";
+
+/* UIAlertView button title to link to Settings app */
+"Settings" = "Definições";
+
+/* UIAlertView button title to dismiss */
+"Dismiss" = "Rejeitar";

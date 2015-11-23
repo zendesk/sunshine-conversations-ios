@@ -1,0 +1,90 @@
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
+
+/* Nav bar right button, action sheet cancel button */
+"Cancel" = "Отменить";
+
+/* Conversation title */
+"Messages" = "Сообщения";
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "Это начало вашего разговора с командой %@. Мы остаемся на связи, чтобы помочь вам получить максимум пользы от вашего приложения.\nНе стесняйтесь делиться с нами любыми своими мыслями. Мы в самое ближайшее время рассмотрим все ваши вопросы, предложения и т.д.";
+
+/* Error message shown in conversation view */
+"No Internet connection" = "Подключение к Интернету отсутствует";
+
+/* Error message shown in conversation view */
+"Could not connect to server" = "Не удалось подключиться к серверу";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "Не удалось подключиться к серверу";
+
+/* Fallback used by the in app notification when no message author name is found */
+"%@ Team" = "Команда %@";
+
+/* Conversation send button */
+"Send" = "Отправить";
+
+/* Conversation text input place holder */
+"Type a message..." = "Введите сообщение...";
+
+/* Conversation nav bar left button */
+"Done" = "Готово";
+
+/* Failure text for chat messages that fail to upload */
+"Message not delivered. Tap to retry." = "Сообщение не доставлено. Коснитесь, чтобы повторить попытку.";
+
+/* Status text for chat messages */
+"Sending..." = "Отправляем...";
+
+/* Action sheet button label */
+"Take Photo" = "Сделать снимок";
+
+/* Action sheet button label */
+"Use Last Photo Taken" = "Использовать последний сделанный снимок";
+
+/* Action sheet button label */
+"Choose from Library" = "Выбрать из библиотеки";
+
+/* Action sheet button label */
+"Resend" = "Отправить повторно";
+
+/* Action sheet button label */
+"View Image" = "Просмотреть изображение";
+
+/* Error displayed in message bubble if image failed to download */
+"Tap to reload image" = "Коснитесь, чтобы перезагрузить изображение";
+
+/* Error title when user selects "use latest photo", but no photos exist */
+"No Photos Found" = "Фотографий не найдено";
+
+/* Error description when user selects "use latest photo", but no photos exist */
+"Your photo library seems to be empty." = "Ваша библиотека фотографий, кажется, пуста.";
+
+/* Error title when user attempts to upload a photo but Photos access is denied */
+"Can't Access Photos" = "Не удается получить доступ к фотографиям";
+
+/* Error description when user attempts to upload a photo but Photos access is denied */
+"Make sure to allow photos access for this app in your privacy settings." = "Убедитесь, что в настройках конфиденциальности вашего устройства доступ к фотографиям разрешен для данного приложения.";
+
+/* Error title when user attempts to take a photo but camera access is denied */
+"Can't Access Camera" = "Не удается получить доступ к камере";
+
+/* Error description when user attempts to take a photo but camera access is denied */
+"Make sure to allow camera access for this app in your privacy settings." = " Убедитесь, что в настройках конфиденциальности вашего устройства доступ к камере разрешен для данного приложения.";
+
+/* Generic error title when user attempts to upload an image and it fails for an unknown reason */
+"Can't Retrieve Photo" = "Не удается загрузить фото";
+
+/* Generic error description when user attempts to upload an image and it fails for an unknown reason */
+"Please try again or select a new photo." = "Пожалуйста, повторите попытку или выберите новое фото.";
+
+/* UIAlertView button title to link to Settings app */
+"Settings" = "Настройки";
+
+/* UIAlertView button title to dismiss */
+"Dismiss" = "Закрыть";
