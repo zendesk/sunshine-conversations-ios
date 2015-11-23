@@ -20,6 +20,9 @@
 /* Error message shown in conversation view */
 "Could not connect to server" = "無法連接至伺服器";
 
+/* Error message shown in conversation view */
+"Reconnecting..." = "無法連接至伺服器";
+
 /* Fallback used by the in app notification when no message author name is found */
 "%@ Team" = "%@ 團隊";
 

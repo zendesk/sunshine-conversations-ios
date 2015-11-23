@@ -20,6 +20,9 @@
 /* Error message shown in conversation view */
 "Could not connect to server" = "Не удалось подключиться к серверу";
 
+/* Error message shown in conversation view */
+"Reconnecting..." = "Не удалось подключиться к серверу";
+
 /* Fallback used by the in app notification when no message author name is found */
 "%@ Team" = "Команда %@";
 

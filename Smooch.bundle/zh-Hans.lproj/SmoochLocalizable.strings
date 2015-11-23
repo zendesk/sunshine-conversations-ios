@@ -1,4 +1,9 @@
-/* SmoochLocalizable.strings Smooch Copyright (c) 2015 Smooch Technologies. All rights reserved. */
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
 
 /* Nav bar right button, action sheet cancel button */
 "Cancel" = "取消";
@@ -14,6 +19,9 @@
 
 /* Error message shown in conversation view */
 "Could not connect to server" = "无法连接到服务器";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "无法连接到服务器";
 
 /* Fallback used by the in app notification when no message author name is found */
 "%@ Team" = "%@团队";

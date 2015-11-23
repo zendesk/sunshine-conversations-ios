@@ -20,6 +20,9 @@
 /* Error message shown in conversation view */
 "Could not connect to server" = "Ni se mogoče povezati na strežnik";
 
+/* Error message shown in conversation view */
+"Reconnecting..." = "Ni se mogoče povezati na strežnik";
+
 /* Fallback used by the in app notification when no message author name is found */
 "%@ Team" = "%@ Ekipa";
 

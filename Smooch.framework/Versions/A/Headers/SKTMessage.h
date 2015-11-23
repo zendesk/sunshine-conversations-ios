@@ -99,8 +99,18 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
  */
 @property(readonly) NSString* mediaUrl;
 
+/**
+ *  @abstract The role of the message.
+ *
+ *  @discussion Valid roles include `appUser`, `appMaker`, and `whisper`. Messages created with -initWithText: have role of `appUser`.
+ */
 @property(readonly) NSString* role;
 
+/**
+ *  @abstract Metadata associated with the message.
+ *
+ *  @discussion A flat dictionary of metadata set through the REST API. May be nil.
+ */
 @property(readonly) NSDictionary* metadata;
 
 @end

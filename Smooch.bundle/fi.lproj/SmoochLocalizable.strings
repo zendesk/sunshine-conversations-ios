@@ -20,6 +20,9 @@
 /* Error message shown in conversation view */
 "Could not connect to server" = "Palvelimeen ei voitu yhdistää";
 
+/* Error message shown in conversation view */
+"Reconnecting..." = "Palvelimeen ei voitu yhdistää";
+
 /* Fallback used by the in app notification when no message author name is found */
 "%@ Team" = "%@ Tiimi";
 
