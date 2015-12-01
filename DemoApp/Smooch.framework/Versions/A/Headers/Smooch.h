@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 3.1.1
+//  version : 3.2.0
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SMOOCH_VERSION @"3.1.1"
+#define SMOOCH_VERSION @"3.2.0"
 
 @interface Smooch : NSObject
 
@@ -135,5 +135,27 @@
  *  You may not call logout while the conversation screen is shown. Doing so will result in a no-op.
  */
 +(void)logout;
+
+/**
+ *  @abstract Set the push notification token for this device.
+ *
+ *  @discussion This method is called automatically if SKTSettings.enableAppDelegateSwizzling is set to YES.
+ *
+ *  @see SKTSettings
+ */
++(void)setPushToken:(NSData*)token;
+
+/**
+ *  @abstract Handle an incoming push notification.
+ *
+ *  @discussion Call this method in your -application:didReceiveRemoteNotification: or -application:didReceiveRemoteNotification:fetchCompletionHandler: callback, passing the userInfo dictionary.
+ *
+ *  If the push notification did not originate from Smooch, this is a no-op.
+ *
+ *  This method is called automatically if SKTSettings.enableAppDelegateSwizzling is set to YES.
+ *
+ *  @see SKTSettings
+ */
++(void)handlePushNotification:(NSDictionary*)userInfo;
 
 @end

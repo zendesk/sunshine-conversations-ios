@@ -74,4 +74,34 @@
  */
 @property NSUInteger notificationDisplayTime;
 
+/**
+ *  @abstract Whether or not to swizzle app delegate methods for handling push notifications.
+ *
+ *  @discussion When set to YES, Smooch will swizzle the following methods of your UIApplicationDelegate in order to automatically handle push notification receiving and registering.
+ *
+ *  1. -application:didRegisterForRemoteNotificationsWithDeviceToken:
+ *  2. -application:didFailToRegisterForRemoteNotificationsWithError:
+ *  3. -application:didReceiveRemoteNotification:
+ *  4. -application:didReceiveRemoteNotification:fetchCompletionHandler:
+ *
+ *  If set to NO, Smooch will not perform swizzling. It is up to the app to handle Smooch push notifications by doing the following:
+ *
+ *  1. When a new push token is received in -application:didRegisterForRemoteNotificationsWithDeviceToken:, you must call Smooch +setPushToken.
+ *  2. In your -application:didReceiveRemoteNotification: or -application:didReceiveRemoteNotification:fetchCompletionHandler: callback, you must call Smooch +handlePushNotification: with the passed userInfo dictionary.
+ *
+ *  The default value is YES.
+ *
+ *  @see Smooch
+ */
+@property BOOL enableAppDelegateSwizzling;
+
+/**
+ *  @abstract Whether or not to request user notification privileges after the user sends their first message.
+ *
+ *  @discussion If your app has a preferred time to request user notification privileges, set this to NO.
+ *
+ *  The default value is YES.
+ */
+@property BOOL requestPushPermissionOnFirstMessage;
+
 @end
