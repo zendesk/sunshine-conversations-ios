@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 3.2.2
+//  version : 3.2.3
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SMOOCH_VERSION @"3.2.2"
+#define SMOOCH_VERSION @"3.2.3"
 
 @interface Smooch : NSObject
 
