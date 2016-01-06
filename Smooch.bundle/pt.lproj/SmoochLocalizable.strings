@@ -1,11 +1,11 @@
 /*
  SmoochLocalizable.strings
  Smooch
-
+ 
  Copyright (c) 2015 Smooch Technologies. All rights reserved.
  */
 
-/* Nav bar right button, action sheet cancel button */
+/* Nav bar button, action sheet cancel button */
 "Cancel" = "Cancelar";
 
 /* Conversation title */

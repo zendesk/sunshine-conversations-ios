@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 3.2.3
+//  version : 3.3.0
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,7 +11,16 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SMOOCH_VERSION @"3.2.3"
+#define SMOOCH_VERSION @"3.3.0"
+
+/**
+ *  @abstract User info dictionary key to determine the origin of a push notification.
+ *
+ *  @discussion Push notifications that originate from Smooch will have a non-nil value for this key.
+ *
+ *  `BOOL isSmoochNotification = userInfo[SKTPushNotificationIdentifier] != nil`
+ */
+extern NSString* const SKTPushNotificationIdentifier;
 
 @interface Smooch : NSObject
 

@@ -5,7 +5,7 @@
  Copyright (c) 2015 Smooch Technologies. All rights reserved.
  */
 
-/* Nav bar right button, action sheet cancel button */
+/* Nav bar button, action sheet cancel button */
 "Cancel" = "Cancel";
 
 /* Conversation title */
@@ -88,3 +88,15 @@
 
 /* UIAlertView button title to dismiss */
 "Dismiss" = "Dismiss";
+
+/* Title for payment button */
+"Pay Now" = "Pay Now";
+
+/* Title for message action when payment completed */
+"Payment Completed" = "Payment Completed";
+
+/* Instructions for entering credit card info */
+"Enter your credit card to send $%.2lf %@ securely to %@" = "Enter your credit card to send $%.2lf %@ securely to %@";
+
+/* Error text when payment fails */
+"An error occurred while processing the card. Please try again or use a different card." = "An error occurred while processing the card. Please try again or use a different card.";

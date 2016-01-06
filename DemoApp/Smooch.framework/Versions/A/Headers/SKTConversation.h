@@ -213,4 +213,13 @@ extern NSString* const SKTConversationNewMessagesKey;
  */
 -(void)conversation:(SKTConversation*)conversation didReceiveMessages:(NSArray*)messages;
 
+/**
+ *  @abstract Asks the delegate if default handling should be performed for a message action.
+ *
+ *  @discussion Called when the user taps a message action.
+ *
+ *  @return YES to allow default handling. NO to perform custom handling.
+ */
+-(BOOL)conversation:(SKTConversation *)conversation shouldHandleMessageAction:(SKTMessageAction*)action;
+
 @end
