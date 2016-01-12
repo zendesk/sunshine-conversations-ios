@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 3.3.0
+//  version : 3.3.1
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SMOOCH_VERSION @"3.3.0"
+#define SMOOCH_VERSION @"3.3.1"
 
 /**
  *  @abstract User info dictionary key to determine the origin of a push notification.
@@ -22,6 +22,9 @@
  */
 extern NSString* const SKTPushNotificationIdentifier;
 
+/**
+ *  @abstract The core class used for interacting with Smooch. Provides methods to initialize, configure, and interact with the library.
+ */
 @interface Smooch : NSObject
 
 /**
