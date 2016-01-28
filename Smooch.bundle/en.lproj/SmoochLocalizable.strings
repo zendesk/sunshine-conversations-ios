@@ -95,8 +95,24 @@
 /* Title for message action when payment completed */
 "Payment Completed" = "Payment Completed";
 
-/* Instructions for entering credit card info */
-"Enter your credit card to send $%.2lf %@ securely to %@" = "Enter your credit card to send $%.2lf %@ securely to %@";
+/* 
+ Instructions for entering credit card info. Parameters are as follows:
+ 1. Amount (e.g. 50.45)
+ 2. Currency (e.g. USD)
+ 3. App name (Uses CFBundleDisplayName)
+*/
+"Enter your credit card to send $%@ %@ securely to %@" = "Enter your credit card to send $%@ %@ securely to %@";
 
 /* Error text when payment fails */
 "An error occurred while processing the card. Please try again or use a different card." = "An error occurred while processing the card. Please try again or use a different card.";
+
+/* Button label for saved credit card view */
+"Change Credit Card" = "Change Credit Card";
+
+/*
+ Information label for saved credit card view. Parameters are as follows:
+ 1. Amount (e.g. 50.45)
+ 2. Currency (e.g. USD)
+ 3. App name (Uses CFBundleDisplayName)
+ */
+"You're about to send $%@ %@ securely to %@" = "You're about to send $%@ %@ securely to %@";
