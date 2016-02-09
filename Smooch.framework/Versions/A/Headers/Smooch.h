@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 3.4.0
+//  version : 3.5.0
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SMOOCH_VERSION @"3.4.0"
+#define SMOOCH_VERSION @"3.5.0"
 
 /**
  *  @abstract User info dictionary key to determine the origin of a push notification.
@@ -21,6 +21,17 @@
  *  `BOOL isSmoochNotification = userInfo[SKTPushNotificationIdentifier] != nil`
  */
 extern NSString* const SKTPushNotificationIdentifier;
+
+/**
+ *  @abstract Notification that fires when initialization completes successfully
+ *
+ *  @discussion This notification is fired each time a call to `POST /v1/init` completes with a non-error status code. Methods that will trigger this HTTP request include calls to +initWithSettings:, +login:jwt:, and +logout.
+ *
+ *  You may use this notification to know when initialization is complete, and the SKTUser object is correctly assigned it's `smoochId` property.
+ *
+ *  @see SKTUser
+ */
+extern NSString* const SKTInitializationDidCompleteNotification;
 
 /**
  *  @abstract The core class used for interacting with Smooch. Provides methods to initialize, configure, and interact with the library.
@@ -125,6 +136,8 @@ extern NSString* const SKTPushNotificationIdentifier;
  *  @abstract Logs in a new Smooch user.
  *
  *  @discussion You can either use this method to transition from logged out state to logged in, or to switch the currently logged in user to a different one.
+ *
+ *  User login state is persisted across app launches. You must call +logout to reset to anonymous mode.
  *
  *  +initWithSettings: must have been called prior to calling this method.
  *

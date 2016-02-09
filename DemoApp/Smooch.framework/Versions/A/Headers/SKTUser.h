@@ -36,9 +36,24 @@
 -(void)addProperties:(NSDictionary*)properties;
 
 /**
- *  @abstract The userId for this user
+ *  @abstract The assigned smoochId for this user.
+ *
+ *  @discussion Unlike `userId`, this property is set automatically by Smooch, and is not configurable. Every user is assigned a `smoochId`, including anonymous users. This is analogous to `appUser._id` in the REST API response.
+ *
+ *  The value of this property is `nil` until Smooch.initWithSettings completes successfully, and the `SKTInitializationDidCompleteNotification` notification is fired.
+ *
+ *  @see Smooch
+ */
+@property(readonly) NSString* smoochId;
+
+/**
+ *  @abstract The assigned userId for this user.
  *
  *  @discussion This property is set by either calling +initWithSettings: with a userId, or calling +login:jwt:.
+ *
+ *  Unlike `smoochId`, this value is assigned and managed by the developer, and is used to identify a user across devices and app installations. 
+ *
+ *  More information: http://docs.smooch.io/ios/#users-on-multiple-devices
  *
  *  @see SKTSettings
  *  @see Smooch

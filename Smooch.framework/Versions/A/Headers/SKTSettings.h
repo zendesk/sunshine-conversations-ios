@@ -46,7 +46,7 @@
 /**
  *  @abstract The distinct id of the current user, if known.
  *
- *  @discussion The default value is nil.
+ *  @discussion Defaults to the last known user id for the given app token (user login state is persisted between app launches). Defaults to nil if the previous user was anonymous, or if there was no previous user.
  *
  *  This value may only be set once, and must be set at init time. To change at runtime, use Smooch.login instead.
  *
@@ -57,7 +57,7 @@
 /**
  *  @abstract Optional jwt used to prove the origin of the login request.
  *
- *  @discussion Used only if userId is not nil. The default value is nil. 
+ *  @discussion Used only if userId is not nil. Defaults to the last known jwt for the given app token.
  *
  *  This value may only be set once, and must be set at init time. To change at runtime, use Smooch.login instead.
  *
