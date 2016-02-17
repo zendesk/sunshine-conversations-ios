@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 3.5.1
+//  version : 3.5.2
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SMOOCH_VERSION @"3.5.1"
+#define SMOOCH_VERSION @"3.5.2"
 
 /**
  *  @abstract User info dictionary key to determine the origin of a push notification.
