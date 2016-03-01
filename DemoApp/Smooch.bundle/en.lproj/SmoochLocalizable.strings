@@ -1,0 +1,118 @@
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
+
+/* Nav bar button, action sheet cancel button */
+"Cancel" = "Cancel";
+
+/* Conversation title */
+"Messages" = "Messages";
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can.";
+
+/* Error message shown in conversation view */
+"No Internet connection" = "No Internet connection";
+
+/* Error message shown in conversation view */
+"Could not connect to server" = "Could not connect to server";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "Reconnecting...";
+
+/* Fallback used by the in app notification when no message author name is found */
+"%@ Team" = "%@ Team";
+
+/* Conversation send button */
+"Send" = "Send";
+
+/* Conversation text input place holder */
+"Type a message..." = "Type a message...";
+
+/* Conversation nav bar left button */
+"Done" = "Done";
+
+/* Failure text for chat messages that fail to upload */
+"Message not delivered. Tap to retry." = "Message not delivered. Tap to retry.";
+
+/* Status text for chat messages */
+"Sending..." = "Sending...";
+
+/* Action sheet button label */
+"Take Photo" = "Take Photo";
+
+/* Action sheet button label */
+"Use Last Photo Taken" = "Use Last Photo Taken";
+
+/* Action sheet button label */
+"Choose from Library" = "Choose from Library";
+
+/* Action sheet button label */
+"Resend" = "Resend";
+
+/* Action sheet button label */
+"View Image" = "View Image";
+
+/* Error displayed in message bubble if image failed to download */
+"Tap to reload image" = "Tap to reload image";
+
+/* Error title when user selects "use latest photo", but no photos exist */
+"No Photos Found" = "No Photos Found";
+
+/* Error description when user selects "use latest photo", but no photos exist */
+"Your photo library seems to be empty." = "Your photo library seems to be empty.";
+
+/* Error title when user attempts to upload a photo but Photos access is denied */
+"Can't Access Photos" = "Can't Access Photos";
+
+/* Error description when user attempts to upload a photo but Photos access is denied */
+"Make sure to allow photos access for this app in your privacy settings." = "Make sure to allow photos access for this app in your privacy settings.";
+
+/* Error title when user attempts to take a photo but camera access is denied */
+"Can't Access Camera" = "Can't Access Camera";
+
+/* Error description when user attempts to take a photo but camera access is denied */
+"Make sure to allow camera access for this app in your privacy settings." = "Make sure to allow camera access for this app in your privacy settings.";
+
+/* Generic error title when user attempts to upload an image and it fails for an unknown reason */
+"Can't Retrieve Photo" = "Can't Retrieve Photo";
+
+/* Generic error description when user attempts to upload an image and it fails for an unknown reason */
+"Please try again or select a new photo." = "Please try again or select a new photo.";
+
+/* UIAlertView button title to link to Settings app */
+"Settings" = "Settings";
+
+/* UIAlertView button title to dismiss */
+"Dismiss" = "Dismiss";
+
+/* Title for payment button */
+"Pay Now" = "Pay Now";
+
+/* Title for message action when payment completed */
+"Payment Completed" = "Payment Completed";
+
+/* 
+ Instructions for entering credit card info. Parameters are as follows:
+ 1. Amount (e.g. 50.45)
+ 2. Currency (e.g. USD)
+ 3. App name (Uses CFBundleDisplayName)
+*/
+"Enter your credit card to send $%@ %@ securely to %@" = "Enter your credit card to send $%@ %@ securely to %@";
+
+/* Error text when payment fails */
+"An error occurred while processing the card. Please try again or use a different card." = "An error occurred while processing the card. Please try again or use a different card.";
+
+/* Button label for saved credit card view */
+"Change Credit Card" = "Change Credit Card";
+
+/*
+ Information label for saved credit card view. Parameters are as follows:
+ 1. Amount (e.g. 50.45)
+ 2. Currency (e.g. USD)
+ 3. App name (Uses CFBundleDisplayName)
+ */
+"You're about to send $%@ %@ securely to %@" = "You're about to send $%@ %@ securely to %@";

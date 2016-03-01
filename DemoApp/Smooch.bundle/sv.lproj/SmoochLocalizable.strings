@@ -1,0 +1,42 @@
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
+
+/* Nav bar button */
+"Cancel" = "Avbryt";
+
+/* Conversation title */
+"Messages" = "Meddelanden";
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "Här börjar din konversation med %@ teamet. Vi finns här för att hjälpa dig få koll på allt i din app.\nTveka inte att lämna oss ett meddelande om vadhelst du funderar på. Vi återkommer till dig så fort vi kan.";
+
+/* Error message shown in conversation view */
+"No Internet connection" = "Ingen nätverksanslutning";
+
+/* Error message shown in conversation view */
+"Could not connect to server" = "Ingen kontakt med servern";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "Ingen kontakt med servern";
+
+/* Fallback used by the in app notification when no message author name is found */
+"%@ Team" = "%@ Team";
+
+/* Conversation send button */
+"Send" = "Skicka";
+
+/* Conversation text input place holder */
+"Type a message..." = "Skriv ett meddelande...";
+
+/* Conversation nav bar left button */
+"Done" = "Klar";
+
+/* Failure text for chat messages that fail to upload */
+"Message not delivered. Tap to retry." = "Meddelande ej levererat. Tryck för nytt försök.";
+
+/* Status text for chat messages */
+"Sending..." = "Skickar...";

@@ -1,0 +1,42 @@
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
+
+/* Nav bar button */
+"Cancel" = "Annuler";
+
+/* Conversation title */
+"Messages" = "Discussion";
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "Ceci est le début de votre conversation avec l'équipe de %@. Nous garderons le contact pour vous aider à tirer le maximum de votre appli.\nN'hésitez pas à nous envoyer un message à propos de tout ce qui vous traverse l'esprit. Nous répondrons à vos questions, vos suggestions ou toute autre chose aussi vite que possible.";
+
+/* Error message shown in conversation view */
+"No Internet connection" = "Aucune connexion à internet";
+
+/* Error message shown in conversation view */
+"Could not connect to server" = "Impossible de se connecter au serveur";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "Impossible de se connecter au serveur";
+
+/* Fallback used by the in app notification when no message author name is found */
+"%@ Team" = "Équipe de %@";
+
+/* Conversation send button */
+"Send" = "Envoyer";
+
+/* Conversation text input place holder */
+"Type a message..." = "Rédigez un message...";
+
+/* Conversation nav bar left button */
+"Done" = "Terminé";
+
+/* Failure text for chat messages that fail to upload */
+"Message not delivered. Tap to retry." = "Message non livré. Touchez pour réessayer.";
+
+/* Status text for chat messages */
+"Sending..." = "Envoi...";

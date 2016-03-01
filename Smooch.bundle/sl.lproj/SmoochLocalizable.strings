@@ -1,0 +1,90 @@
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
+
+/* Nav bar button, action sheet cancel button */
+"Cancel" = "Prekliči";
+
+/* Conversation title */
+"Messages" = "Sporočila";
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "To je začetek vašega pogovora z %@ ekipo. Ostali bomo v kontaktu, da vam čimbolje pomagamo pri uporabi vaše aplikacije.\nPustite nam sporočilo o čimer koli vam pade na pamet. Oglasili se vam bomo na vsa vaša vprašanja in predloge, takoj ko bo mogoče.";
+
+/* Error message shown in conversation view */
+"No Internet connection" = "Ni internetne povezave";
+
+/* Error message shown in conversation view */
+"Could not connect to server" = "Ni se mogoče povezati na strežnik";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "Ni se mogoče povezati na strežnik";
+
+/* Fallback used by the in app notification when no message author name is found */
+"%@ Team" = "%@ Ekipa";
+
+/* Conversation send button */
+"Send" = "Pošlji";
+
+/* Conversation text input place holder */
+"Type a message..." = "Vnesi sporočilo...";
+
+/* Conversation nav bar left button */
+"Done" = "Končano";
+
+/* Failure text for chat messages that fail to upload */
+"Message not delivered. Tap to retry." = "Sporočilo ni bilo prejeto. Dotaknite se za ponoven poizkus.";
+
+/* Status text for chat messages */
+"Sending..." = "Pošiljam...";
+
+/* Action sheet button label */
+"Take Photo" = "Fotografiraj";
+
+/* Action sheet button label */
+"Use Last Photo Taken" = "Uporabi zadnjo fotografijo";
+
+/* Action sheet button label */
+"Choose from Library" = "Izberi iz knjižnice";
+
+/* Action sheet button label */
+"Resend" = "Pošlji ponovno";
+
+/* Action sheet button label */
+"View Image" = "Poglej sliko";
+
+/* Error displayed in message bubble if image failed to download */
+"Tap to reload image" = "Dotik za ponovno nalaganje slike";
+
+/* Error title when user selects "use latest photo", but no photos exist */
+"No Photos Found" = "Ni fotografij";
+
+/* Error description when user selects "use latest photo", but no photos exist */
+"Your photo library seems to be empty." = "Vaša knjižnica fotografij je prazna.";
+
+/* Error title when user attempts to upload a photo but Photos access is denied */
+"Can't Access Photos" = "Do fotografij ni dostopa";
+
+/* Error description when user attempts to upload a photo but Photos access is denied */
+"Make sure to allow photos access for this app in your privacy settings." = "Prepričajte se, da je odobren dostop do fotografij v vaših nastavitvah zasebnosti.";
+
+/* Error title when user attempts to take a photo but camera access is denied */
+"Can't Access Camera" = "Do kamere ni dostopa";
+
+/* Error description when user attempts to take a photo but camera access is denied */
+"Make sure to allow camera access for this app in your privacy settings." = "Prepričajte se, da je odobren dostop do kamere v vaših nastavitvah zasebnosti.";
+
+/* Generic error title when user attempts to upload an image and it fails for an unknown reason */
+"Can't Retrieve Photo" = "Ni mogoče dobiti fotografije";
+
+/* Generic error description when user attempts to upload an image and it fails for an unknown reason */
+"Please try again or select a new photo." = "Prosimo poizkusite ponovno ali izberite drugo fotografijo";
+
+/* UIAlertView button title to link to Settings app */
+"Settings" = "Nastavitve";
+
+/* UIAlertView button title to dismiss */
+"Dismiss" = "Opusti";

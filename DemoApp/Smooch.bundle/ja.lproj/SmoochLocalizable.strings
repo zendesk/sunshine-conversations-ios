@@ -1,0 +1,42 @@
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
+
+/* Nav bar button */
+"Cancel" = "キャンセル";
+
+/* Conversation title */
+"Messages" = "チャット";
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "こちらより %@ チームとの会話が開始されます。アプリを最大限ご利用いただけるように、いつでもご連絡いただけます。\n何かご不明な点がありましたら、いつでもお気軽にメッセージをお送りください。ご連絡いただいたお問い合わせ、ご提案などについて、可能な限り早急に折り返しご連絡いたします。";
+
+/* Error message shown in conversation view */
+"No Internet connection" = "インターネット接続がありません";
+
+/* Error message shown in conversation view */
+"Could not connect to server" = "サーバーに接続できませんでした";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "サーバーに接続できませんでした";
+
+/* Fallback used by the in app notification when no message author name is found */
+"%@ Team" = "%@ チーム";
+
+/* Conversation send button */
+"Send" = "送信";
+
+/* Conversation text input place holder */
+"Type a message..." = "メッセージを入力…";
+
+/* Conversation nav bar left button */
+"Done" = "完了";
+
+/* Failure text for chat messages that fail to upload */
+"Message not delivered. Tap to retry." = "メッセージが送信されませんでした。タップで再試行します。";
+
+/* Status text for chat messages */
+"Sending..." = "送信...";
