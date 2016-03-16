@@ -1,4 +1,5 @@
 # [Smooch](http://www.smooch.io)
+Mobile and web messaging API & SDKs for apps and businesses.
 
 [![Pod Version](http://img.shields.io/cocoapods/v/Smooch.svg)](http://cocoadocs.org/docsets/Smooch/)
 [![Platform](http://img.shields.io/cocoapods/p/Smooch.svg)](http://cocoadocs.org/docsets/Smooch/)
