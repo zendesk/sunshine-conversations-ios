@@ -1,5 +1,5 @@
 # [Smooch](http://www.smooch.io)
-Mobile and web messaging API & SDKs for apps and businesses.
+Simple, lightweight SDK and interfaces that enable customer messaging inside your apps and websites.
 
 [![Pod Version](http://img.shields.io/cocoapods/v/Smooch.svg)](http://cocoadocs.org/docsets/Smooch/)
 [![Platform](http://img.shields.io/cocoapods/p/Smooch.svg)](http://cocoadocs.org/docsets/Smooch/)
