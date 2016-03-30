@@ -222,4 +222,32 @@ extern NSString* const SKTConversationNewMessagesKey;
  */
 -(BOOL)conversation:(SKTConversation *)conversation shouldHandleMessageAction:(SKTMessageAction*)action;
 
+/**
+ *  @abstract Notifies the delegate when the conversation is about to be presented.
+ *
+ *  @discussion Called in the viewWillAppear: method of the conversation view controller.
+ */
+-(void)conversation:(SKTConversation *)conversation willShowViewController:(UIViewController*)viewController;
+
+/**
+ *  @abstract Notifies the delegate when presentation of the conversation completes.
+ *
+ *  @discussion Called in the viewDidAppear: method of the conversation view controller.
+ */
+-(void)conversation:(SKTConversation *)conversation didShowViewController:(UIViewController*)viewController;
+
+/**
+ *  @abstract Notifies the delegate when the conversation is about to be dismissed.
+ *
+ *  @discussion Called in the viewWillDisappear: method of the conversation view controller.
+ */
+-(void)conversation:(SKTConversation *)conversation willDismissViewController:(UIViewController*)viewController;
+
+/**
+ *  @abstract Notifies the delegate when dismissal of the conversation completes.
+ *
+ *  @discussion Called in the viewDidDisappear: method of the conversation view controller.
+ */
+-(void)conversation:(SKTConversation *)conversation didDismissViewController:(UIViewController*)viewController;
+
 @end
