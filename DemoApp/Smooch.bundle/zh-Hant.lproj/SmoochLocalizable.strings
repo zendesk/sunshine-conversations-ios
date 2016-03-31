@@ -1,0 +1,42 @@
+/*
+ SmoochLocalizable.strings
+ Smooch
+ 
+ Copyright (c) 2015 Smooch Technologies. All rights reserved.
+ */
+
+/* Nav bar button */
+"Cancel" = "取消";
+
+/* Conversation title */
+"Messages" = "訊息";
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "您可以在這裡與 %@ 製作團隊直接溝通。我們將會協助您充份利用這支App。您也可以留下任何問題或是您的寶貴意見，我們將會盡快回覆您。";
+
+/* Error message shown in conversation view */
+"No Internet connection" = "沒有網路服務";
+
+/* Error message shown in conversation view */
+"Could not connect to server" = "無法連接至伺服器";
+
+/* Error message shown in conversation view */
+"Reconnecting..." = "無法連接至伺服器";
+
+/* Fallback used by the in app notification when no message author name is found */
+"%@ Team" = "%@ 團隊";
+
+/* Conversation send button */
+"Send" = "送出";
+
+/* Conversation text input place holder */
+"Type a message..." = "請輸入文字...";
+
+/* Conversation nav bar left button */
+"Done" = "完成";
+
+/* Failure text for chat messages that fail to upload */
+"Message not delivered. Tap to retry." = "訊息未成功送出，請點撃重送.";
+
+/* Status text for chat messages */
+"Sending..." = "發出...";
