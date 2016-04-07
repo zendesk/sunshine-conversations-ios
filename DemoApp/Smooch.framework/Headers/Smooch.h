@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 4.1.0
+//  version : 4.1.1
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SMOOCH_VERSION @"4.1.0"
+#define SMOOCH_VERSION @"4.1.1"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
