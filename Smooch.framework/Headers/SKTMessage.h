@@ -49,6 +49,11 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
 -(instancetype)initWithText:(NSString*)text;
 
 /**
+ *  @abstract The unique identifier of the message.
+ */
+@property(readonly) NSString* messageId;
+
+/**
  *  @abstract The text content of the message.
  */
 @property(readonly) NSString* text;
@@ -105,6 +110,11 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
  *  @discussion Valid roles include `appUser`, `appMaker`, and `whisper`. Messages created with -initWithText: have role of `appUser`.
  */
 @property(readonly) NSString* role;
+
+/**
+ *  @abstract If the message was generated from a Whisper, contains the unique identifier of the Whisper, nil otherwise.
+ */
+@property(readonly) NSString* ruleId;
 
 /**
  *  @abstract Metadata associated with the message.

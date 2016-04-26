@@ -142,6 +142,20 @@ extern NSString* const SKTConversationNewMessagesKey;
 -(void)sendImage:(UIImage *)image withProgress:(SKTImageUploadProgressBlock)progressBlock completion:(SKTImageUploadCompletionBlock)completionBlock;
 
 /**
+ *  @abstract Sends a postback to the server.
+ *
+ *  @discussion The completion block is called when the operation completes, either in success or failure.
+ *
+ *  In case of success, the error parameter will be nil.
+ *
+ *  In case of failure, the error parameter will contain the error that occurred.
+ *
+ *  @param messageAction The messageAction for which to send the postback. Must not be nil.
+ *  @param completionBlock Called when the postback completes or fails. May be nil.
+ */
+-(void)postback:(SKTMessageAction*)messageAction completion:(void (^)(NSError* error))completionBlock;
+
+/**
  *  @abstract Retries a message that failed to send.
  *
  *  @discussion The failed message will be removed from the messages array, and a new message will be constructed with the same text as the failed message. A notification will be fired indicating the success or failure status of the upload.

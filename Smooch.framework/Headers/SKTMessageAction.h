@@ -18,6 +18,11 @@ extern NSString* const SKTMessageActionTypeLink;
 extern NSString* const SKTMessageActionTypeBuy;
 
 /**
+ *  @abstract Type for a postback action.
+ */
+extern NSString* const SKTMessageActionTypePostback;
+
+/**
  *  @abstract Offered state for a buy message. The user has not yet completed the transaction.
  */
 extern NSString* const SKTMessageActionStateOffered;
@@ -30,7 +35,7 @@ extern NSString* const SKTMessageActionStatePaid;
 /**
  *  @abstract An action associated to a particular SKTMessage.
  *
- *  Actions are rendered as buttons in the Smooch conversation screen, and may be of type `SKTMessageActionTypeLink` or `SKTMessageActionTypeBuy`.
+ *  Actions are rendered as buttons in the Smooch conversation screen, and may be of type `SKTMessageActionTypeLink`, `SKTMessageActionTypeBuy` or `SKTMessageActionTypePostback`.
  *
  *  @see SKTMessage
  */
