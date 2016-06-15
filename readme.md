@@ -5,6 +5,16 @@
 [![License](http://img.shields.io/cocoapods/l/Smooch.svg)](http://smooch.io/terms.html)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
+Smooch is the best way to have personal, rich conversations with people on your website or customers on any device. Our features, integrations and developer-friendly APIs empower companies to connect with their customers in a whole new way.
+
+The Smooch iOS SDK will add [in-app messaging](https://smooch.io/in-app-messaging/) to your iOS app. Customers will be able to talk to you from your app, while you manage conversations using your favorite business apps.
+
+- Maximize development productivity with a single codebase across platforms and [add more channels](https://smooch.io/cross-channel-messaging/) anytime.
+- Build better relationships with messaging that feels and looks native to your app.
+- Delight your customers with the most engaging conversational experience using [rich messaging](https://smooch.io/rich-messaging/).
+- Sync conversations across every device and channel your customers use.
+- Bring every conversation into your existing business apps. No new tool to learn. [See all integrations](https://smooch.io/integrations/).
+
 Sign up and get an app token: [https://app.smooch.io/signup](https://app.smooch.io/signup).
 
 CocoaPods:
@@ -23,7 +33,7 @@ Obj-C:
 [Smooch initWithSettings:[SKTSettings settingsWithAppToken:@"YOURAPPTOKEN"]];
 [Smooch show];
 ```
-    
+
 Swift:
 
 In your bridging header:
@@ -31,7 +41,7 @@ In your bridging header:
 ```objc
 #import <Smooch/Smooch.h>
 ```
-    
+
 In a Swift file:
 
 ```Swift
