@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 4.2.2
+//  version : 4.3.0
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SMOOCH_VERSION @"4.2.2"
+#define SMOOCH_VERSION @"4.3.0"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
@@ -98,6 +98,8 @@ extern NSString* const SKTInitializationDidCompleteNotification;
  *  @abstract Creates and returns a Smooch conversation view controller.
  *
  *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose.
+ *
+ *  A view controller created in this way is tied to the current user's conversation at creation time. If the current user changes (i.e. by calling +login:jwt: or +logout), the view controller is invalidated and must be recreated for the new user.
  *
  *  Note: It is the responsibility of the caller to show, hide, and maintain a reference to this view controller. Calling `close` will not dismiss a view controller created in this way.
  *
