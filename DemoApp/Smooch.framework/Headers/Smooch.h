@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 4.3.1
+//  version : 5.0.0
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,7 +11,9 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SMOOCH_VERSION @"4.3.1"
+@protocol UNUserNotificationCenterDelegate;
+
+#define SMOOCH_VERSION @"5.0.0"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
@@ -24,6 +26,20 @@ FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
  *  `BOOL isSmoochNotification = userInfo[SKTPushNotificationIdentifier] != nil`
  */
 extern NSString* const SKTPushNotificationIdentifier;
+
+/**
+ *  @abstract Identifier for a Smooch user notification reply action.
+ *
+ *  @discussion Used as the identifier for a UIUserNotificationAction on iOS 9, and a UNTextInputNotificationAction on iOS 10 and above.
+ */
+extern NSString* const SKTUserNotificationReplyActionIdentifier;
+
+/**
+ *  @abstract Identifier for a Smooch user notification category.
+ *
+ *  @discussion Used as the identifier for a UIUserNotificationCategory on iOS 9, and a UNNotificationCategory on iOS 10 and above.
+ */
+extern NSString* const SKTUserNotificationReplyCategoryIdentifier;
 
 /**
  *  @abstract Notification that fires when initialization completes successfully
@@ -185,5 +201,64 @@ extern NSString* const SKTInitializationDidCompleteNotification;
  *  @see SKTSettings
  */
 +(void)handlePushNotification:(NSDictionary*)userInfo;
+
+/**
+ *  @abstract An object conforming to UNUserNotificationCenterDelegate protocol, used to handle notifications on iOS 10 and above.
+ *
+ *  @discussion Implements both methods of UNUserNotificationCenterDelegate.
+ *
+ *  By default this object will automatically be set as the UNUserNotificationCenter delegate at init time. Smooch will maintain a reference to your app's existing delegate (if applicable), and automatically forward any calls for notifications that did not originate from Smooch.
+ *
+ *  To disable automatic overriding, you must set SKTSettings.enableUserNotificationCenterDelegateOverride to NO before calling +initWithSettings:. If you choose to do so, you must manually forward any relevant calls from your own delegate object. To check the origin of a notification, see the documentation for SKTPushNotificationIdentifier. For example:
+ *
+ *  -(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler
+ *  {
+ *    if(notification.request.content.userInfo[SKTPushNotificationIdentifier] != nil){
+ *      [[Smooch userNotificationCenterDelegate] userNotificationCenter:center willPresentNotification:notification withCompletionHandler:completionHandler];
+ *      return;
+ *    }
+ *  }
+ *
+ *  -(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler
+ *  {
+ *    if(response.notification.request.content.userInfo[SKTPushNotificationIdentifier] != nil){
+ *      [[Smooch userNotificationCenterDelegate] userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
+ *      return;
+ *    }
+ *  }
+ *
+ *  @see SKTSettings
+ *
+ *  @return An object conforming to UNUserNotificationCenterDelegate protocol, or nil if +initWithSettings: hasn't been called yet.
+ */
++(id<UNUserNotificationCenterDelegate>)userNotificationCenterDelegate;
+
+/**
+ *  @abstract Handle the user input from a reply type notification action.
+ *
+ *  @discussion Call this method in your -application:handleActionWithIdentifier:forRemoteNotification:withResponseInfo:completionHandler:, passing the action identifier, responseInfo dictionary, and completionHandler callback.
+ *
+ *  This method will post a message on behalf of the user, with the contents of their inline reply. When the message upload completes (either in success or failure), the completion handler will be called.
+ *
+ *  If the action identifier does not match SKTUserNotificationReplyActionIdentifier, the completion handler will be called immediately and the notification will be ignored.
+ *
+ *  This method is called automatically if SKTSettings.enableAppDelegateSwizzling is set to YES.
+ *
+ *  @see SKTSettings
+ */
++(void)handleUserNotificationActionWithIdentifier:(NSString *)identifier withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void (^)())completionHandler;
+
+/**
+ *  @abstract A set of categories used for handling and displaying Smooch user notification actions.
+ *
+ *  @discussion On iOS 8, returns an empty set.
+ *  On iOS 9, returns a set of UIUserNotificationCategory objects, to be used with `UIUserNotificationSettings` +settingsForTypes:categories:
+ *  On iOS 10, returns a set of UNNotificationCategory objects, to be used with `UNUserNotificationCenter` -setNotificationCategories:
+ *
+ *  Categories are registered automatically if SKTSettings.requestPushPermissionOnFirstMessage is set to YES. If automatic registration is disabled, you must make sure to include the Smooch categories in your calls to the above mentioned methods.
+ *
+ *  @see SKTSettings
+ */
++(NSSet*)userNotificationCategories;
 
 @end
