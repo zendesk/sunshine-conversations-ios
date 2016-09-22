@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @interface SKTSettings : NSObject
 
 /**
@@ -52,7 +53,7 @@
  *
  *  @see Smooch
  */
-@property(nonatomic, copy) NSString* userId;
+@property(nonatomic, copy, nullable) NSString* userId;
 
 /**
  *  @abstract Optional jwt used to prove the origin of the login request.
@@ -63,7 +64,7 @@
  *
  *  @see Smooch
  */
-@property(nonatomic, copy) NSString* jwt;
+@property(nonatomic, copy, nullable) NSString* jwt;
 
 /**
  *  @abstract Maximum number of seconds to display in-app notifications before dismissing.
@@ -124,3 +125,4 @@
 @property BOOL requestPushPermissionOnFirstMessage;
 
 @end
+NS_ASSUME_NONNULL_END

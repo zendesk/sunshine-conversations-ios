@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 /**
  *  @abstract Type for a link action.
  */
@@ -63,16 +64,16 @@ extern NSString* const SKTMessageActionStatePaid;
 /**
  *  @abstract The URI to navigate to if the user interacts with the action.
  *
- *  @discussion May not be nil.
+ *  @discussion May not be nil if message is of type `SKTMessageActionTypeLink`
  */
-@property(readonly) NSURL* uri;
+@property(readonly, nullable) NSURL* uri;
 
 /**
  *  @abstract Metadata associated with the action.
  *
  *  @discussion A flat dictionary of metadata set through the REST API. May be nil.
  */
-@property(readonly) NSDictionary* metadata;
+@property(readonly, nullable) NSDictionary* metadata;
 
 #pragma mark - Buy actions
 
@@ -81,7 +82,7 @@ extern NSString* const SKTMessageActionStatePaid;
  *
  *  @discussion This property is only non-nil for actions of type `SKTMessageActionTypeBuy`. Valid states include `SKTMessageActionStateOffered` and `SKTMessageActionStatePaid`.
  */
-@property(readonly) NSString* state;
+@property(readonly, nullable) NSString* state;
 
 /**
  *  @abstract The amount of money to charge for the action.
@@ -95,6 +96,7 @@ extern NSString* const SKTMessageActionStatePaid;
  *
  *  @discussion This property is only valid for actions of type `SKTMessageActionTypeBuy`.
  */
-@property(readonly) NSString* currency;
+@property(readonly, nullable) NSString* currency;
 
 @end
+NS_ASSUME_NONNULL_END

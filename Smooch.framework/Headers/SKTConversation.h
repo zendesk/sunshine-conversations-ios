@@ -8,10 +8,12 @@
 #import <Foundation/Foundation.h>
 #import "SKTMessage.h"
 #import "SKTMessageAction.h"
+
+NS_ASSUME_NONNULL_BEGIN
 @protocol SKTConversationDelegate;
 
 typedef void (^SKTImageUploadProgressBlock)(double progress);
-typedef void (^SKTImageUploadCompletionBlock)(NSError *error, SKTMessage *message);
+typedef void (^SKTImageUploadCompletionBlock)(NSError* _Nullable error, SKTMessage* _Nullable message);
 
 /**
  *  @discussion Represents various actions the user takes when interacting with Smooch UI components.
@@ -160,7 +162,7 @@ extern NSString* const SKTConversationProgressKey;
  *
  *  @see SKTMessage
  */
-@property(readonly) NSArray* messages;
+@property(readonly, nullable) NSArray* messages;
 
 /**
  *  @abstract The total number of messages in the conversation, including user-generated messages.
@@ -179,7 +181,7 @@ extern NSString* const SKTConversationProgressKey;
  *
  *  @see SKTConversationDelegate
  */
-@property(weak) id<SKTConversationDelegate> delegate;
+@property(weak, nullable) id<SKTConversationDelegate> delegate;
 
 /**
  *  @abstract Marks all unread messages as read.
@@ -215,7 +217,7 @@ extern NSString* const SKTConversationProgressKey;
  *  @param progressBlock Called to report progress updates. May be nil.
  *  @param completionBlock Called when the upload completes or fails. May be nil.
  */
--(void)sendImage:(UIImage *)image withProgress:(SKTImageUploadProgressBlock)progressBlock completion:(SKTImageUploadCompletionBlock)completionBlock;
+-(void)sendImage:(UIImage *)image withProgress:(nullable SKTImageUploadProgressBlock)progressBlock completion:(nullable SKTImageUploadCompletionBlock)completionBlock;
 
 /**
  *  @abstract Sends a postback to the server.
@@ -229,7 +231,7 @@ extern NSString* const SKTConversationProgressKey;
  *  @param messageAction The messageAction for which to send the postback. Must not be nil.
  *  @param completionBlock Called when the postback completes or fails. May be nil.
  */
--(void)postback:(SKTMessageAction*)messageAction completion:(void (^)(NSError* error))completionBlock;
+-(void)postback:(SKTMessageAction*)messageAction completion:(nullable void (^)(NSError* _Nullable error))completionBlock;
 
 /**
  *  @abstract Retries a message that failed to send.
@@ -341,3 +343,4 @@ extern NSString* const SKTConversationProgressKey;
 -(void)conversation:(SKTConversation *)conversation didDismissViewController:(UIViewController*)viewController;
 
 @end
+NS_ASSUME_NONNULL_END

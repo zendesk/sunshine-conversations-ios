@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 5.0.0
+//  version : 5.0.1
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -11,9 +11,10 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"5.0.0"
+#define SMOOCH_VERSION @"5.0.1"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
@@ -81,7 +82,7 @@ extern NSString* const SKTInitializationDidCompleteNotification;
  *
  *  @return Settings object passed in +initWithSettings:, or nil if +initWithSettings: hasn't been called yet.
  */
-+(SKTSettings*)settings;
++(nullable SKTSettings*)settings;
 
 /**
  *  @abstract Presents the Smooch conversation screen.
@@ -119,9 +120,9 @@ extern NSString* const SKTInitializationDidCompleteNotification;
  *
  *  Note: It is the responsibility of the caller to show, hide, and maintain a reference to this view controller. Calling `close` will not dismiss a view controller created in this way.
  *
- *  @return A new instance of the Smooch conversation view controller class.
+ *  @return A new instance of the Smooch conversation view controller class. Returns nil if +initWithSettings: hasn't been called
  */
-+(UIViewController*)newConversationViewController;
++(nullable UIViewController*)newConversationViewController;
 
 /**
  *  @abstract Sets the current user's first and last name to be used as a display name when sending messages.
@@ -133,7 +134,7 @@ extern NSString* const SKTInitializationDidCompleteNotification;
  *  @param firstName The first name of the user
  *  @param lastName The last name of the user
  */
-+(void)setUserFirstName:(NSString*)firstName lastName:(NSString*)lastName;
++(void)setUserFirstName:(nullable NSString*)firstName lastName:(nullable NSString*)lastName;
 
 /**
  *  @abstract Tracks an app event, and processes any whispers associated with that event.
@@ -151,7 +152,7 @@ extern NSString* const SKTInitializationDidCompleteNotification;
  *
  *  @return Current conversation, or nil if +initWithSettings: hasn't been called yet.
  */
-+(SKTConversation*)conversation;
++(nullable SKTConversation*)conversation;
 
 /**
  *  @abstract Logs in a new Smooch user.
@@ -167,7 +168,7 @@ extern NSString* const SKTInitializationDidCompleteNotification;
  *  @param userId The distinct id of the user to login. Must not be nil.
  *  @param jwt Optional jwt used to prove the origin of the login request. May be nil.
  */
-+(void)login:(NSString*)userId jwt:(NSString*)jwt;
++(void)login:(NSString*)userId jwt:(nullable NSString*)jwt;
 
 /**
  *  @abstract Logs out the current user.
@@ -231,7 +232,7 @@ extern NSString* const SKTInitializationDidCompleteNotification;
  *
  *  @return An object conforming to UNUserNotificationCenterDelegate protocol, or nil if +initWithSettings: hasn't been called yet.
  */
-+(id<UNUserNotificationCenterDelegate>)userNotificationCenterDelegate;
++(nullable id<UNUserNotificationCenterDelegate>)userNotificationCenterDelegate;
 
 /**
  *  @abstract Handle the user input from a reply type notification action.
@@ -262,3 +263,4 @@ extern NSString* const SKTInitializationDidCompleteNotification;
 +(NSSet*)userNotificationCategories;
 
 @end
+NS_ASSUME_NONNULL_END

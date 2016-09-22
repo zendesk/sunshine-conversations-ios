@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @interface SKTUser : NSObject
 
 /**
@@ -16,7 +17,7 @@
  *
  *  @see Smooch
  */
-+(instancetype)currentUser;
++(nullable instancetype)currentUser;
 
 /**
  *  @abstract Adds custom properties to the user. This info is used to provide more context around who a user is.
@@ -44,7 +45,7 @@
  *
  *  @see Smooch
  */
-@property(readonly) NSString* smoochId;
+@property(readonly, nullable) NSString* smoochId;
 
 /**
  *  @abstract The assigned userId for this user.
@@ -58,26 +59,27 @@
  *  @see SKTSettings
  *  @see Smooch
  */
-@property(readonly) NSString* userId;
+@property(readonly, nullable) NSString* userId;
 
 /**
  *  @abstract The user's first name, to be used as part of the display name when sending messages.
  */
-@property(copy) NSString* firstName;
+@property(copy, nullable) NSString* firstName;
 
 /**
  *  @abstract The user's last name, to be used as part of the display name when sending messages.
  */
-@property(copy) NSString* lastName;
+@property(copy, nullable) NSString* lastName;
 
 /**
  *  @abstract The user's email, to be used to display a gravatar.
  */
-@property(copy) NSString* email;
+@property(copy, nullable) NSString* email;
 
 /**
  *  @abstract The date the user started using your service. This can be used to create Whispers for user onboarding.
  */
-@property(copy) NSDate* signedUpAt;
+@property(copy, nullable) NSDate* signedUpAt;
 
 @end
+NS_ASSUME_NONNULL_END
