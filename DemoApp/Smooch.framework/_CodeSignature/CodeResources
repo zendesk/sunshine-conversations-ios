@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		8yK8Esjs2ktn5wJfcuLpSCu6RKE=
+		7LZC3zcxtULF9IDgBLzJbVDcNp8=
 		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		Smhg94vNzLyy8kEridQXYhl77nY=
+		WvOkZsBxH7P0z7g20pNBgridbyA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kc5YQm08FdrmRLNJSBVtXLus2ro=
+		lDVT8yFUhhxsGGP4iGmqZJiVmMA=
 		</data>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
 		<dict>
@@ -66,7 +66,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sVuKKnmuk7M1HA192K/FiMlgEDI=
+			KT9lSHpR9ZoxSmILXx26qZfMslY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -328,11 +328,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8yK8Esjs2ktn5wJfcuLpSCu6RKE=
+			7LZC3zcxtULF9IDgBLzJbVDcNp8=
 			</data>
 			<key>hash2</key>
 			<data>
-			nJ4fDY6Ic7WX1n/C6AuQZA2AZLb421Tr5V5aMHKFi7M=
+			ZmhTe0AEWiu2FDLmhwTkx81WEsoYqcVDrCANwlnsNi4=
 			</data>
 		</dict>
 		<key>Headers/SKTMessage.h</key>
@@ -383,11 +383,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Smhg94vNzLyy8kEridQXYhl77nY=
+			WvOkZsBxH7P0z7g20pNBgridbyA=
 			</data>
 			<key>hash2</key>
 			<data>
-			jq/bmn8IFDTDUyxg17k75nDZasj6hT0NRyOvOH2V2PE=
+			5IRxfG0AsT3MkLHwk3ncWCiSJHNRwF7fa5D9rWTWBZw=
 			</data>
 		</dict>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
@@ -453,11 +453,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sVuKKnmuk7M1HA192K/FiMlgEDI=
+			KT9lSHpR9ZoxSmILXx26qZfMslY=
 			</data>
 			<key>hash2</key>
 			<data>
-			e9OTnUz+ex23h0F65S19JwI4hU6I95JE3leR0+vpmZo=
+			1+axWBztWtnblNLImqlX7OFZnv0A+dOyuhvGiOwzRe4=
 			</data>
 			<key>optional</key>
 			<true/>

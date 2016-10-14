@@ -87,6 +87,19 @@ extern NSString* const SKTConversationImageUploadCompletedNotification;
 extern NSString* const SKTConversationDidReceiveMessagesNotification;
 
 /**
+ *  @abstract Posted when an operation to load previous messages in a conversation has been completed
+ *
+ *  @discussion This notification is posted as the result of [SKTConversation loadPreviousMessages]
+ *
+ *  If the operation succeeded, the object returned by this notification will include the updated array of messages
+ *  If the operation failed, the userInfo dictionary will contain an "error" object with the response error
+ *
+ *  @see SKTMessage
+ *  @see SKTConversationPreviousMessagesKey
+ */
+extern NSString* const SKTConversationDidReceivePreviousMessagesNotification;
+
+/**
  *  @abstract A key whose value is an NSArray of SKTMessage objects.
  *
  *  @discussion This key is used with SKTConversationDidReceiveMessagesNotification notification.
@@ -94,6 +107,15 @@ extern NSString* const SKTConversationDidReceiveMessagesNotification;
  *  @see SKTConversationDidReceiveMessagesNotification
  */
 extern NSString* const SKTConversationNewMessagesKey;
+
+/**
+ *  @abstract A key whose value is an NSArray of SKTMessage objects
+ *
+ *  @discussion This key is used with SKTConversationDidReceivePreviousMessagesNotification notification
+ *
+ *  @see SKTConversationDidReceivePreviousMessagesNotification
+ */
+extern NSString* const SKTConversationPreviousMessagesKey;
 
 /**
  *  @abstract A key whose value is a UIImage which represents an image being uploaded. 
@@ -191,6 +213,13 @@ extern NSString* const SKTConversationProgressKey;
  *  @see SKTMessage
  */
 -(void)markAllAsRead;
+
+/**
+ *  @abstract Loads previous messages for this conversation, if any
+ *
+ *  @dicussion Will get previous messages for this conversation based on the timestamp of the current oldest message and will notify the delegate of new incoming messages through [SKTConversationDelegate conversation:didReceivePreviousMessages:]
+ */
+-(void)loadPreviousMessages;
 
 /**
  *  @abstract Adds a new message to the conversation.
@@ -304,6 +333,16 @@ extern NSString* const SKTConversationProgressKey;
  *  @see SKTMessage
  */
 -(void)conversation:(SKTConversation*)conversation didReceiveMessages:(NSArray*)messages;
+
+/**
+ *  @abstract Notifies the delegate when older messages in the conversation history have been received
+ *
+ *  @dicussion Called when older messages in the conversation history are received from the server
+ *
+ *  @param conversation The conversation object
+ *  @param messages The messages that have been fetched
+ */
+-(void)conversation:(SKTConversation*)conversation didReceivePreviousMessages:(NSArray*)messages;
 
 /**
  *  @abstract Asks the delegate if default handling should be performed for a message action.
