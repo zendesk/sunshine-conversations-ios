@@ -6,7 +6,11 @@
 	<dict>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		7LZC3zcxtULF9IDgBLzJbVDcNp8=
+		bz8GHJedEGYMWva7zEDCs9GveWo=
+		</data>
+		<key>Headers/SKTConversationActivity.h</key>
+		<data>
+		31XE9trmYQL5NK3jsQyFq/ifabM=
 		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
@@ -26,11 +30,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		WvOkZsBxH7P0z7g20pNBgridbyA=
+		H0ezp1jZrr+H6cZXQbVEoMUAjFw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lDVT8yFUhhxsGGP4iGmqZJiVmMA=
+		/7A7jJyIyLwieosQapFnBSgGcjE=
 		</data>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
 		<dict>
@@ -328,11 +332,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7LZC3zcxtULF9IDgBLzJbVDcNp8=
+			bz8GHJedEGYMWva7zEDCs9GveWo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZmhTe0AEWiu2FDLmhwTkx81WEsoYqcVDrCANwlnsNi4=
+			i8fR1N6cNrgltfZ3/IcPBT6v1bH4BkQAiExzVYSj/h4=
+			</data>
+		</dict>
+		<key>Headers/SKTConversationActivity.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			31XE9trmYQL5NK3jsQyFq/ifabM=
+			</data>
+			<key>hash2</key>
+			<data>
+			ARXF8QdMF3TabAmZtC28b2msF1u+PViW91qi2SNFQhY=
 			</data>
 		</dict>
 		<key>Headers/SKTMessage.h</key>
@@ -383,11 +398,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WvOkZsBxH7P0z7g20pNBgridbyA=
+			H0ezp1jZrr+H6cZXQbVEoMUAjFw=
 			</data>
 			<key>hash2</key>
 			<data>
-			5IRxfG0AsT3MkLHwk3ncWCiSJHNRwF7fa5D9rWTWBZw=
+			YOkQv2g+dTFqQekwnT9mqj/qiXL/RtBs8KRI4CdF5Us=
 			</data>
 		</dict>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
@@ -1004,6 +1019,11 @@
 			<key>weight</key>
 			<real>1100</real>
 		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
 		<key>^version.plist$</key>
 		<true/>
 	</dict>
@@ -1048,6 +1068,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>

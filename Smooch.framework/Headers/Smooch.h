@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 5.1.0
+//  version : 5.2.0
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"5.1.0"
+#define SMOOCH_VERSION @"5.2.0"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];

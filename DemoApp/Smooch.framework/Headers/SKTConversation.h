@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "SKTMessage.h"
 #import "SKTMessageAction.h"
+#import "SKTConversationActivity.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SKTConversationDelegate;
@@ -100,6 +101,14 @@ extern NSString* const SKTConversationDidReceiveMessagesNotification;
 extern NSString* const SKTConversationDidReceivePreviousMessagesNotification;
 
 /**
+ *  @abstract Posted when a conversation activity has been created, such as typing start/stop
+ *
+ *  @see SKTConversationActivity
+ *  @see SKTConversationActivityKey
+ */
+extern NSString* const SKTConversationDidReceiveActivityNotification;
+
+/**
  *  @abstract A key whose value is an NSArray of SKTMessage objects.
  *
  *  @discussion This key is used with SKTConversationDidReceiveMessagesNotification notification.
@@ -154,6 +163,15 @@ extern NSString* const SKTConversationMessageKey;
  *  @see SKTConversationImageUploadProgressDidChangeNotification
  */
 extern NSString* const SKTConversationProgressKey;
+
+/**
+ *  @abstract A key whose value is a SKTConversationActivity object representing the newly created activity
+ *
+ *  @discussion This key is used with SKTConversationDidReceiveActivityNotification notification.
+ *
+ *  @see SKTConversationDidReceiveActivityNotification
+ */
+extern NSString* const SKTConversationActivityKey;
 
 /**
  *  @discussion The SKTConversation class provides an interface to interact with the current user's conversation. 
@@ -343,6 +361,16 @@ extern NSString* const SKTConversationProgressKey;
  *  @param messages The messages that have been fetched
  */
 -(void)conversation:(SKTConversation*)conversation didReceivePreviousMessages:(NSArray*)messages;
+
+/**
+ *  @abstract Notifies the delegate of new conversation activity
+ *
+ *  @dicussion Called when a new activity is received from the server
+ *
+ *  @param conversation The conversation object
+ *  @param activity The activity that was received
+ */
+-(void)conversation:(SKTConversation *)conversation didReceiveActivity:(SKTConversationActivity *)activity;
 
 /**
  *  @abstract Asks the delegate if default handling should be performed for a message action.
