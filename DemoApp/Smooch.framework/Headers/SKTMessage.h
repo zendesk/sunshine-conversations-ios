@@ -18,6 +18,16 @@ extern NSString* _Nonnull const SKTMessageUploadFailedNotification;
 extern NSString* _Nonnull const SKTMessageUploadCompletedNotification;
 
 /**
+ *  @abstract A type of message that contains an image, text, and/or action buttons
+ */
+extern NSString* _Nonnull const SKTMessageTypeImage;
+
+/**
+ *  @abstract A type of message that contains text and/or action buttons
+ */
+extern NSString* _Nonnull const SKTMessageTypeText;
+
+/**
  *  @discussion Upload status of an SKTMessage.
  *
  *  @see SKTMessage
@@ -103,6 +113,13 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
  *  @abstract The url to the image asset, if applicable. Returns nil if the message is not an image message.
  */
 @property(readonly, nullable) NSString* mediaUrl;
+
+/**
+ *  @abstract The type the message.
+ *
+ *  @discussion Valid types include SKTMessageTypeImage and SKTMessageTypeText
+ */
+@property(readonly, nullable) NSString* type;
 
 /**
  *  @abstract The role of the message.
