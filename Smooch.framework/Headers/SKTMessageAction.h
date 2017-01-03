@@ -23,6 +23,11 @@ extern NSString* _Nonnull const SKTMessageActionTypeBuy;
 extern NSString* _Nonnull const SKTMessageActionTypePostback;
 
 /**
+ *  @abstract Type for a reply action
+ */
+extern NSString* _Nonnull const SKTMessageActionTypeReply;
+
+/**
  *  @abstract Offered state for a buy message. The user has not yet completed the transaction.
  */
 extern NSString* _Nonnull const SKTMessageActionStateOffered;
@@ -73,6 +78,20 @@ extern NSString* _Nonnull const SKTMessageActionStatePaid;
  *  @discussion A flat dictionary of metadata set through the REST API. May be nil.
  */
 @property(readonly, nullable) NSDictionary* metadata;
+
+/**
+ *  @abstract Icon to display with a reply
+ *
+ *  @discussion An icon to render next to the reply option
+ */
+@property(readonly, nullable) NSString* iconUrl;
+
+/**
+ *  @abstract The payload of actions with type SKTMessageActionTypeReply or SKTMessageActionTypePostback
+ *
+ *  @discussion The payload of actions with type SKTMessageActionTypeReply or SKTMessageActionTypePostback, if applicable. May be nil
+ */
+@property(readonly, nullable) NSString* payload;
 
 #pragma mark - Buy actions
 

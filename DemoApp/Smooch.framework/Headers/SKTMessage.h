@@ -59,6 +59,11 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
 -(nonnull instancetype)initWithText:(nonnull NSString*)text;
 
 /**
+ *  @abstract Create a message with the given text, payload, and metadata. The message will be owned by the current user
+ */
+-(nonnull instancetype)initWithText:(nonnull NSString *)text payload:(nullable NSString *)payload metadata:(nullable NSDictionary *)metadata;
+
+/**
  *  @abstract The unique identifier of the message. May be nil if a unique identifier has not been generated for this message
  */
 @property(readonly, nullable) NSString* messageId;
@@ -139,5 +144,12 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
  *  @discussion A flat dictionary of metadata set through the REST API. May be nil.
  */
 @property(readonly, nullable) NSDictionary* metadata;
+
+/**
+ *  @abstract The payload of an action with type SKTMessageActionTypeReply
+ *
+ *  @discussion The payload of a SKTMessageActionTypeReply, if applicable. May be nil
+ */
+@property(readonly, nullable) NSString* payload;
 
 @end
