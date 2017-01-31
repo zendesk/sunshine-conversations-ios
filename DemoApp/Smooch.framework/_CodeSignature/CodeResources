@@ -30,11 +30,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		9BgHu+hS65/s7qtuYxaIQbbm5yc=
+		0m7Wei5WEXYOTdKxC1pzvBSRLbM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rDMLB7TQF+uP4bW2r3NoAFGwbqc=
+		4D9wWwymhT9f5hr9qYTSlFaIwWU=
 		</data>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
 		<dict>
@@ -407,11 +407,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9BgHu+hS65/s7qtuYxaIQbbm5yc=
+			0m7Wei5WEXYOTdKxC1pzvBSRLbM=
 			</data>
 			<key>hash2</key>
 			<data>
-			rTVblE8yDfChybGcH0ptIFwcIbVm8rNkl18rG8d8yyQ=
+			RNsgz5GRRltVCaybHqA0/ATMHdKH5yzAYTs6asJ72kE=
 			</data>
 		</dict>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
@@ -1041,6 +1041,11 @@
 			<key>weight</key>
 			<real>1100</real>
 		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
 		<key>^version.plist$</key>
 		<true/>
 	</dict>
@@ -1085,6 +1090,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>
