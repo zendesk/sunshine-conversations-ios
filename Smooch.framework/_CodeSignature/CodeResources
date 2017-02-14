@@ -12,13 +12,17 @@
 		<data>
 		31XE9trmYQL5NK3jsQyFq/ifabM=
 		</data>
+		<key>Headers/SKTCoordinates.h</key>
+		<data>
+		mP4Mb2xab9lvhHiLxzHgO797VmM=
+		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
-		JsUD+FXqeSqAjaFlbs0jQYfKx8Y=
+		uUA4n43jDkiz7lbq2EUElPL52/8=
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
-		aLxG3c+mEH8fasw85bkRcir/m9M=
+		h3NP0IRFPL/8h8LjGxM6ZZ3ySVU=
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
@@ -34,7 +38,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SIUrHPkvu+csghY/LimM25X+PAo=
+		7yM5ckbg6Pq/qNS/eg9AKaJdVok=
 		</data>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
 		<dict>
@@ -70,7 +74,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KT9lSHpR9ZoxSmILXx26qZfMslY=
+			680y58KhGMw9zD2Aeid9M+Uwsjg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -142,6 +146,18 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>locationIcon.png</key>
+		<data>
+		n9/8KH5i5S5/Fqk4aRjAfitgsDU=
+		</data>
+		<key>locationIcon@2x.png</key>
+		<data>
+		tpRuH8JQTdZ/I9e99LthAFHZNYY=
+		</data>
+		<key>locationIcon@3x.png</key>
+		<data>
+		OKdo9S8LS2EfWPcOgegSdRUagpM=
+		</data>
 		<key>pt-BR.lproj/SmoochLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -359,26 +375,37 @@
 			ARXF8QdMF3TabAmZtC28b2msF1u+PViW91qi2SNFQhY=
 			</data>
 		</dict>
+		<key>Headers/SKTCoordinates.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mP4Mb2xab9lvhHiLxzHgO797VmM=
+			</data>
+			<key>hash2</key>
+			<data>
+			PQFOl+POv6Lp+en+51TRy4ORjfwvvt/0D4kD+EyeFcw=
+			</data>
+		</dict>
 		<key>Headers/SKTMessage.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JsUD+FXqeSqAjaFlbs0jQYfKx8Y=
+			uUA4n43jDkiz7lbq2EUElPL52/8=
 			</data>
 			<key>hash2</key>
 			<data>
-			CmkPV7svN7P5L5NnBK6gT5eJ9MsUIa+BENU7bIPtPDg=
+			bP93rO6DWiVPEwOHllO9Tn/R9agxSdwpXGPJCFk8lGQ=
 			</data>
 		</dict>
 		<key>Headers/SKTMessageAction.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aLxG3c+mEH8fasw85bkRcir/m9M=
+			h3NP0IRFPL/8h8LjGxM6ZZ3ySVU=
 			</data>
 			<key>hash2</key>
 			<data>
-			8Pf8hXP4cUwzdHCAJwIAwyV4yqbPEHrD0rUajQBqf6E=
+			hDqyxqoCxPzN0FFoQHzp36GuyxPab2SudSikKf2VzSI=
 			</data>
 		</dict>
 		<key>Headers/SKTSettings.h</key>
@@ -477,11 +504,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KT9lSHpR9ZoxSmILXx26qZfMslY=
+			680y58KhGMw9zD2Aeid9M+Uwsjg=
 			</data>
 			<key>hash2</key>
 			<data>
-			1+axWBztWtnblNLImqlX7OFZnv0A+dOyuhvGiOwzRe4=
+			pV5XEfv90pN4IVlvP7bWDNhHwQgSe+Sksj9TtItw3cA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -587,6 +614,39 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>locationIcon.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n9/8KH5i5S5/Fqk4aRjAfitgsDU=
+			</data>
+			<key>hash2</key>
+			<data>
+			70YoNa5o6hMqQ+sHn4V7V9FCcoXqkpEg1s5XDQrl1EM=
+			</data>
+		</dict>
+		<key>locationIcon@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tpRuH8JQTdZ/I9e99LthAFHZNYY=
+			</data>
+			<key>hash2</key>
+			<data>
+			IQOe8dGMf/4Foc0FbW+BtqoqITL+qdPcAWgzQfLYOWE=
+			</data>
+		</dict>
+		<key>locationIcon@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OKdo9S8LS2EfWPcOgegSdRUagpM=
+			</data>
+			<key>hash2</key>
+			<data>
+			sJGxzQ87hrck5OFNwBpzorpHJsHrxviTSfcpXvx2/34=
+			</data>
 		</dict>
 		<key>pt-BR.lproj/SmoochLocalizable.strings</key>
 		<dict>

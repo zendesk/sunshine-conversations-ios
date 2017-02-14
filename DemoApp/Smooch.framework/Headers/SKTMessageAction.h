@@ -28,6 +28,11 @@ extern NSString* _Nonnull const SKTMessageActionTypePostback;
 extern NSString* _Nonnull const SKTMessageActionTypeReply;
 
 /**
+ *  @abstract Type for a location request
+ */
+extern NSString* _Nonnull const SKTMessageActionTypeLocationRequest;
+
+/**
  *  @abstract Offered state for a buy message. The user has not yet completed the transaction.
  */
 extern NSString* _Nonnull const SKTMessageActionStateOffered;

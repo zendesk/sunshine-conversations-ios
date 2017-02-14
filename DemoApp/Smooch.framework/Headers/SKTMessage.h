@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SKTCoordinates.h"
 
 /**
  *  @abstract Notification that is fired when a message fails to upload.
@@ -26,6 +27,11 @@ extern NSString* _Nonnull const SKTMessageTypeImage;
  *  @abstract A type of message that contains text and/or action buttons
  */
 extern NSString* _Nonnull const SKTMessageTypeText;
+
+/**
+ *  @abstract A type of message that contains a location
+ */
+extern NSString* _Nonnull const SKTMessageTypeLocation;
 
 /**
  *  @discussion Upload status of an SKTMessage.
@@ -62,6 +68,11 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
  *  @abstract Create a message with the given text, payload, and metadata. The message will be owned by the current user
  */
 -(nonnull instancetype)initWithText:(nonnull NSString *)text payload:(nullable NSString *)payload metadata:(nullable NSDictionary *)metadata;
+
+/**
+ *  @abstract Create a message with the given coordinates, payload, and metadata. The message will be owned by the current user
+ */
+-(nonnull instancetype)initWithCoordinates:(nonnull SKTCoordinates *)coordinates payload:(nullable NSString *)payload metadata:(nullable NSDictionary *)metadata;
 
 /**
  *  @abstract The unique identifier of the message. May be nil if a unique identifier has not been generated for this message
@@ -122,9 +133,14 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
 /**
  *  @abstract The type the message.
  *
- *  @discussion Valid types include SKTMessageTypeImage and SKTMessageTypeText
+ *  @discussion Valid types include SKTMessageTypeText, SKTMessageTypeImage, and SKTMessageTypeLocation
  */
 @property(readonly, nullable) NSString* type;
+
+/**
+ *  @abstract Coordinates for a location for a message of type SKTMessageTypeLocation
+ */
+@property(readonly, nullable) SKTCoordinates *coordinates;
 
 /**
  *  @abstract The role of the message.
