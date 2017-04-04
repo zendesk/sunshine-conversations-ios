@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		bz8GHJedEGYMWva7zEDCs9GveWo=
+		1bft6O3haNc7CcS6PQRfHh4dclg=
 		</data>
 		<key>Headers/SKTConversationActivity.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
-		uUA4n43jDkiz7lbq2EUElPL52/8=
+		zLbUgu/x8Z4g3NENTrwM0J5vU6I=
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
-		h3NP0IRFPL/8h8LjGxM6ZZ3ySVU=
+		Bc2IWQlbwjFfkWAul4/nI/RJMz0=
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		clRYeRISDiVKrNUguBqGo73V3Zg=
+		GBDjrorCjcIg7BCtBg//3qlFWjo=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bAmg+bB+k0IXe1DntLt63pR7V+8=
+		ZPDdqtbz7voIxlrdkAYag8cEeTQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -361,11 +361,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bz8GHJedEGYMWva7zEDCs9GveWo=
+			1bft6O3haNc7CcS6PQRfHh4dclg=
 			</data>
 			<key>hash2</key>
 			<data>
-			i8fR1N6cNrgltfZ3/IcPBT6v1bH4BkQAiExzVYSj/h4=
+			D3dYvkMEqxr0PyT0OvuqpHDEvLCVJ2bgtjt1KoyZkxU=
 			</data>
 		</dict>
 		<key>Headers/SKTConversationActivity.h</key>
@@ -394,22 +394,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uUA4n43jDkiz7lbq2EUElPL52/8=
+			zLbUgu/x8Z4g3NENTrwM0J5vU6I=
 			</data>
 			<key>hash2</key>
 			<data>
-			bP93rO6DWiVPEwOHllO9Tn/R9agxSdwpXGPJCFk8lGQ=
+			VruyImNhwcpjwJWhrgOnoZdam2vHJhF16hiOaGldKQU=
 			</data>
 		</dict>
 		<key>Headers/SKTMessageAction.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h3NP0IRFPL/8h8LjGxM6ZZ3ySVU=
+			Bc2IWQlbwjFfkWAul4/nI/RJMz0=
 			</data>
 			<key>hash2</key>
 			<data>
-			hDqyxqoCxPzN0FFoQHzp36GuyxPab2SudSikKf2VzSI=
+			rewC611QPNHZDEJbCg8QDlw22/7OqGyUCBLDRU2OA3Y=
 			</data>
 		</dict>
 		<key>Headers/SKTSettings.h</key>
@@ -438,11 +438,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			clRYeRISDiVKrNUguBqGo73V3Zg=
+			GBDjrorCjcIg7BCtBg//3qlFWjo=
 			</data>
 			<key>hash2</key>
 			<data>
-			taaxUQHPEG1Fc7vWFYNdjaTLvLmePMhrsEzMEyba/BQ=
+			ERWTjrh4k3GP5KAPJEPyrCCX6h9F2mKEv7p5tVi4FTU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

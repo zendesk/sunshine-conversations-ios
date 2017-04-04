@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 5.5.2
+//  version : 5.6.0
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"5.5.2"
+#define SMOOCH_VERSION @"5.6.0"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
@@ -101,6 +101,14 @@ extern NSString* const SKTInitializationDidCompleteNotification;
  *  +initWithSettings: must have been called prior to calling this method.
  */
 +(void)close;
+
+/**
+ *  @abstract Destroys the Smooch SDK
+ *
+ *  @discussion Smooch is automatically terminated when the application exits. This method does not need to be called manually
+ *
+ */
++(void)destroy;
 
 /**
  *  @abstract Presents the Smooch conversation screen, using the given view controller as presenting view controller.

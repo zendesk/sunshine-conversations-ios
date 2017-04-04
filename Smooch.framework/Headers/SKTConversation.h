@@ -334,11 +334,46 @@ extern NSString* const SKTConversationActivityKey;
  *  @param conversation The conversation object.
  *  @param message The action the user has taken.
  *
+ *  @deprecated Use conversation:shouldShowForAction:info instead
+ *
  *  @return YES to allow default handling. NO to suppress the conversation screen, and perform custom handling.
  *
  *  @see SKTAction
  */
--(BOOL)conversation:(SKTConversation*)conversation shouldShowForAction:(SKTAction)action;
+-(BOOL)conversation:(SKTConversation*)conversation shouldShowForAction:(SKTAction)action __attribute((deprecated("use conversation:shouldShowForAction:info instead")));
+
+/**
+ *  @abstract Asks the delegate if the conversation should show for the given action.
+ *
+ *  @discussion Called when the user performs an action that causes the conversation screen to show. Return NO to cancel the display of the conversation screen and perform your own handling of the action.
+ *
+ *  @param conversation The conversation object.
+ *  @param message The action the user has taken.
+ *  @param info An instance of NSDictionary with a `message` object with the latest SKTMessage represented as an NSDictionary
+ *
+ *  @return YES to allow default handling. NO to suppress the conversation screen, and perform custom handling.
+ *
+ *  @see SKTAction
+ */
+-(BOOL)conversation:(SKTConversation*)conversation shouldShowForAction:(SKTAction)action withInfo:(nullable NSDictionary *) info;
+
+/**
+ *  @abstract Gives the delegate the option to modify a message before it is sent
+ *
+ *  @discussion Called when a message is about to be sent to give the delegate the option of modify or decorate its content (i.e. add metadata) before sending to Smooch
+ *
+ *  @return the message to be sent
+ */
+-(SKTMessage *)conversation:(SKTConversation*)conversation willSendMessage:(SKTMessage *)message;
+
+/**
+ *  @abstract Gives the delegate the option to modify a message before it is displayed. If nil is returned the message will be hidden
+ *
+ *  @discussion Called when a message is about to be displayed to the user to give the delegate the option of modifying its content before display or hide it
+ *
+ *  @return the message to be displayed. If nil, the message won't get displayed
+ */
+-(nullable SKTMessage *)conversation:(SKTConversation*)conversation willDisplayMessage:(SKTMessage *)message;
 
 /**
  *  @abstract Notifies the delegate of new incoming messages.

@@ -61,42 +61,42 @@ extern NSString* _Nonnull const SKTMessageActionStatePaid;
  *
  *  @discussion Valid types include `SKTMessageActionTypeLink` for regular actions, and `SKTMessageActionTypeBuy` for buy actions.
  */
-@property(readonly, nullable) NSString* type;
+@property(nullable) NSString* type;
 
 /**
  *  @abstract The text to display as a descriptor for the action.
  *
  *  @discussion May not be nil.
  */
-@property(readonly, nullable) NSString* text;
+@property(nullable) NSString* text;
 
 /**
  *  @abstract The URI to navigate to if the user interacts with the action.
  *
  *  @discussion May not be nil if message is of type `SKTMessageActionTypeLink`
  */
-@property(readonly, nullable) NSURL* uri;
+@property(nullable) NSURL* uri;
 
 /**
  *  @abstract Metadata associated with the action.
  *
  *  @discussion A flat dictionary of metadata set through the REST API. May be nil.
  */
-@property(readonly, nullable) NSDictionary* metadata;
+@property(nullable) NSDictionary* metadata;
 
 /**
  *  @abstract Icon to display with a reply
  *
  *  @discussion An icon to render next to the reply option
  */
-@property(readonly, nullable) NSString* iconUrl;
+@property(nullable) NSString* iconUrl;
 
 /**
  *  @abstract The payload of actions with type SKTMessageActionTypeReply or SKTMessageActionTypePostback
  *
  *  @discussion The payload of actions with type SKTMessageActionTypeReply or SKTMessageActionTypePostback, if applicable. May be nil
  */
-@property(readonly, nullable) NSString* payload;
+@property(nullable) NSString* payload;
 
 #pragma mark - Buy actions
 
@@ -105,20 +105,20 @@ extern NSString* _Nonnull const SKTMessageActionStatePaid;
  *
  *  @discussion This property is only non-nil for actions of type `SKTMessageActionTypeBuy`. Valid states include `SKTMessageActionStateOffered` and `SKTMessageActionStatePaid`.
  */
-@property(readonly, nullable) NSString* state;
+@property(nullable) NSString* state;
 
 /**
  *  @abstract The amount of money to charge for the action.
  *
  *  @discussion This property is only valid for actions of type `SKTMessageActionTypeBuy`. For USD, this value is in cents.
  */
-@property(readonly) long amount;
+@property long amount;
 
 /**
  *  @abstract The currency in which the `amount` is expressed.
  *
  *  @discussion This property is only valid for actions of type `SKTMessageActionTypeBuy`.
  */
-@property(readonly, nullable) NSString* currency;
+@property(nullable) NSString* currency;
 
 @end
