@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		1bft6O3haNc7CcS6PQRfHh4dclg=
+		ar3SMfNQdwoDDG+9BCDB9YyAPdc=
 		</data>
 		<key>Headers/SKTConversationActivity.h</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		GBDjrorCjcIg7BCtBg//3qlFWjo=
+		LfFroKartWtYGrcpzGo0lOcqMm4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZPDdqtbz7voIxlrdkAYag8cEeTQ=
+		7SQ6ekOd3kYGC0npDLcs/3lZPOA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -361,11 +361,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1bft6O3haNc7CcS6PQRfHh4dclg=
+			ar3SMfNQdwoDDG+9BCDB9YyAPdc=
 			</data>
 			<key>hash2</key>
 			<data>
-			D3dYvkMEqxr0PyT0OvuqpHDEvLCVJ2bgtjt1KoyZkxU=
+			K/HCm8rxwYN5TOuCe2shQmPgFTKX92iY+FCNfqIk6oM=
 			</data>
 		</dict>
 		<key>Headers/SKTConversationActivity.h</key>
@@ -438,11 +438,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GBDjrorCjcIg7BCtBg//3qlFWjo=
+			LfFroKartWtYGrcpzGo0lOcqMm4=
 			</data>
 			<key>hash2</key>
 			<data>
-			ERWTjrh4k3GP5KAPJEPyrCCX6h9F2mKEv7p5tVi4FTU=
+			1kOIqccZ/WIQOcvru6Pdp/PiPEzd33dOwFRI+LIMPzc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1116,11 +1116,6 @@
 			<key>weight</key>
 			<real>1100</real>
 		</dict>
-		<key>^Base\.lproj/</key>
-		<dict>
-			<key>weight</key>
-			<real>1010</real>
-		</dict>
 		<key>^version.plist$</key>
 		<true/>
 	</dict>
@@ -1165,11 +1160,6 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
-		</dict>
-		<key>^Base\.lproj/</key>
-		<dict>
-			<key>weight</key>
-			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>

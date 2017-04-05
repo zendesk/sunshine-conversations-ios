@@ -332,7 +332,7 @@ extern NSString* const SKTConversationActivityKey;
  *  @discussion Called when the user performs an action that causes the conversation screen to show. Return NO to cancel the display of the conversation screen and perform your own handling of the action.
  *
  *  @param conversation The conversation object.
- *  @param message The action the user has taken.
+ *  @param action The action the user has taken.
  *
  *  @deprecated Use conversation:shouldShowForAction:info instead
  *
@@ -348,7 +348,7 @@ extern NSString* const SKTConversationActivityKey;
  *  @discussion Called when the user performs an action that causes the conversation screen to show. Return NO to cancel the display of the conversation screen and perform your own handling of the action.
  *
  *  @param conversation The conversation object.
- *  @param message The action the user has taken.
+ *  @param action The action the user has taken.
  *  @param info An instance of NSDictionary with a `message` object with the latest SKTMessage represented as an NSDictionary
  *
  *  @return YES to allow default handling. NO to suppress the conversation screen, and perform custom handling.
@@ -381,7 +381,7 @@ extern NSString* const SKTConversationActivityKey;
  *  @discussion Called when new messages are received from the server.
  *
  *  @param conversation The conversation object.
- *  @param message An array of SKTMessage objects representing the new messages.
+ *  @param messages An array of SKTMessage objects representing the new messages.
  *
  *  @see SKTMessage
  */
