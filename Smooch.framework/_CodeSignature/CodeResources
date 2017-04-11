@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		LfFroKartWtYGrcpzGo0lOcqMm4=
+		9WbzL65qsEdaTy3xV2vNYNRflY4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7SQ6ekOd3kYGC0npDLcs/3lZPOA=
+		WqK4zA4sPFXmldF65fg6oSQpNuM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -438,11 +438,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LfFroKartWtYGrcpzGo0lOcqMm4=
+			9WbzL65qsEdaTy3xV2vNYNRflY4=
 			</data>
 			<key>hash2</key>
 			<data>
-			1kOIqccZ/WIQOcvru6Pdp/PiPEzd33dOwFRI+LIMPzc=
+			T9o4Hn/5EDUfVGVrI2O9fW1lfSXjy08MeaNL3x0ONvs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1116,6 +1116,11 @@
 			<key>weight</key>
 			<real>1100</real>
 		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
 		<key>^version.plist$</key>
 		<true/>
 	</dict>
@@ -1160,6 +1165,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>
