@@ -223,6 +223,14 @@ extern NSString* const SKTConversationActivityKey;
  */
 @property(weak, nullable) id<SKTConversationDelegate> delegate;
 
+
+/**
+ *  @abstract URL used for fetching previous messages in the conversation, if they exist.
+ *
+ *  @discussion if there are no previous messages in the conversation, this will be nil. For fetching previous messages, use [SKTConversation loadPreviousMessages]
+ */
+@property(readonly, nullable) NSString *previous;
+
 /**
  *  @abstract Marks all unread messages as read.
  *
