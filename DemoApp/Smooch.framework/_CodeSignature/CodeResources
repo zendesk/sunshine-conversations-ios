@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		Dk3+Gs4LR55mqj3ywHh/WmhyIRw=
+		x9Ldw+kXvv29k+PcZHVGNHjrQEU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		atjNFeaKyMoX9xt+OJ0+mvgWoOQ=
+		RVwN5fa/2LveUv8cZiqD2/lCw+8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -162,6 +162,15 @@
 		<data>
 		OKdo9S8LS2EfWPcOgegSdRUagpM=
 		</data>
+		<key>nl.lproj/SmoochLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/ajaaAgHFyMynig50/3S7eltAGk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>pt-BR.lproj/SmoochLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -438,11 +447,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Dk3+Gs4LR55mqj3ywHh/WmhyIRw=
+			x9Ldw+kXvv29k+PcZHVGNHjrQEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			AztiZcNgQXUsut13wIKF10MZWyYxKygJOh7FRdayTRc=
+			OOshHWJ8KNQatXf4ceJQRY3jjxnnIZo45aYQ/ScaOyY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -662,6 +671,19 @@
 			<data>
 			sJGxzQ87hrck5OFNwBpzorpHJsHrxviTSfcpXvx2/34=
 			</data>
+		</dict>
+		<key>nl.lproj/SmoochLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/ajaaAgHFyMynig50/3S7eltAGk=
+			</data>
+			<key>hash2</key>
+			<data>
+			fZEoyJhbqzlCeGgmuMTH86N+fhFWEMlxR1zjDMvsPJ0=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>pt-BR.lproj/SmoochLocalizable.strings</key>
 		<dict>
