@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
-		zLbUgu/x8Z4g3NENTrwM0J5vU6I=
+		naTjc8UTzwSSyzfGfg3gLtxElb8=
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		x9Ldw+kXvv29k+PcZHVGNHjrQEU=
+		KN3nTIr+6M4zJCSZ5uj8N58X2OU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		RVwN5fa/2LveUv8cZiqD2/lCw+8=
+		L3DSvpg8Pj46KpIATOa6XfM+07g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -403,11 +403,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zLbUgu/x8Z4g3NENTrwM0J5vU6I=
+			naTjc8UTzwSSyzfGfg3gLtxElb8=
 			</data>
 			<key>hash2</key>
 			<data>
-			VruyImNhwcpjwJWhrgOnoZdam2vHJhF16hiOaGldKQU=
+			m7fagQad1niKofZupqyutQEHe0WwPO9fMTbOGFzyobU=
 			</data>
 		</dict>
 		<key>Headers/SKTMessageAction.h</key>
@@ -447,11 +447,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x9Ldw+kXvv29k+PcZHVGNHjrQEU=
+			KN3nTIr+6M4zJCSZ5uj8N58X2OU=
 			</data>
 			<key>hash2</key>
 			<data>
-			OOshHWJ8KNQatXf4ceJQRY3jjxnnIZo45aYQ/ScaOyY=
+			QD1k9ANhRhlk943pcLXwnJE79uGWHPfPPv2QTRAH0XA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

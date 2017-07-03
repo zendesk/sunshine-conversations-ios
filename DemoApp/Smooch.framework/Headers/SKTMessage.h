@@ -34,6 +34,11 @@ extern NSString* _Nonnull const SKTMessageTypeText;
 extern NSString* _Nonnull const SKTMessageTypeLocation;
 
 /**
+ *  @abstract A type of message that contains a file and/or text
+ */
+extern NSString* _Nonnull const SKTMessageTypeFile;
+
+/**
  *  @discussion Upload status of an SKTMessage.
  *
  *  @see SKTMessage
