@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 5.7.0
+//  version : 5.8.0
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"5.7.0"
+#define SMOOCH_VERSION @"5.8.0"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
@@ -27,6 +27,26 @@ FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
  *  `BOOL isSmoochNotification = userInfo[SKTPushNotificationIdentifier] != nil`
  */
 extern NSString* const SKTPushNotificationIdentifier;
+
+/**
+ *  @abstract User info dictionary key to determine the error code of a failed initialization
+ *
+ *  @discussion Possible values include "unauthorized", "invalid_auth", "bad_request", "unhandled_error" or an empty string for connectivity errors
+ *
+ *  @see SKTInitializationDidFailNotification
+ *
+ */
+extern NSString* const SKTErrorCodeIdentifier;
+
+/**
+ *  @abstract User info dictionary key to determine the HTTP status code of a failed initialization
+ *
+ *  @discussion User info dictionary key to determine the HTTP status code of a failed initialization
+ *
+ *  @see SKTInitializationDidFailNotification
+ *
+ */
+extern NSString* const SKTStatusCodeIdentifier;
 
 /**
  *  @abstract Identifier for a Smooch user notification reply action.
@@ -52,6 +72,19 @@ extern NSString* const SKTUserNotificationReplyCategoryIdentifier;
  *  @see SKTUser
  */
 extern NSString* const SKTInitializationDidCompleteNotification;
+
+/**
+ *  @abstract Notification that fires when initialization fails
+ *
+ *  @discussion This notification is fired each time a call to `POST /v1/init` fails. Methods that will trigger this HTTP request include calls to +initWithSettings:, +login:jwt:, and +logout.
+ *
+ *  You may use this notification to know if initialization failed due to an invalid app token, invalid JWT, or connectivity errors by inspecting the `userInfo` dictionary included with it.
+ *
+ *  @see SKTErrorCodeIdentifier
+ *  @see SKTStatusCodeIdentifier
+ *
+ */
+extern NSString* const SKTInitializationDidFailNotification;
 
 /**
  *  @abstract The core class used for interacting with Smooch. Provides methods to initialize, configure, and interact with the library.
