@@ -1,7 +1,7 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 5.8.1
+//  version : 5.8.2
 //
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"5.8.1"
+#define SMOOCH_VERSION @"5.8.2"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
@@ -288,7 +288,7 @@ extern NSString* const SKTInitializationDidFailNotification;
  *
  *  @see SKTSettings
  */
-+(void)handleUserNotificationActionWithIdentifier:(NSString *)identifier withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void (^)())completionHandler;
++(void)handleUserNotificationActionWithIdentifier:(NSString *)identifier withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void (^)(void))completionHandler;
 
 /**
  *  @abstract A set of categories used for handling and displaying Smooch user notification actions.
