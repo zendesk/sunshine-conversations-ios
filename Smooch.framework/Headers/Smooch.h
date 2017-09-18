@@ -1,10 +1,8 @@
 //
 //  Smooch.h
 //  Smooch
-//  version : 5.8.2
 //
-//  Copyright (c) 2015 Smooch Technologies. All rights reserved.
-//
+//  version : 6.0.0
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
@@ -14,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"5.8.2"
+#define SMOOCH_VERSION @"6.0.0"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
@@ -29,22 +27,58 @@ FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
 extern NSString* const SKTPushNotificationIdentifier;
 
 /**
- *  @abstract User info dictionary key to determine the error code of a failed initialization
+ *  @abstract User info dictionary key for an SKTUser after a successful call to +login:jwt:completionHandler:
  *
- *  @discussion Possible values include "unauthorized", "invalid_auth", "bad_request", "unhandled_error" or an empty string for connectivity errors
+ *  @discussion User info dictionary key for an SKTUser after a successful call to +login:jwt:completionHandler:
+ *
+ *  @see SKTUser
+ *  @see SKTLoginDidCompleteNotification
+ *  @see +login:jwt:completionHandler:
+ */
+extern NSString* const SKTUserIdentifier;
+
+/**
+ *  @abstract User info dictionary key to determine the error code of a failed operation. Possible operations that may include this value are +initWithSettings:completionHandler:, +login:jwt:completionHandler: and +logoutWithCompletionHandler:
+ *
+ *  @discussion Possible values include, but are not limited to, "unauthorized", "invalid_auth", "bad_request", "unhandled_error", "invalid_app" or an empty string for connectivity errors
  *
  *  @see SKTInitializationDidFailNotification
- *
+ *  @see SKTLoginDidFailNotification
+ *  @see SKTLogoutDidFailNotification
+ *  @see +initWithSettings:completionHandler:
+ *  @see +login:jwt:completionHandler:
+ *  @see +logoutWithCompletionHandler:
  */
 extern NSString* const SKTErrorCodeIdentifier;
 
 /**
- *  @abstract User info dictionary key to determine the HTTP status code of a failed initialization
- *
- *  @discussion User info dictionary key to determine the HTTP status code of a failed initialization
+ *  @abstract User info dictionary key to determine the error description of a failed operation. Possible operations that include this value are +initWithSettings:completionHandler:, +login:jwt:completionHandler: and +logoutWithCompletionHandler:
  *
  *  @see SKTInitializationDidFailNotification
+ *  @see SKTLoginDidFailNotification
+ *  @see SKTLogoutDidFailNotification
+ *  @see +initWithSettings:completionHandler:
+ *  @see +login:jwt:completionHandler:
+ *  @see +logoutWithCompletionHandler:
+ */
+extern NSString* const SKTErrorDescriptionIdentifier;
+
+/**
+ *  @abstract Custom error domain identifier
+ */
+extern NSString* const SKTErrorDomainIdentifier;
+
+/**
+ *  @abstract User info dictionary key to determine the HTTP status code of a failed operation. Possible operations that include this value are +initWithSettings:completionHandler:, +login:jwt:completionHandler: and +logoutWithCompletionHandler:
  *
+ *  @discussion User info dictionary key to determine the HTTP status code of a failed operation
+ *
+ *  @see SKTInitializationDidFailNotification
+ *  @see SKTLoginDidFailNotification
+ *  @see SKTLogoutDidFailNotification
+ *  @see +initWithSettings:completionHandler:
+ *  @see +login:jwt:completionHandler:
+ *  @see +logoutWithCompletionHandler:
  */
 extern NSString* const SKTStatusCodeIdentifier;
 
@@ -65,26 +99,67 @@ extern NSString* const SKTUserNotificationReplyCategoryIdentifier;
 /**
  *  @abstract Notification that fires when initialization completes successfully
  *
- *  @discussion This notification is fired each time a call to `POST /v1/init` completes with a non-error status code. Methods that will trigger this HTTP request include calls to +initWithSettings:, +login:jwt:, and +logout.
+ *  @discussion This notification is fired each time a call to +initWithSettings:completionHandler: completes with a non-error status code.
  *
- *  You may use this notification to know when initialization is complete, and the SKTUser object is correctly assigned it's `smoochId` property.
- *
- *  @see SKTUser
+ *  @see +initWithSettings:completionHandler:
  */
 extern NSString* const SKTInitializationDidCompleteNotification;
 
 /**
  *  @abstract Notification that fires when initialization fails
  *
- *  @discussion This notification is fired each time a call to `POST /v1/init` fails. Methods that will trigger this HTTP request include calls to +initWithSettings:, +login:jwt:, and +logout.
+ *  @discussion This notification is fired each time a call to +initWithSettings:completionHandler: fails.
  *
- *  You may use this notification to know if initialization failed due to an invalid app token, invalid JWT, or connectivity errors by inspecting the `userInfo` dictionary included with it.
+ *  You may use this notification to know if initialization failed due to an invalid app ID, invalid JWT, or connectivity errors by inspecting the `userInfo` dictionary included with it.
  *
  *  @see SKTErrorCodeIdentifier
+ *  @see SKTErrorDescriptionIdentifier
  *  @see SKTStatusCodeIdentifier
- *
  */
 extern NSString* const SKTInitializationDidFailNotification;
+
+/**
+ *  @abstract Notification that fires when +login:jwt:completionHandler: completes successfully
+ *
+ *  @discussion This notification is fired each time a call to +login:jwt:completionHandler: completes with a non-error status code.
+ *
+ *  @see +login:jwt:completionHandler:
+ *  @see SKTUserIdentifier
+ */
+extern NSString* const SKTLoginDidCompleteNotification;
+
+/**
+ *  @abstract Notification that fires when +login:jwt:completionHandler: fails
+ *
+ *  @discussion This notification is fired each time a call to +login:jwt:completionHandler: fails.
+ *
+ *  You may use this notification to know if a call to +login:jwt:completionHandler: failed due to an invalid JWT, or connectivity errors by inspecting the `userInfo` dictionary included with it.
+ *
+ *  @see SKTErrorCodeIdentifier
+ *  @see SKTErrorDescriptionIdentifier
+ *  @see SKTStatusCodeIdentifier
+ */
+extern NSString* const SKTLoginDidFailNotification;
+
+/**
+ *  @abstract Notification that fires when +logoutWithCompletionHandler: completes successfully
+ *
+ *  @discussion This notification is fired each time a call to +logoutWithCompletionHandler: completes with a non-error status code.
+ *
+ *  @see +logoutWithCompletionHandler:
+ */
+extern NSString* const SKTLogoutDidCompleteNotification;
+
+/**
+ *  @abstract Notification that fires when a call to +logoutWithCompletionHandler: fails
+ *
+ *  @discussion This notification is fired when a call to +logoutWithCompletionHandler: fails
+ *
+ *  @see SKTErrorCodeIdentifier
+ *  @see SKTErrorDescriptionIdentifier
+ *  @see SKTStatusCodeIdentifier
+ */
+extern NSString* const SKTLogoutDidFailNotification;
 
 /**
  *  @abstract The core class used for interacting with Smooch. Provides methods to initialize, configure, and interact with the library.
@@ -92,7 +167,7 @@ extern NSString* const SKTInitializationDidFailNotification;
 @interface Smooch : NSObject
 
 /**
- *  @abstract Initialize the Smooch SDK with the provided settings. 
+ *  @abstract Initialize the Smooch SDK with the provided settings.
  *
  *  @discussion This may only be called once (preferably, in application:didFinishLaunchingWithOptions:).
  *
@@ -101,8 +176,9 @@ extern NSString* const SKTInitializationDidFailNotification;
  *  @see SKTSettings
  *
  *  @param settings The settings to use.
+ *  @param handler An optional block to evaluate the result of the operation
  */
-+(void)initWithSettings:(SKTSettings*)settings;
++(void)initWithSettings:(SKTSettings*)settings completionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))handler;
 
 /**
  *  @abstract Accessor method for the sdk settings.
@@ -113,7 +189,7 @@ extern NSString* const SKTInitializationDidFailNotification;
  *
  *  @see SKTSettings
  *
- *  @return Settings object passed in +initWithSettings:, or nil if +initWithSettings: hasn't been called yet.
+ *  @return Settings object passed in +initWithSettings:completionHandler:, or nil if +initWithSettings:completionHandler: hasn't been called yet.
  */
 +(nullable SKTSettings*)settings;
 
@@ -122,7 +198,7 @@ extern NSString* const SKTInitializationDidFailNotification;
  *
  *  @discussion Uses the top-most view controller of the `UIApplicationDelegate` as the presenting view controller.
  *
- *  +initWithSettings: must have been called prior to calling this method.
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
  */
 +(void)show;
 
@@ -131,7 +207,7 @@ extern NSString* const SKTInitializationDidFailNotification;
  *
  *  @discussion Note: If a view controller was created and presented using `newConversationViewController`, calling this method will have no effect.
  *
- *  +initWithSettings: must have been called prior to calling this method.
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
  */
 +(void)close;
 
@@ -148,7 +224,7 @@ extern NSString* const SKTInitializationDidFailNotification;
  *
  *  @discussion In most cases, it is better to use +show. If you need more fine-grained control over which view controller is used as presenting view controller, use this method instead.
  *
- *  +initWithSettings: must have been called prior to calling this method.
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
  */
 +(void)showConversationFromViewController:(UIViewController*)viewController;
 
@@ -157,11 +233,11 @@ extern NSString* const SKTInitializationDidFailNotification;
  *
  *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose.
  *
- *  A view controller created in this way is tied to the current user's conversation at creation time. If the current user changes (i.e. by calling +login:jwt: or +logout), the view controller is invalidated and must be recreated for the new user.
+ *  A view controller created in this way is tied to the current user's conversation at creation time. If the current user changes (i.e. by calling +login:jwt:completionHandler: or +logoutWithCompletionHandler:), the view controller is invalidated and must be recreated for the new user.
  *
  *  Note: It is the responsibility of the caller to show, hide, and maintain a reference to this view controller. Calling `close` will not dismiss a view controller created in this way.
  *
- *  @return A new instance of the Smooch conversation view controller class. Returns nil if +initWithSettings: hasn't been called
+ *  @return A new instance of the Smooch conversation view controller class. Returns nil if +initWithSettings:completionHandler: hasn't been called
  */
 +(nullable UIViewController*)newConversationViewController;
 
@@ -178,20 +254,11 @@ extern NSString* const SKTInitializationDidFailNotification;
 +(void)setUserFirstName:(nullable NSString*)firstName lastName:(nullable NSString*)lastName;
 
 /**
- *  @abstract Tracks an app event, and processes any whispers associated with that event.
- *
- *  @discussion Whispers can be configured in the Smooch admin panel.
- *
- *  @param eventName The name of the event to track. This should match a whisper created on the admin panel for your app.
- */
-+(void)track:(NSString*)eventName;
-
-/**
  *  @abstract Accessor method for the current conversation.
  *
  *  @see SKTConversation
  *
- *  @return Current conversation, or nil if +initWithSettings: hasn't been called yet.
+ *  @return Current conversation, or nil if +initWithSettings:completionHandler: hasn't been called yet.
  */
 +(nullable SKTConversation*)conversation;
 
@@ -200,27 +267,25 @@ extern NSString* const SKTInitializationDidFailNotification;
  *
  *  @discussion You can either use this method to transition from logged out state to logged in, or to switch the currently logged in user to a different one.
  *
- *  User login state is persisted across app launches. You must call +logout to reset to anonymous mode.
+ *  User login state is persisted across app launches. You must call +logoutWithCompletionHandler: to reset to anonymous mode.
  *
- *  +initWithSettings: must have been called prior to calling this method.
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
  *
  *  You may not call login while the conversation screen is shown. Doing so will result in a no-op.
  *
  *  @param userId The distinct id of the user to login. Must not be nil.
- *  @param jwt Optional jwt used to prove the origin of the login request. May be nil.
+ *  @param jwt jwt used to prove the origin of the login request. Must not be nil.
  */
-+(void)login:(NSString*)userId jwt:(nullable NSString*)jwt;
++(void)login:(NSString*)userId jwt:(NSString*)jwt completionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))handler;
 
 /**
  *  @abstract Logs out the current user.
  *
- *  @discussion This method will automatically login an anonymous user after logging out the current user.
- *
- *  Calling this method while already in anonymous state has no effect.
+ *  @discussion Calling this method while already in anonymous state has no effect.
  *
  *  You may not call logout while the conversation screen is shown. Doing so will result in a no-op.
  */
-+(void)logout;
++(void)logoutWithCompletionHandler:(nullable void(^)( NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler;
 
 /**
  *  @abstract Set the push notification token for this device.
@@ -251,7 +316,7 @@ extern NSString* const SKTInitializationDidFailNotification;
  *
  *  By default this object will automatically be set as the UNUserNotificationCenter delegate at init time. Smooch will maintain a reference to your app's existing delegate (if applicable), and automatically forward any calls for notifications that did not originate from Smooch.
  *
- *  To disable automatic overriding, you must set SKTSettings.enableUserNotificationCenterDelegateOverride to NO before calling +initWithSettings:. If you choose to do so, you must manually forward any relevant calls from your own delegate object. To check the origin of a notification, see the documentation for SKTPushNotificationIdentifier. For example:
+ *  To disable automatic overriding, you must set SKTSettings.enableUserNotificationCenterDelegateOverride to NO before calling +initWithSettings:completionHandler:. If you choose to do so, you must manually forward any relevant calls from your own delegate object. To check the origin of a notification, see the documentation for SKTPushNotificationIdentifier. For example:
  *
  *  -(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler
  *  {
@@ -271,7 +336,7 @@ extern NSString* const SKTInitializationDidFailNotification;
  *
  *  @see SKTSettings
  *
- *  @return An object conforming to UNUserNotificationCenterDelegate protocol, or nil if +initWithSettings: hasn't been called yet.
+ *  @return An object conforming to UNUserNotificationCenterDelegate protocol, or nil if +initWithSettings:completionHandler: hasn't been called yet.
  */
 +(nullable id<UNUserNotificationCenterDelegate>)userNotificationCenterDelegate;
 

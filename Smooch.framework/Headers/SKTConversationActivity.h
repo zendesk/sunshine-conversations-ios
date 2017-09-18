@@ -2,8 +2,6 @@
 //  SKTConversationActivity.h
 //  Smooch
 //
-//  Copyright © 2016 Smooch Technologies. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 

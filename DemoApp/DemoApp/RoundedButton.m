@@ -2,7 +2,6 @@
 //  RoundedButton.m
 //  DemoApp
 //
-//  Created by Michael Spensieri on 2/28/14.
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
 
@@ -27,12 +26,12 @@ static const int buttonSidePadding = 30;
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self setTitleColor:[UIColor colorWithRed:136/255.0 green:136/255.0 blue:136/255.0 alpha:1] forState:UIControlStateHighlighted];
         self.titleLabel.font = [UIFont systemFontOfSize:20];
-        
+
         if(floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1){
             [self setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.2] forState:UIControlStateHighlighted];
             [self setBackgroundImage:[UIImage new] forState:UIControlStateNormal];
         }
-        
+
         self.layer.borderColor = [UIColor whiteColor].CGColor;
         self.layer.borderWidth = 1.0f;
     }

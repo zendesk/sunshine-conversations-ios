@@ -2,8 +2,6 @@
 //  SKTSettings.h
 //  Smooch
 //
-//  Copyright (c) 2015 Smooch Technologies. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
@@ -11,20 +9,20 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SKTSettings : NSObject
 
 /**
- *  @abstract Initializes a settings object with the given app token.
+ *  @abstract Initializes a settings object with the given app id.
  *
- *  @param appToken A valid app token retrieved from the Smooch web portal.
+ *  @param appId A valid app id retrieved from the Smooch web portal.
  */
-+(instancetype)settingsWithAppToken:(NSString*)appToken;
++(instancetype)settingsWithAppId:(NSString*)appId;
 
 /**
- *  @abstract The app token corresponding to your application.
+ *  @abstract The app id corresponding to your application.
  *
- *  @discussion App tokens are issued on the Smooch web portal. 
+ *  @discussion App id can be retrieved from the Smooch web portal
  *
  *  This value may only be set once, and must be set at init time.
  */
-@property(nonatomic, copy) NSString* appToken;
+@property(nonatomic, copy) NSString* appId;
 
 /**
  *  @abstract The accent color for the conversation screen.
@@ -39,32 +37,10 @@ NS_ASSUME_NONNULL_BEGIN
  *  @abstract The status bar style to use on the conversation screen.
  *
  *  @discussion You should use this property if your app uses UIAppearance to style UINavigationBar, and your styling requires a specific status bar color.
- * 
+ *
  *  The default value is UIStatusBarStyleDefault.
  */
 @property UIStatusBarStyle conversationStatusBarStyle;
-
-/**
- *  @abstract The distinct id of the current user, if known.
- *
- *  @discussion Defaults to the last known user id for the given app token (user login state is persisted between app launches). Defaults to nil if the previous user was anonymous, or if there was no previous user.
- *
- *  This value may only be set once, and must be set at init time. To change at runtime, use Smooch.login instead.
- *
- *  @see Smooch
- */
-@property(nonatomic, copy, nullable) NSString* userId;
-
-/**
- *  @abstract Optional jwt used to prove the origin of the login request.
- *
- *  @discussion Used only if userId is not nil. Defaults to the last known jwt for the given app token.
- *
- *  This value may only be set once, and must be set at init time. To change at runtime, use Smooch.login instead.
- *
- *  @see Smooch
- */
-@property(nonatomic, copy, nullable) NSString* jwt;
 
 /**
  *  @abstract Maximum number of seconds to display in-app notifications before dismissing.

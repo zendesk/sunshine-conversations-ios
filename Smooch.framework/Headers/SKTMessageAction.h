@@ -2,8 +2,6 @@
 //  SKTMessageAction.h
 //  Smooch
 //
-//  Copyright (c) 2015 Smooch Technologies. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 

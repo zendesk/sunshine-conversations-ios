@@ -2,7 +2,6 @@
 //  MainContentView.m
 //  DemoApp
 //
-//  Created by Michael Spensieri on 12/19/13.
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
 
@@ -45,11 +44,11 @@ static const int kLogoBottomPadding = 30;
 -(void)initNavBar
 {
     self.navBar = [[UINavigationBar alloc] init];
-    
+
     if([self isIOS7OrLater]){
         self.navBar.tintColor = [UIColor colorWithRed:145.0/255 green:45.0/255 blue:141.0/255 alpha:1.0];
     }
-    
+
     [self addSubview:self.navBar];
 }
 
@@ -80,7 +79,7 @@ static const int kLogoBottomPadding = 30;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.titleLabel.font = [UIFont boldSystemFontOfSize:22];
     self.titleLabel.backgroundColor = [UIColor clearColor];
-    
+
     [self addSubview:self.titleLabel];
 }
 
@@ -93,7 +92,7 @@ static const int kLogoBottomPadding = 30;
     self.subtitleLabel.font = [UIFont systemFontOfSize:15];
     self.subtitleLabel.numberOfLines = 0;
     self.subtitleLabel.backgroundColor = [UIColor clearColor];
-    
+
     [self addSubview:self.subtitleLabel];
 }
 
@@ -122,20 +121,20 @@ static const int kLogoBottomPadding = 30;
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    
+
     CGFloat navBarHeight = [self getNavBarHeight];
     self.navBar.frame = CGRectMake(0, 0, self.bounds.size.width, navBarHeight);
-    
+
     // Resize the gradient to fit the screensize when switching between landscape/portrait
     self.background.frame = self.frame;
-    
+
     self.subtitleLabel.frame = CGRectMake(0, 0, MIN(self.bounds.size.width - 50, 320), 500);
     [self.subtitleLabel sizeToFit];
     self.subtitleLabel.center = CGPointMake(floor(CGRectGetMidX(self.bounds)), self.center.y + 20);
-    
+
     [self.titleLabel sizeToFit];
     self.titleLabel.center = CGPointMake(self.subtitleLabel.center.x, self.subtitleLabel.frame.origin.y - 5 - floor(self.titleLabel.frame.size.height / 2));
-    
+
     // Switch to a smaller logo when the phone is in landscape mode
     if ([self isLayoutPhoneInLandscape]) {
         self.logo.frame = CGRectMake(0, self.titleLabel.frame.origin.y - self.logo.frame.size.height/2 - kLogoBottomPadding, self.logo.image.size.width/2, self.logo.image.size.height/2);
@@ -143,7 +142,7 @@ static const int kLogoBottomPadding = 30;
         self.logo.frame = CGRectMake(0, self.titleLabel.frame.origin.y - self.logo.frame.size.height - kLogoBottomPadding, self.logo.image.size.width, self.logo.image.size.height);
     }
     self.logo.center = CGPointMake(self.titleLabel.center.x, self.logo.center.y);
-    
+
     self.button.frame = CGRectMake(0,CGRectGetMaxY(self.subtitleLabel.frame) + 10, 200, 46);
     self.button.center = CGPointMake(floor(CGRectGetMidX(self.bounds)), self.button.center.y);
 }
@@ -151,15 +150,15 @@ static const int kLogoBottomPadding = 30;
 -(CGFloat)getNavBarHeight
 {
     int height = 44;
-    
+
     if([self isLayoutPhoneInLandscape]){
         height = 32;
     }
-    
+
     if([self isIOS7OrLater]){
         height += 20;
     }
-    
+
     return height;
 }
 

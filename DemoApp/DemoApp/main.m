@@ -2,7 +2,6 @@
 //  main.m
 //  DemoApp
 //
-//  Created by Michael Spensieri on 12/10/13.
 //  Copyright (c) 2015 Smooch Technologies. All rights reserved.
 //
 

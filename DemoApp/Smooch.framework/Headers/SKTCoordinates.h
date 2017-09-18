@@ -2,8 +2,6 @@
 //  SKTCoordinates.h
 //  Smooch
 //
-//  Copyright (c) 2017 Smooch Technologies. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 

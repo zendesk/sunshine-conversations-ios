@@ -15,7 +15,7 @@ The Smooch iOS SDK will add [in-app messaging](https://smooch.io/in-app-messagin
 - Sync conversations across every device and channel your customers use.
 - Bring every conversation into your existing business apps. No new tool to learn. [See all integrations](https://smooch.io/integrations/).
 
-Sign up and get an app token: [https://app.smooch.io/signup](https://app.smooch.io/signup).
+Sign up and get an app id: [https://app.smooch.io/signup](https://app.smooch.io/signup).
 
 CocoaPods:
 
@@ -30,22 +30,18 @@ Carthage:
 Obj-C:
 
 ```objc
-[Smooch initWithSettings:[SKTSettings settingsWithAppToken:@"YOURAPPTOKEN"]];
+[Smooch initWithSettings:[SKTSettings settingsWithAppId:@"YOUR_APP_ID"] completionHandler:^(NSError * _Nullable error, NSDictionary * _Nullable userInfo) {
+        // Your code after init is complete
+    }];
 [Smooch show];
 ```
 
 Swift:
 
-In your bridging header:
-
-```objc
-#import <Smooch/Smooch.h>
-```
-
-In a Swift file:
-
 ```Swift
-Smooch.initWithSettings(SKTSettings(appToken: "YOUR_APP_TOKEN"))
+Smooch.initWith(SKTSettings(appId: "YOUR_APP_ID")) { (error: Error?, userInfo: [AnyHashable : Any]?) in
+            // Your code after init is complete
+        }
 Smooch.show()
 ```
 

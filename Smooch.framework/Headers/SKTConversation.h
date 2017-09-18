@@ -2,8 +2,6 @@
 //  SKTConversation.h
 //  Smooch
 //
-//  Copyright (c) 2015 Smooch Technologies. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import "SKTMessage.h"
@@ -127,7 +125,7 @@ extern NSString* const SKTConversationNewMessagesKey;
 extern NSString* const SKTConversationPreviousMessagesKey;
 
 /**
- *  @abstract A key whose value is a UIImage which represents an image being uploaded. 
+ *  @abstract A key whose value is a UIImage which represents an image being uploaded.
  *
  *  @discussion This key is used with SKTConversationImageUploadDidStartNotification, SKTConversationImageUploadProgressDidChangeNotification, and SKTConversationImageUploadCompletedNotification notifications.
  *
@@ -174,9 +172,9 @@ extern NSString* const SKTConversationProgressKey;
 extern NSString* const SKTConversationActivityKey;
 
 /**
- *  @discussion The SKTConversation class provides an interface to interact with the current user's conversation. 
- *  
- *  To obtain an instance, use `[Smooch conversation]`. +initWithSettings: must have been called prior to retrieving the shared conversation object.
+ *  @discussion The SKTConversation class provides an interface to interact with the current user's conversation.
+ *
+ *  To obtain an instance, use `[Smooch conversation]`. +initWithSettings:completionHandler: must have been called prior to retrieving the shared conversation object.
  *
  *  To send a message, use -sendMessage: with an SKTMessage object
  *
@@ -225,11 +223,11 @@ extern NSString* const SKTConversationActivityKey;
 
 
 /**
- *  @abstract URL used for fetching previous messages in the conversation, if they exist.
+ *  @abstract Boolean representing whether there are previous messages in the conversation that can be fetched or not
  *
- *  @discussion if there are no previous messages in the conversation, this will be nil. For fetching previous messages, use [SKTConversation loadPreviousMessages]
+ *  @discussion Returns YES if there are previous messages in the conversation, NO otherwise. For fetching previous messages, use [SKTConversation loadPreviousMessages]
  */
-@property(readonly, nullable) NSString *previous;
+@property(readonly) BOOL hasPreviousMessages;
 
 /**
  *  @abstract Marks all unread messages as read.
@@ -312,7 +310,7 @@ extern NSString* const SKTConversationActivityKey;
 @optional
 /**
  *  @abstract Notifies the delegate of a change in unread message count.
- *  
+ *
  *  @discussion Called when conversation data is fetched from the server, or when the user enters the conversation screen.
  *
  *  @param conversation The conversation object that initiated the change.
@@ -333,22 +331,6 @@ extern NSString* const SKTConversationActivityKey;
  *  @see SKTMessage
  */
 -(BOOL)conversation:(SKTConversation*)conversation shouldShowInAppNotificationForMessage:(SKTMessage*)message;
-
-/**
- *  @abstract Asks the delegate if the conversation should show for the given action.
- *
- *  @discussion Called when the user performs an action that causes the conversation screen to show. Return NO to cancel the display of the conversation screen and perform your own handling of the action.
- *
- *  @param conversation The conversation object.
- *  @param action The action the user has taken.
- *
- *  @deprecated Use conversation:shouldShowForAction:info instead
- *
- *  @return YES to allow default handling. NO to suppress the conversation screen, and perform custom handling.
- *
- *  @see SKTAction
- */
--(BOOL)conversation:(SKTConversation*)conversation shouldShowForAction:(SKTAction)action __attribute((deprecated("use conversation:shouldShowForAction:info instead")));
 
 /**
  *  @abstract Asks the delegate if the conversation should show for the given action.
