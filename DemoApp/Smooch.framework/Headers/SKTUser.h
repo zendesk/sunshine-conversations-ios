@@ -61,6 +61,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(copy, nullable) NSString* firstName;
 
 /**
+ *  @abstract The user's custom properties.
+ */
+@property(copy, readonly) NSDictionary *properties;
+
+/**
  *  @abstract The user's last name, to be used as part of the display name when sending messages.
  */
 @property(copy, nullable) NSString* lastName;
