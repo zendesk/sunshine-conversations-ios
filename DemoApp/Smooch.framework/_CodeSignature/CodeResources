@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
-		RY/tVhDJeeh6h3hvY3agK6qu994=
+		Uu7r0z0AEeFppoWDxJWycOyvNSE=
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		MG/p/i4YAJKBBzYU4od8MFsSZ20=
+		tAosI+kPggb1fn9a4of/DHuX3Rw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lLZcxrI5BbzzCa5gYR77EokFAC8=
+		lj2X31dJwZ7JDSI6e+MqP5BjQu0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,6 +53,18 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>backArrow.png</key>
+		<data>
+		yE5b1yUQWTeXW7Akd/WY7t+x22Y=
+		</data>
+		<key>backArrow@2x.png</key>
+		<data>
+		K62LOF6lPOX85m717fjxI82JKXE=
+		</data>
+		<key>backArrow@3x.png</key>
+		<data>
+		F+56PCXqxEecyhA27oy/tnJKHZI=
+		</data>
 		<key>de.lproj/SmoochLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -78,7 +90,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			I9aMAWTvFGicGkrczPb/AkKpDa0=
+			rIe7cRzuS4Maxn3DAviLs6AZW58=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -414,11 +426,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RY/tVhDJeeh6h3hvY3agK6qu994=
+			Uu7r0z0AEeFppoWDxJWycOyvNSE=
 			</data>
 			<key>hash2</key>
 			<data>
-			PKet1sO46AImtY1yWfqBX0Yo0JKkOsVWmNuHO8Hewdg=
+			fOSqIffMYEf1+txPa6z4fjdMBO/6NyIFEvrm7OdbdmY=
 			</data>
 		</dict>
 		<key>Headers/SKTSettings.h</key>
@@ -447,11 +459,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MG/p/i4YAJKBBzYU4od8MFsSZ20=
+			tAosI+kPggb1fn9a4of/DHuX3Rw=
 			</data>
 			<key>hash2</key>
 			<data>
-			oIf1yYm6TdkKRAlVCzOqr/4/Jbz2R8jOTB/oJ7bq5Vo=
+			gJLUWRnkYkQshrfJTlUQa+ClCUTGetmYLVC+PkHdKj0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -477,6 +489,39 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>backArrow.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yE5b1yUQWTeXW7Akd/WY7t+x22Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			sEwVxIKod9DJt8nHtS5PxOpSeKzOsRmhJha11MJil/8=
+			</data>
+		</dict>
+		<key>backArrow@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			K62LOF6lPOX85m717fjxI82JKXE=
+			</data>
+			<key>hash2</key>
+			<data>
+			l8bn95Guo3VG2Zc6/LSMUkcPtsTPn0WmZus8vhLw55U=
+			</data>
+		</dict>
+		<key>backArrow@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			F+56PCXqxEecyhA27oy/tnJKHZI=
+			</data>
+			<key>hash2</key>
+			<data>
+			otH2xQfLD418ZONfh4Np/TKBct4x14IuBID8vhCkdLs=
+			</data>
 		</dict>
 		<key>de.lproj/SmoochLocalizable.strings</key>
 		<dict>
@@ -528,11 +573,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			I9aMAWTvFGicGkrczPb/AkKpDa0=
+			rIe7cRzuS4Maxn3DAviLs6AZW58=
 			</data>
 			<key>hash2</key>
 			<data>
-			Jrj4x9WuA/wdZ3HWr0kzg3Jd5S7cbFkT6/Br89AdgKk=
+			+No4Exg5wIgfCd0SfROT0jcRLAz9PQx3x69AjR++/TY=
 			</data>
 			<key>optional</key>
 			<true/>
