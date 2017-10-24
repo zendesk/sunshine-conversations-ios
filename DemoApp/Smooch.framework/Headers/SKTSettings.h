@@ -16,6 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 +(instancetype)settingsWithAppId:(NSString*)appId;
 
 /**
+ *  @abstract Initializes a settings object with the given app id and auth code.
+ *
+ *  @param appId A valid app id retrieved from the Smooch web portal.
+ *  @param authCode A valid auth code generated from the Smooch API.
+ */
++(instancetype)settingsWithAppId:(NSString*)appId andAuthCode:(NSString*)authCode;
+
+/**
  *  @abstract The app id corresponding to your application.
  *
  *  @discussion App id can be retrieved from the Smooch web portal
@@ -23,6 +31,15 @@ NS_ASSUME_NONNULL_BEGIN
  *  This value may only be set once, and must be set at init time.
  */
 @property(nonatomic, copy) NSString* appId;
+
+/**
+ *  @abstract The auth code being used to authenticate as an existing user.
+ *
+ *  @discussion Auth code can be retrieved from the Smooch API
+ *
+ *  This value may only be set once, and must be set at init time.
+ */
+@property(nonatomic, copy) NSString* authCode;
 
 /**
  *  @abstract The accent color for the conversation screen.
