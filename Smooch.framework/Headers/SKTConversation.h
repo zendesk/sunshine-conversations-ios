@@ -296,6 +296,24 @@ extern NSString* const SKTConversationActivityKey;
  */
 -(void)retryMessage:(SKTMessage*)failedMessage;
 
+/**
+ *  @abstract Notify the server that the user is typing.
+ *
+ *  @discussion This method is called automatically when using the default conversation view controller. Only call this method if your application implements its own conversation view.
+ *
+ *  Typing updates are automatically throttled, so you may call this method as often as necessary. The typing stop event will automatically fire 10 seconds after the most recent call to this method.
+ */
+-(void)startTyping;
+
+/**
+ *  @abstract Notify the server that the user has finished typing.
+ *
+ *  @discussion This method is called automatically when using the default conversation view controller. Only call this method if your application implements its own conversation view.
+ *
+ *  If the user was not flagged as typing recently, this method will result in a no-op.
+ */
+-(void)stopTyping;
+
 @end
 
 /**
