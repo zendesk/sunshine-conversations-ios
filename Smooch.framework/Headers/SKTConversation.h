@@ -215,6 +215,11 @@ extern NSString* const SKTConversationActivityKey;
 @property(readonly) NSUInteger unreadCount;
 
 /**
+ *  @abstract Date when the business last read the user messages
+ */
+@property(readonly) NSDate *appMakerLastRead;
+
+/**
  *  @abstract A delegate object for receiving notifications related to the conversation.
  *
  *  @see SKTConversationDelegate

@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		ZpdqpDlNhaHTPKHCfTjL/DV56I8=
+		JQ3KMdAO5e4XPP2pOIn51jjpp9c=
 		</data>
 		<key>Headers/SKTConversationActivity.h</key>
 		<data>
-		/8zwtggDDlwNZu6cEDt1joXUD58=
+		I8uPtH6junXaUbVt2k2PSQiLUuA=
 		</data>
 		<key>Headers/SKTCoordinates.h</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		ABNOta4hnQ74/C/VStj2DLKl2TE=
+		A4E1FroovsCjy1i+Sj85hxWPK70=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OhYlts890hdskzheY6TVpavDITw=
+		+3UU3GOzEWlwZUyANil3EH6wuvo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,7 +90,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vjPYpAsfDnuOo58Sgw5g4z74g8w=
+			LPfgp0GIvWCCS3xv/pqXmAQCpPw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -382,22 +382,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZpdqpDlNhaHTPKHCfTjL/DV56I8=
+			JQ3KMdAO5e4XPP2pOIn51jjpp9c=
 			</data>
 			<key>hash2</key>
 			<data>
-			prz6Z1RtTbT2S+M070R6wUnA5QGs9PAXpBZdntrFjtY=
+			llH7I5qbGmh8PLXsFCT/v+UsDgORkpp9Fp5/3BdqTW0=
 			</data>
 		</dict>
 		<key>Headers/SKTConversationActivity.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/8zwtggDDlwNZu6cEDt1joXUD58=
+			I8uPtH6junXaUbVt2k2PSQiLUuA=
 			</data>
 			<key>hash2</key>
 			<data>
-			kJYt4fQMGiolMzEpWUjIKyeIgm0mrrKTt9woPOURhlI=
+			P24MHDGO+lP5t9bYBnNxri5+edRc8tpCzdAv43MOkks=
 			</data>
 		</dict>
 		<key>Headers/SKTCoordinates.h</key>
@@ -459,11 +459,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ABNOta4hnQ74/C/VStj2DLKl2TE=
+			A4E1FroovsCjy1i+Sj85hxWPK70=
 			</data>
 			<key>hash2</key>
 			<data>
-			GiTzO8KnceSeZQiBEGVqiUQOZKMN16mUUYZGR3CNJP0=
+			5pofy4m0M0E/uRsZoxaQA3uXYrFI4pgSYfazR3oyIxY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -573,11 +573,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vjPYpAsfDnuOo58Sgw5g4z74g8w=
+			LPfgp0GIvWCCS3xv/pqXmAQCpPw=
 			</data>
 			<key>hash2</key>
 			<data>
-			XvAJIo2WwDR+3cLR3g0BBAjUJlx5cyBA1eKZ4Tiswlc=
+			DWTRAoS8xuskFZ/oX4AY9zt7uYV1chQCpPx8SCG0YZs=
 			</data>
 			<key>optional</key>
 			<true/>
