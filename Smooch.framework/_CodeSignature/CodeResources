@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
-		KrjWZTwQMeWvTna2VA3kTir5gIM=
+		7/v/FNwckmh6J5mRSzgvuyeKtcY=
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
-		Uu7r0z0AEeFppoWDxJWycOyvNSE=
+		V+l8T6tbAy/sjuvjyz2QbhsC/cU=
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		A4E1FroovsCjy1i+Sj85hxWPK70=
+		yGF5D6neVxNbosoc6FqxbWcx4a4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+3UU3GOzEWlwZUyANil3EH6wuvo=
+		N0Q2s0lSRnLZ3KJ2C6jwGEnHUCs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,7 +90,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LPfgp0GIvWCCS3xv/pqXmAQCpPw=
+			iQaKM/V3P8yCZrDmzl+W7Zjcvr0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -415,22 +415,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KrjWZTwQMeWvTna2VA3kTir5gIM=
+			7/v/FNwckmh6J5mRSzgvuyeKtcY=
 			</data>
 			<key>hash2</key>
 			<data>
-			oqaGEK8yhpAq7VHyeh2dgDnL9bPBw2vFJiLb/F6vsHQ=
+			kPpgWjRzsE7+zRVCaKc4oAH0hYkCZZ3wW0XD8+iq4ZA=
 			</data>
 		</dict>
 		<key>Headers/SKTMessageAction.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Uu7r0z0AEeFppoWDxJWycOyvNSE=
+			V+l8T6tbAy/sjuvjyz2QbhsC/cU=
 			</data>
 			<key>hash2</key>
 			<data>
-			fOSqIffMYEf1+txPa6z4fjdMBO/6NyIFEvrm7OdbdmY=
+			AP4KNa0z2N26s7chWVFnwl49ZhIKT73VDxSVzdOjWGQ=
 			</data>
 		</dict>
 		<key>Headers/SKTSettings.h</key>
@@ -459,11 +459,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A4E1FroovsCjy1i+Sj85hxWPK70=
+			yGF5D6neVxNbosoc6FqxbWcx4a4=
 			</data>
 			<key>hash2</key>
 			<data>
-			5pofy4m0M0E/uRsZoxaQA3uXYrFI4pgSYfazR3oyIxY=
+			Xrsiw1APXbz5rmUQEDQhRRbKm7zuUdf3i9Nloe8W/Xo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -573,11 +573,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LPfgp0GIvWCCS3xv/pqXmAQCpPw=
+			iQaKM/V3P8yCZrDmzl+W7Zjcvr0=
 			</data>
 			<key>hash2</key>
 			<data>
-			DWTRAoS8xuskFZ/oX4AY9zt7uYV1chQCpPx8SCG0YZs=
+			rQHyc5lJ1vMyEhueKMHi1p8B54uvjml5uINPamAUGAs=
 			</data>
 			<key>optional</key>
 			<true/>

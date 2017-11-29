@@ -37,6 +37,16 @@ extern NSString* _Nonnull const SKTMessageTypeLocation;
 extern NSString* _Nonnull const SKTMessageTypeFile;
 
 /**
+ *  @abstract A type of message that contains a horizontally scrollable set of items
+ */
+extern NSString* _Nonnull const SKTMessageTypeCarousel;
+
+/**
+ *  @abstract A type of message that contains a vertically scrollable set of items
+ */
+extern NSString* _Nonnull const SKTMessageTypeList;
+
+/**
  *  @discussion Upload status of an SKTMessage.
  *
  *  @see SKTMessage
@@ -86,6 +96,11 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
  *  @abstract The text content of the message. May be nil if mediaUrl or actions are provided
  */
 @property(nullable) NSString* text;
+
+/**
+ *  @abstract The text fallback to display for message types not supported by the SDK. May be nil
+ */
+@property(nullable) NSString* textFallback;
 
 /**
  *  @abstract The name of the author. This property may be nil if no name could be determined.
