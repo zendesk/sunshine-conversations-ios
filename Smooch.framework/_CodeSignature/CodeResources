@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		JQ3KMdAO5e4XPP2pOIn51jjpp9c=
+		a1AxRinaS4xTjH8XIa/WowRC34I=
 		</data>
 		<key>Headers/SKTConversationActivity.h</key>
 		<data>
@@ -16,13 +16,21 @@
 		<data>
 		e19jFaBQx7dTYeoMcU32hQvyJaU=
 		</data>
+		<key>Headers/SKTDisplaySettings.h</key>
+		<data>
+		/DEvR6uRHR5SZz/x4sfkIJLCPKk=
+		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
-		7/v/FNwckmh6J5mRSzgvuyeKtcY=
+		97ohuwf+Yt7On4mIKcSv3p14KNk=
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
-		V+l8T6tbAy/sjuvjyz2QbhsC/cU=
+		aUKxXbwFR8AhpPBlOhGBtPAkn0U=
+		</data>
+		<key>Headers/SKTMessageItem.h</key>
+		<data>
+		XqvtWMdJ16+47jpsMUmOGP7jk2s=
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
@@ -34,11 +42,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		v1byVrpVKeCJsTQ1G13uEBidA2M=
+		uMaJ+BP/EVH8ArmvVeS3AnDeumo=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		T2gOx1dqDzzS7kc15hH9iysjZ+k=
+		94XGJWG4Q2VQbmi5PFaXkeVO81o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -382,11 +390,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JQ3KMdAO5e4XPP2pOIn51jjpp9c=
+			a1AxRinaS4xTjH8XIa/WowRC34I=
 			</data>
 			<key>hash2</key>
 			<data>
-			llH7I5qbGmh8PLXsFCT/v+UsDgORkpp9Fp5/3BdqTW0=
+			wI7JoWi4E/1NBFMEPn3NUCNIPAaIUyXoSjRvoBXEdgM=
 			</data>
 		</dict>
 		<key>Headers/SKTConversationActivity.h</key>
@@ -411,26 +419,48 @@
 			IyZTAGHGtq1Dj2XQHuU8n4M9k1uSGZN1EdPO43dVrsA=
 			</data>
 		</dict>
+		<key>Headers/SKTDisplaySettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/DEvR6uRHR5SZz/x4sfkIJLCPKk=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZrKiah1YhLR3n6DIfZJmpilCjWu/F8KPRcL5NO40tUg=
+			</data>
+		</dict>
 		<key>Headers/SKTMessage.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7/v/FNwckmh6J5mRSzgvuyeKtcY=
+			97ohuwf+Yt7On4mIKcSv3p14KNk=
 			</data>
 			<key>hash2</key>
 			<data>
-			kPpgWjRzsE7+zRVCaKc4oAH0hYkCZZ3wW0XD8+iq4ZA=
+			XlbONN8IRzmd5/UwV8kdzEAFTTYI6KnglPr1R69t0ME=
 			</data>
 		</dict>
 		<key>Headers/SKTMessageAction.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			V+l8T6tbAy/sjuvjyz2QbhsC/cU=
+			aUKxXbwFR8AhpPBlOhGBtPAkn0U=
 			</data>
 			<key>hash2</key>
 			<data>
-			AP4KNa0z2N26s7chWVFnwl49ZhIKT73VDxSVzdOjWGQ=
+			+4aYWuWmy0eA5Ht+Uldj9ObAlm521SqpgAXvd/IOzEY=
+			</data>
+		</dict>
+		<key>Headers/SKTMessageItem.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XqvtWMdJ16+47jpsMUmOGP7jk2s=
+			</data>
+			<key>hash2</key>
+			<data>
+			A6NhvAodEkgT6fO4sdCbxa/F2YU0ILT4CM0w4AVsj/4=
 			</data>
 		</dict>
 		<key>Headers/SKTSettings.h</key>
@@ -459,11 +489,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v1byVrpVKeCJsTQ1G13uEBidA2M=
+			uMaJ+BP/EVH8ArmvVeS3AnDeumo=
 			</data>
 			<key>hash2</key>
 			<data>
-			VCuYbkbz27Z18C6cLLmuq3GWMUdAU45EGWGTuWhJH/U=
+			K+JT9Na0v1HU9KULkHLbaHcpWjk2mXsEsU5i7uSTl/M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

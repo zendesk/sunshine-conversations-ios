@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "SKTMessage.h"
 #import "SKTMessageAction.h"
+#import "SKTMessageItem.h"
 #import "SKTConversationActivity.h"
 
 NS_ASSUME_NONNULL_BEGIN

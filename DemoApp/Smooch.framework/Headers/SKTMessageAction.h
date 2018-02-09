@@ -108,6 +108,15 @@ extern NSString* _Nonnull const SKTMessageActionWebviewSizeCompact;
 @property(nullable, copy) NSString* size;
 
 /**
+ *  @abstract Boolean value indicating whether this action is the default action for an SKTMessageItem
+ *
+ *  @discussion Default value is `NO`
+ *
+ *  @see SKTMessageItem
+ */
+@property(readonly) BOOL isDefault;
+
+/**
  *  @abstract Metadata associated with the action.
  *
  *  @discussion A flat dictionary of metadata set through the REST API. May be nil.

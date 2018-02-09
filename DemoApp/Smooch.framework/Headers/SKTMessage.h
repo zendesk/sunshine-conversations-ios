@@ -5,6 +5,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SKTCoordinates.h"
+#import "SKTDisplaySettings.h"
 
 /**
  *  @abstract Notification that is fired when a message fails to upload.
@@ -139,6 +140,15 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
 @property(readonly, nullable) NSArray* actions;
 
 /**
+ *  @abstract An array of SKTMessageItem objects representing the items associated with this message
+ *
+ *  @discussion Only messages of type `SKTMessageTypeCarousel` and `SKTMessageTypeList` contain items.
+ *
+ *  @see SKTMessageItem
+ */
+@property(readonly, nullable) NSArray* items;
+
+/**
  *  @abstract The url to the image asset, if applicable. Returns nil if the message is not an image message.
  */
 @property(nullable) NSString* mediaUrl;
@@ -154,6 +164,13 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
  *  @abstract Coordinates for a location for a message of type SKTMessageTypeLocation
  */
 @property(readonly, nullable) SKTCoordinates *coordinates;
+
+/**
+ *  @abstract Settings to adjust the layout of a message of type SKTMessageTypeCarousel
+ *
+ *  @see SKTDisplaySettings
+ */
+@property(readonly, nullable) SKTDisplaySettings *displaySettings;
 
 /**
  *  @abstract The role of the message.
