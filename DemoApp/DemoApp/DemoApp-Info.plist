@@ -24,6 +24,19 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>${PRODUCT_NAME} will use your camera to gather additional information</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>${PRODUCT_NAME} will use location services to gather additional information</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Photo library permission is required to send images to ${PRODUCT_NAME}</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>${PRODUCT_NAME} will use your photo library to gather additional information</string>
 	<key>UILaunchStoryboardName</key>
 	<string>launch</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -37,11 +50,5 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>${PRODUCT_NAME} will use your camera to gather additional information</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>${PRODUCT_NAME} will use location services to gather additional information</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>${PRODUCT_NAME} will use your photo library to gather additional information</string>
 </dict>
 </plist>
