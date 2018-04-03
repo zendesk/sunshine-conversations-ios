@@ -42,6 +42,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString* authCode;
 
 /**
+ *  @abstract The Smooch region for this account.
+ *
+ *  @discussion The Smooch region for this account.
+ *
+ */
+@property(nonatomic, copy) NSString* region;
+
+/**
  *  @abstract The accent color for the conversation screen.
  *
  *  @discussion Used as the color of user message bubbles, as well as the color of the send button and text input caret.
