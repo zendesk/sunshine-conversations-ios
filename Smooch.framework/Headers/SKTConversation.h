@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^SKTImageUploadProgressBlock)(double progress);
 typedef void (^SKTImageUploadCompletionBlock)(NSError* _Nullable error, SKTMessage* _Nullable message);
+typedef void (^SKTFileUploadProgressBlock)(double progress);
+typedef void (^SKTFileUploadCompletionBlock)(NSError* _Nullable error, SKTMessage* _Nullable message);
 
 /**
  *  @discussion Represents various actions the user takes when interacting with Smooch UI components.
@@ -77,6 +79,46 @@ extern NSString* const SKTConversationImageUploadProgressDidChangeNotification;
 extern NSString* const SKTConversationImageUploadCompletedNotification;
 
 /**
+ *  @abstract Posted when a file upload begins.
+ *
+ *  @discussion The userInfo dictionary contains the url of the file to upload. Use SKTConversationFileKey to access this value.
+ *
+ *  This notification is guaranteed to fire on the main thread.
+ *
+ *  @see SKTConversationFileKey
+ */
+extern NSString* const SKTConversationFileUploadDidStartNotification;
+
+/**
+ *  @abstract Posted when a file upload receives a progress update.
+ *
+ *  @discussion The userInfo dictionary contains the url of the file being uploaded, as well as an NSNumber reflecting the current progress. Use SKTConversationFileKey and SKTConversationProgressKey to access these values.
+ *
+ *  This notification is guaranteed to fire on the main thread.
+ *
+ *  @see SKTConversationFileKey
+ *  @see SKTConversationProgressKey
+ */
+extern NSString* const SKTConversationFileUploadProgressDidChangeNotification;
+
+/**
+ *  @abstract Posted when a file upload completes, either in success or failure.
+ *
+ *  @discussion The userInfo dictionary contains the url of the file that was uploaded. Use SKTConversationFileKey to access this value.
+ *
+ *  If the upload succeeded, the userInfo dictionary will also include the SKTMessage instance of the new message. Use SKTConversationMessageKey to access this value.
+ *  If the upload failed, the userInfo dictionary will include the NSError that occurred. Use SKTConversationErrorKey to access this value.
+ *
+ *  This notification is guaranteed to fire on the main thread.
+ *
+ *  @see SKTMessage
+ *  @see SKTConversationFileKey
+ *  @see SKTConversationMessageKey
+ *  @see SKTConversationErrorKey
+ */
+extern NSString* const SKTConversationFileUploadCompletedNotification;
+
+/**
  *  @abstract Posted when new messages are received from the server.
  *
  *  @discussion The userInfo dictionary contains an NSArray of SKTMessage objects. Use SKTConversationNewMessagesKey to access this value.
@@ -135,6 +177,17 @@ extern NSString* const SKTConversationPreviousMessagesKey;
  *  @see SKTConversationImageUploadCompletedNotification
  */
 extern NSString* const SKTConversationImageKey;
+
+/**
+ *  @abstract A key whose value is an NSURL which represents a file being uploaded.
+ *
+ *  @discussion This key is used with SKTConversationFileUploadDidStartNotification, SKTConversationFileUploadProgressDidChangeNotification, and SKTConversationFileUploadCompletedNotification notifications.
+ *
+ *  @see SKTConversationFileUploadDidStartNotification
+ *  @see SKTConversationFileUploadProgressDidChangeNotification
+ *  @see SKTConversationFileUploadCompletedNotification
+ */
+extern NSString* const SKTConversationFileKey;
 
 /**
  *  @abstract A key whose value is an NSError.
@@ -277,6 +330,8 @@ extern NSString* const SKTConversationActivityKey;
  *  @param completionBlock Called when the upload completes or fails. May be nil.
  */
 -(void)sendImage:(UIImage *)image withProgress:(nullable SKTImageUploadProgressBlock)progressBlock completion:(nullable SKTImageUploadCompletionBlock)completionBlock;
+
+-(void)sendFile:(NSURL *)fileLocation withProgress:(nullable SKTFileUploadProgressBlock)progressBlock completion:(nullable SKTFileUploadCompletionBlock)completionBlock;
 
 /**
  *  @abstract Sends a postback to the server.

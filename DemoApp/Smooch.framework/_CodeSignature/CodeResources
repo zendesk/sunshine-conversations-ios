@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		a1AxRinaS4xTjH8XIa/WowRC34I=
+		7CYEFN3NKh9utvVEcKIOlqGVnNU=
 		</data>
 		<key>Headers/SKTConversationActivity.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
-		97ohuwf+Yt7On4mIKcSv3p14KNk=
+		yrNrwLK05pKYKEqW7iJ3AEYSI1U=
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
-		9k2wfjOyapqTvyT4upEmak6qrPY=
+		gZtyhs2pOfXnykmHkYKFty67WoY=
 		</data>
 		<key>Headers/SKTUser.h</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		ffct0OXH9w3boECn6ARcE8WRCAw=
+		gVxXAb8Ss3RvjlgDwgzd+TgvFfQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Zeb+IbZR8kY2W+MqZnb3z0t1mvQ=
+		O+yxo8cYnUQ1boIJwKlfa/I0Ll8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -98,7 +98,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8CpxBx5/fY6KbYXA6STOVAEcL8Q=
+			ilzUnQmxMdq569p4raEYx2z/XqE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -182,6 +182,18 @@
 		<data>
 		OKdo9S8LS2EfWPcOgegSdRUagpM=
 		</data>
+		<key>mediaButton.png</key>
+		<data>
+		6nUifgRcOUO926EURsx6sq0+HkI=
+		</data>
+		<key>mediaButton@2x.png</key>
+		<data>
+		oF/OHwKj6iMphgjYL7W7dz2NYxw=
+		</data>
+		<key>mediaButton@3x.png</key>
+		<data>
+		+twwLCQ8p7imtIgY8aSvfhjgSQs=
+		</data>
 		<key>nl.lproj/SmoochLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -191,6 +203,18 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>paperClip.png</key>
+		<data>
+		1avpH6UM8Cq/V8IsulyEoDdVctw=
+		</data>
+		<key>paperClip@2x.png</key>
+		<data>
+		kOaipYoltnL0THCsiaLODUJMj5s=
+		</data>
+		<key>paperClip@3x.png</key>
+		<data>
+		gYrKSe6BwOrIPEumoID5dKVCKzQ=
+		</data>
 		<key>pt-BR.lproj/SmoochLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -390,11 +414,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			a1AxRinaS4xTjH8XIa/WowRC34I=
+			7CYEFN3NKh9utvVEcKIOlqGVnNU=
 			</data>
 			<key>hash2</key>
 			<data>
-			wI7JoWi4E/1NBFMEPn3NUCNIPAaIUyXoSjRvoBXEdgM=
+			2QZhyVTCVI6tBbByjmH+rp8mEibPYTfrqqPxIMB7KNI=
 			</data>
 		</dict>
 		<key>Headers/SKTConversationActivity.h</key>
@@ -434,11 +458,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			97ohuwf+Yt7On4mIKcSv3p14KNk=
+			yrNrwLK05pKYKEqW7iJ3AEYSI1U=
 			</data>
 			<key>hash2</key>
 			<data>
-			XlbONN8IRzmd5/UwV8kdzEAFTTYI6KnglPr1R69t0ME=
+			L4QnYx7YKBe9bfrtZoLw4isj5E05osAxbqJVuzluQHk=
 			</data>
 		</dict>
 		<key>Headers/SKTMessageAction.h</key>
@@ -467,11 +491,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9k2wfjOyapqTvyT4upEmak6qrPY=
+			gZtyhs2pOfXnykmHkYKFty67WoY=
 			</data>
 			<key>hash2</key>
 			<data>
-			414io1AZziqvQROTB6KeO026ghKsCMyt8/G8epw1T0k=
+			iKMLwi5bmUVVGgMw1uwEzavrBJ6DQW9555FBjfrkclM=
 			</data>
 		</dict>
 		<key>Headers/SKTUser.h</key>
@@ -489,11 +513,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ffct0OXH9w3boECn6ARcE8WRCAw=
+			gVxXAb8Ss3RvjlgDwgzd+TgvFfQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q4ggK1/0qeQOxT3eiyUR378hrziQLaUSAeBeAiSLlNs=
+			eU1EnBrA10GpPkqMRgM+MrVVRRgaItYpOw5wYGQm4+U=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -603,11 +627,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8CpxBx5/fY6KbYXA6STOVAEcL8Q=
+			ilzUnQmxMdq569p4raEYx2z/XqE=
 			</data>
 			<key>hash2</key>
 			<data>
-			8WWmc06c12T5xC6l9V0cExZKdnDNGbKfvJXyvMDVtCo=
+			Yu6cCENYn+CHYQfsLlntbPhb7dGo5ZTESFz7teTjBBI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -747,6 +771,39 @@
 			sJGxzQ87hrck5OFNwBpzorpHJsHrxviTSfcpXvx2/34=
 			</data>
 		</dict>
+		<key>mediaButton.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6nUifgRcOUO926EURsx6sq0+HkI=
+			</data>
+			<key>hash2</key>
+			<data>
+			AD0yYuoh/6APY1Va1b+7hZhp6QuPHQSOJmJZiqL7x4M=
+			</data>
+		</dict>
+		<key>mediaButton@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oF/OHwKj6iMphgjYL7W7dz2NYxw=
+			</data>
+			<key>hash2</key>
+			<data>
+			g5N+iyWzPWflfkk9a/x5L+gehhVf+cFMMpqdEaRBHkE=
+			</data>
+		</dict>
+		<key>mediaButton@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+twwLCQ8p7imtIgY8aSvfhjgSQs=
+			</data>
+			<key>hash2</key>
+			<data>
+			WJYw3O7klQxspjQ6AMaORw7LVjjjkRAh0mcsHzIsLMg=
+			</data>
+		</dict>
 		<key>nl.lproj/SmoochLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -759,6 +816,39 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>paperClip.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1avpH6UM8Cq/V8IsulyEoDdVctw=
+			</data>
+			<key>hash2</key>
+			<data>
+			g6j1Re+OLSHH3KvUujJ85/lJZM1nNrZNjJutbcIXCMw=
+			</data>
+		</dict>
+		<key>paperClip@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kOaipYoltnL0THCsiaLODUJMj5s=
+			</data>
+			<key>hash2</key>
+			<data>
+			Nu33i3Jl6Xj1bx3FFKKS/ea0yCvKiqGu20exKUxNQZM=
+			</data>
+		</dict>
+		<key>paperClip@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gYrKSe6BwOrIPEumoID5dKVCKzQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			AGQOZItOUyotZrzDph4MTQeAT8g5SLsWMPJ/Kh0Ky58=
+			</data>
 		</dict>
 		<key>pt-BR.lproj/SmoochLocalizable.strings</key>
 		<dict>

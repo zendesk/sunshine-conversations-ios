@@ -149,9 +149,14 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
 @property(readonly, nullable) NSArray* items;
 
 /**
- *  @abstract The url to the image asset, if applicable. Returns nil if the message is not an image message.
+ *  @abstract The url to the media asset, if applicable. Returns nil if the message is not an image or file message.
  */
 @property(nullable) NSString* mediaUrl;
+
+/**
+ *  @abstract The size of the media asset in bytes. May be nil.
+ */
+@property(nullable) NSNumber* mediaSize;
 
 /**
  *  @abstract The type the message.

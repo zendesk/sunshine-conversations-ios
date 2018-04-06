@@ -6,6 +6,27 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+/**
+ *  @abstract When added to allowedMenuItems, enables the option to take a photo from the conversation view
+ */
+extern NSString * const SKTMenuItemCamera;
+
+/**
+ *  @abstract When added to allowedMenuItems, enables the option to select an image or video from gallery from the conversation view
+ */
+extern NSString * const SKTMenuItemGallery;
+
+/**
+ *  @abstract When added to allowedMenuItems, enables the option to upload a document from the conversation view
+ */
+extern NSString * const SKTMenuItemDocument;
+
+/**
+ *  @abstract When added to allowedMenuItems, enables the option to share location from the conversation view
+ */
+extern NSString * const SKTMenuItemLocation;
+
 @interface SKTSettings : NSObject
 
 /**
@@ -44,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @abstract The Smooch region for this account.
  *
- *  @discussion The Smooch region for this account.
+ *  @discussion Leave unspecified to use the default region (US). Set to "eu-1" to use the EU region.
  *
  */
 @property(nonatomic, copy) NSString* region;
@@ -66,6 +87,15 @@ NS_ASSUME_NONNULL_BEGIN
  *  The default value is UIStatusBarStyleDefault.
  */
 @property UIStatusBarStyle conversationStatusBarStyle;
+
+/**
+ *  @abstract The items to display in the conversation menu
+ *
+ *  @discussion Valid values are SKTMenuItemCamera, SKTMenuItemGallery, SKTMenuItemDocument and SKTMenuItemLocation
+ *
+ *  All options are displayed by default. Setting this value to nil or an empty array will hide the menu button
+ */
+@property(nonatomic, strong, nullable) NSArray<NSString *>* allowedMenuItems;
 
 /**
  *  @abstract Maximum number of seconds to display in-app notifications before dismissing.

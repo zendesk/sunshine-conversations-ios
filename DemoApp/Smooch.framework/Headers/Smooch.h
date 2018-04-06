@@ -2,7 +2,7 @@
 //  Smooch.h
 //  Smooch
 //
-//  version : 6.8.1
+//  version : 6.9.0
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"6.8.1"
+#define SMOOCH_VERSION @"6.9.0"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
 FOUNDATION_EXPORT const unsigned char SmoochVersionString[];
@@ -305,6 +305,19 @@ extern NSString* const SKTLogoutDidFailNotification;
  *  If a conversation already exists for the current user, this call is a no-op.
  */
 +(void)startConversationWithCompletionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler;
+
+/**
+ *  @abstract Toggles whether the input bar is displayed on the conversation view.
+ *
+ *  @discussion For some use cases, it can be useful to remove the ability for the user to craft their own messages. For example, if your conversation flow relies solely on postback buttons or quick replies, you may not want to allow the user to send anything other than the presented options.
+ *
+ *  Passing NO to this method will hide the input bar entirely, including the media button and the text area, thus preventing the user from sending messages themselves.
+ *
+ *  This method may be called at any time, even when the conversation view is currently displayed.
+ *
+ *  State is persisted across view controller launches.
+ */
++(void)setConversationInputDisplayed:(BOOL)displayed;
 
 /**
  *  @abstract Set the push notification token for this device.
