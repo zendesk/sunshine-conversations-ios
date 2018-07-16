@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		jg364jL0AjWuLhl+zMywMjqW604=
+		cT8iRwViXsxv4Itv0hZXNvxrdYM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5WRfXqgk6TpRGiKm6IiOhELEa8M=
+		oPCq+iaOK2aWFoXkUasgS8NU/KE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -98,7 +98,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ilzUnQmxMdq569p4raEYx2z/XqE=
+			FRhNPQ3Dpb2UtP1is1wLmRhA4Xs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -513,11 +513,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jg364jL0AjWuLhl+zMywMjqW604=
+			cT8iRwViXsxv4Itv0hZXNvxrdYM=
 			</data>
 			<key>hash2</key>
 			<data>
-			B/djcFem9ZShcInxcc527kj4r5ZuXaWxwWBOj3zhqiE=
+			3UrJsRAe0VwSm34L9bo/OheOLPnmABzFD5+Ko6xhWBM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -627,11 +627,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ilzUnQmxMdq569p4raEYx2z/XqE=
+			FRhNPQ3Dpb2UtP1is1wLmRhA4Xs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yu6cCENYn+CHYQfsLlntbPhb7dGo5ZTESFz7teTjBBI=
+			iEY3aOd4lH8iC1GxcNmue722d1aCJg4kvihrE0Qmwfw=
 			</data>
 			<key>optional</key>
 			<true/>
