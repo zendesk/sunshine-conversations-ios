@@ -98,6 +98,15 @@ extern NSString * const SKTMenuItemLocation;
 @property(nonatomic, strong, nullable) NSArray<NSString *>* allowedMenuItems;
 
 /**
+ *  @abstract Allow sending messages from the conversation view when offline
+ *
+ *  @discussion Setting this to `YES` allows the user to send messages even when the device is offline. It also prevents an network error banner from showing when offline.
+ *
+ *  Note that messages that are sent while offline will fail to send and the message will display an option for the user to retry
+ */
+@property BOOL allowOfflineUsage;
+
+/**
  *  @abstract Maximum number of seconds to display in-app notifications before dismissing.
  *
  *  @discussion Setting this value to 0 will cause notications to stay on-screen until the user acts on them.
