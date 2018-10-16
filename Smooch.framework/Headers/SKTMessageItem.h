@@ -34,4 +34,11 @@
  */
 @property(copy, nullable) NSString *mediaType;
 
+/**
+ *  @abstract Metadata associated with the message item.
+ *
+ *  @discussion A flat dictionary of metadata set through the REST API. May be nil.
+ */
+@property(nullable) NSDictionary* metadata;
+
 @end
