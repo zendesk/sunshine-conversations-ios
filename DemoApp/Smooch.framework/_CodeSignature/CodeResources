@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		2osOE+mgPq7XfQ2AAHPcjgFWr/c=
+		Kr4GPIv2mU2HIFVjg/Xw/TS8m1o=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VEhUYNfgMktd6LBn/VQT4gL5EfE=
+		t5bbp9BXJ5sHW/ioOrmqVtj7qYU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -513,11 +513,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2osOE+mgPq7XfQ2AAHPcjgFWr/c=
+			Kr4GPIv2mU2HIFVjg/Xw/TS8m1o=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ve/7TCUvKgoyFUfX6kwVMmTwapJoVdrOhZX2p3NcK9U=
+			qWiLlFt4lQ2BXTLbtIoSAvdXeq3I3q9shOVkEkwuLZY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1287,7 +1287,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -1318,24 +1318,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -1371,13 +1359,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>
