@@ -19,12 +19,12 @@ Sign up and get an app id: [https://app.smooch.io/signup](https://app.smooch.io/
 
 CocoaPods:
 
-    pod 'Smooch'
+    pod "Smooch"
     pod update
 
 Carthage:
 
-    github "smooch/smooch-ios"
+    binary "https://raw.githubusercontent.com/smooch/smooch-ios/master/Smooch.json"
     carthage update
 
 Obj-C:
