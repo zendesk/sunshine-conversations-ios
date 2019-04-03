@@ -300,7 +300,7 @@ extern NSString* const SKTConversationActivityKey;
 /**
  *  @abstract Loads previous messages for this conversation, if any
  *
- *  @dicussion Will get previous messages for this conversation based on the timestamp of the current oldest message and will notify the delegate of new incoming messages through [SKTConversationDelegate conversation:didReceivePreviousMessages:]
+ *  @discussion Will get previous messages for this conversation based on the timestamp of the current oldest message and will notify the delegate of new incoming messages through [SKTConversationDelegate conversation:didReceivePreviousMessages:]
  */
 -(void)loadPreviousMessages;
 
@@ -429,7 +429,7 @@ extern NSString* const SKTConversationActivityKey;
 /**
  *  @abstract Gives the delegate the option to modify a message before it is sent
  *
- *  @discussion Called when a message is about to be sent to give the delegate the option of modify or decorate its content (i.e. add metadata) before sending to Smooch
+ *  @discussion Called when a message is about to be sent to give the delegate the option of modify or decorate its content (i.e. add metadata) before sending to Smooch. When the message type is `file` or `image`, only the message `metadata` may be updated. Other message properties such as `type` or `text` won't be considered.
  *
  *  @return the message to be sent
  */
@@ -459,7 +459,7 @@ extern NSString* const SKTConversationActivityKey;
 /**
  *  @abstract Notifies the delegate when older messages in the conversation history have been received
  *
- *  @dicussion Called when older messages in the conversation history are received from the server
+ *  @discussion Called when older messages in the conversation history are received from the server
  *
  *  @param conversation The conversation object
  *  @param messages The messages that have been fetched
@@ -469,7 +469,7 @@ extern NSString* const SKTConversationActivityKey;
 /**
  *  @abstract Notifies the delegate of new conversation activity
  *
- *  @dicussion Called when a new activity is received from the server
+ *  @discussion Called when a new activity is received from the server
  *
  *  @param conversation The conversation object
  *  @param activity The activity that was received

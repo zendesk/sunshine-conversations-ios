@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		7CYEFN3NKh9utvVEcKIOlqGVnNU=
+		sxjyOic1xo91/MlnyA6DVAKnEEk=
 		</data>
 		<key>Headers/SKTConversationActivity.h</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		vE32AxWuPmuYmYguFnRPJaIRXMk=
+		CDmD7OBqcCC06zLaNYESjxwoi34=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nUJZ149k5a0AfWYdSkz2bnEkM4Y=
+		3irNUlI2hC061XiH9Pxvljwka+Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -414,11 +414,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7CYEFN3NKh9utvVEcKIOlqGVnNU=
+			sxjyOic1xo91/MlnyA6DVAKnEEk=
 			</data>
 			<key>hash2</key>
 			<data>
-			2QZhyVTCVI6tBbByjmH+rp8mEibPYTfrqqPxIMB7KNI=
+			1L63IihzeNWnCXGe+IcTSLlanbcHa0GuPdE+HBKl7rw=
 			</data>
 		</dict>
 		<key>Headers/SKTConversationActivity.h</key>
@@ -513,11 +513,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vE32AxWuPmuYmYguFnRPJaIRXMk=
+			CDmD7OBqcCC06zLaNYESjxwoi34=
 			</data>
 			<key>hash2</key>
 			<data>
-			eHu5wuRszkPOMyqmnCaTKlWM4xi8lPGWLnpT8xGel84=
+			3qjgwA3FnbYTnAvxcDAnzXaMlrjU2psDLPtCQrtming=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
