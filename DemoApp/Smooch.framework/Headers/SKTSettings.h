@@ -4,6 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SKTAuthenticationDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -163,6 +164,17 @@ extern NSString * const SKTMenuItemLocation;
  *  @see Smooch
  */
 @property BOOL requestPushPermissionOnFirstMessage;
+
+/**
+ *  @abstract Delegate that will be notified of authentication related events
+ *
+ *  @discussion This delegate is useful if your app uses expiring tokens for your users. This way you can renew an invalid jwt when needed without having to call +login:jwt:completionHandler. May be nil
+ *
+ *  This value may only be set once, and must be set at init time.
+ *
+ *  @see SKTAuthenticationDelegate
+ */
+@property(nullable) id<SKTAuthenticationDelegate> authenticationDelegate;
 
 @end
 NS_ASSUME_NONNULL_END

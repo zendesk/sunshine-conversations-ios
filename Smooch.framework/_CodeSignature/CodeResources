@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/SKTAuthenticationDelegate.h</key>
+		<data>
+		9D2nKK8lX6QkVhe8iIZhD3xAgcc=
+		</data>
 		<key>Headers/SKTConversation.h</key>
 		<data>
 		sxjyOic1xo91/MlnyA6DVAKnEEk=
@@ -34,7 +38,7 @@
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
-		1a4C9FkYaYy/bLE7zKA48hWu6lQ=
+		k459fQxfRDEygwz2YDF9EMu0ADY=
 		</data>
 		<key>Headers/SKTUser.h</key>
 		<data>
@@ -42,11 +46,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		CDmD7OBqcCC06zLaNYESjxwoi34=
+		UMvWW8NaHQx/YGSWACbb8nmFEiA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3irNUlI2hC061XiH9Pxvljwka+Q=
+		K43TLweenhN0WNXCrXyw9p/2cds=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -410,6 +414,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/SKTAuthenticationDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9D2nKK8lX6QkVhe8iIZhD3xAgcc=
+			</data>
+			<key>hash2</key>
+			<data>
+			qpEBCIWZn4VW5YA8QXiRAAxDGOh7mMWcI335I7LpKtc=
+			</data>
+		</dict>
 		<key>Headers/SKTConversation.h</key>
 		<dict>
 			<key>hash</key>
@@ -491,11 +506,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1a4C9FkYaYy/bLE7zKA48hWu6lQ=
+			k459fQxfRDEygwz2YDF9EMu0ADY=
 			</data>
 			<key>hash2</key>
 			<data>
-			HDr/RxDR/lcAHaJGedfO+fL3Sl1krzRexHyfETRBmdw=
+			FVAFIuiX3jrqP6QWy9cqPIU/+f64zQFsQ3kp/a/DvWs=
 			</data>
 		</dict>
 		<key>Headers/SKTUser.h</key>
@@ -513,11 +528,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CDmD7OBqcCC06zLaNYESjxwoi34=
+			UMvWW8NaHQx/YGSWACbb8nmFEiA=
 			</data>
 			<key>hash2</key>
 			<data>
-			3qjgwA3FnbYTnAvxcDAnzXaMlrjU2psDLPtCQrtming=
+			WpGegIooH62V9X6EMVv/kh9wvZZw9wi/efBkFVJF+Ag=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
