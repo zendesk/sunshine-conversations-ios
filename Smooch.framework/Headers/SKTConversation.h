@@ -250,6 +250,11 @@ extern NSString* const SKTConversationActivityKey;
 @interface SKTConversation : NSObject
 
 /**
+ *  @abstract The unique identifier of the conversation. May be nil if a conversation doesn't exist for the current user
+ */
+@property(readonly, nullable) NSString* conversationId;
+
+/**
  *  @abstract The array of SKTMessage objects representing the conversation.
  *
  *  @see SKTMessage
