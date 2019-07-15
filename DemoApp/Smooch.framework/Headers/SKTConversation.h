@@ -279,6 +279,13 @@ extern NSString* const SKTConversationActivityKey;
 @property(readonly) NSDate *appMakerLastRead;
 
 /**
+ *  @abstract Metadata associated with the conversation.
+ *
+ *  @discussion A flat dictionary of metadata set through the REST API. May be nil.
+ */
+@property(readonly, nullable) NSDictionary* metadata;
+
+/**
  *  @abstract A delegate object for receiving notifications related to the conversation.
  *
  *  @see SKTConversationDelegate
