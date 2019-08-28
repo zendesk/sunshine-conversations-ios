@@ -81,6 +81,15 @@ extern NSString * const SKTMenuItemLocation;
 @property(nonatomic, strong) UIColor* conversationAccentColor;
 
 /**
+ *  @abstract The text color for user messages.
+ *
+ *  @discussion Used as the text color of user message bubbles.
+ *
+ *  The default value is #FFFFFF.
+ */
+@property(nonatomic, strong) UIColor* userMessageTextColor;
+
+/**
  *  @abstract The status bar style to use on the conversation screen.
  *
  *  @discussion You should use this property if your app uses UIAppearance to style UINavigationBar, and your styling requires a specific status bar color.

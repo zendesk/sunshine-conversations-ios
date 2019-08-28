@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
-		k459fQxfRDEygwz2YDF9EMu0ADY=
+		ZVj4EozNXW2BVYu9Z3VHLVlVawc=
 		</data>
 		<key>Headers/SKTUser.h</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		OaAt/PFcu3Pate83G8qfVePWyhA=
+		SK+br4AxqfUyu+VlEwGjVhk6KTI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tOXM6oecBVa6dhrGZawbqUAWNr0=
+		zLgzOIJ2QrmdOfYGBZT2brQRvtI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -506,11 +506,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			k459fQxfRDEygwz2YDF9EMu0ADY=
+			ZVj4EozNXW2BVYu9Z3VHLVlVawc=
 			</data>
 			<key>hash2</key>
 			<data>
-			FVAFIuiX3jrqP6QWy9cqPIU/+f64zQFsQ3kp/a/DvWs=
+			01x27FPWLChP7rrB/HMskDnLFelnjDIJFMIozuCOTqA=
 			</data>
 		</dict>
 		<key>Headers/SKTUser.h</key>
@@ -528,11 +528,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OaAt/PFcu3Pate83G8qfVePWyhA=
+			SK+br4AxqfUyu+VlEwGjVhk6KTI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bw1Gtfo9/BLqxty6Fup7C5MYBKnnInJWCSGaLmXgsIw=
+			c31KpiVqUSE/yv6rHnArolqhRPf74Aj2AdvW76VNf1I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
