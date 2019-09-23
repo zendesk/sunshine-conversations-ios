@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		OeXziXd6X1O2hsHzGpPTISyx884=
+		v47MoWjmNvH0XIQu1w4CsOz1dn0=
 		</data>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		w2aVZ0UXT7BFtpJbqVomFAVuvhg=
+		366xQDpBW527zeuom7HUgZFuE6I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -422,11 +422,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OeXziXd6X1O2hsHzGpPTISyx884=
+			v47MoWjmNvH0XIQu1w4CsOz1dn0=
 			</data>
 			<key>hash2</key>
 			<data>
-			l1FIjNZLL1xalGLSQ2ABWbrRtZMx4ZLH8nm1FZu+SxY=
+			I91QsC3A122RyxueldkitZQN84b80otK96TTbexCWRc=
 			</data>
 		</dict>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
