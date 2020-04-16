@@ -71,7 +71,7 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
     SKTMessageUploadStatusNotUserMessage
 };
 
-@interface SKTMessage : NSObject
+@interface SKTMessage : NSObject <NSSecureCoding>
 
 /**
  *  @abstract Create a message with the given text. The message will be owned by the current user.
@@ -121,7 +121,7 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
 /**
  *  @abstract Returns YES if the message originated from the user, or NO if the message comes from the app team.
  */
-@property(readonly) BOOL isFromCurrentUser;
+@property (nonatomic) BOOL isFromCurrentUser;
 
 /**
  *  @abstract The upload status of the message.

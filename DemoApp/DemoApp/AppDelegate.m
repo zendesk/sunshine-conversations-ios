@@ -20,8 +20,8 @@
     self.window.rootViewController = mainController;
     [self.window makeKeyAndVisible];
 
-    //This is where you would put your appId that was generated for your app on the Smooch console website.
-    SKTSettings* settings = [SKTSettings settingsWithAppId:@"53ecf8ad0f4f4d0a0000eaad"];
+    //This is where you would put your integrationId that was generated for your app on the Sunshine Conversations console website.
+    SKTSettings *settings = [SKTSettings settingsWithIntegrationId: @""];
     settings.conversationAccentColor = [UIColor colorWithRed:145.0/255 green:45.0/255 blue:141.0/255 alpha:1.0];
     [Smooch initWithSettings:settings completionHandler:nil];
 

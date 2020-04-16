@@ -30,7 +30,7 @@ Carthage:
 Obj-C:
 
 ```objc
-[Smooch initWithSettings:[SKTSettings settingsWithAppId:@"YOUR_APP_ID"] completionHandler:^(NSError * _Nullable error, NSDictionary * _Nullable userInfo) {
+[Smooch initWithSettings:[SKTSettings settingsWithIntegrationId:@"YOUR_INTEGRATION_ID"] completionHandler:^(NSError * _Nullable error, NSDictionary * _Nullable userInfo) {
         // Your code after init is complete
     }];
 [Smooch show];
@@ -39,7 +39,7 @@ Obj-C:
 Swift:
 
 ```Swift
-Smooch.initWith(SKTSettings(appId: "YOUR_APP_ID")) { (error: Error?, userInfo: [AnyHashable : Any]?) in
+Smooch.initWith(SKTSettings(integrationId: "YOUR_INTEGRATION_ID")) { (error: Error?, userInfo: [AnyHashable : Any]?) in
             // Your code after init is complete
         }
 Smooch.show()

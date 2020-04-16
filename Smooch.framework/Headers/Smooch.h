@@ -2,17 +2,18 @@
 //  Smooch.h
 //  Smooch
 //
-//  version : 7.1.2
+//  version : 8.0.0
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
 #import "SKTSettings.h"
 #import "SKTUser.h"
+#import "SKTParticipant.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"7.1.2"
+#define SMOOCH_VERSION @"8.0.0"
 #define VENDOR_ID @"smooch"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
@@ -298,7 +299,17 @@ extern NSString* const SKTLogoutDidFailNotification;
  *
  *  @return Current conversation, or nil if +initWithSettings:completionHandler: hasn't been called yet.
  */
-+(nullable SKTConversation*)conversation;
++ (nullable SKTConversation *)conversation;
+
+/**
+ * @abstract Get a conversationById. This is an asynchronous call and requires a callback to retrieve the result.
+ *
+ * +initWithSettings:completionHandler: must have been called prior to calling this method.
+ *
+ * @see SKTConversation
+ * @param conversationId the conversationId
+ */
++ (void)conversationById:(NSString *)conversationId completionHandler:(nullable void(^)(NSError * _Nullable error, SKTConversation * _Nullable conversation))handler;
 
 /**
  *  @abstract Logs in a new Smooch user.
@@ -456,6 +467,23 @@ extern NSString* const SKTLogoutDidFailNotification;
  *  If the conversation is already set to the passed ID, this call is a no-op.
  */
 +(void)loadConversation:(NSString*)conversationId completionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler;
+
+/**
+ *
+ * @abstract Loads a list of conversations
+ *
+ * @discussion when called, returns an array of Conversation objects from storage
+ *
+ */
++ (void)getConversations:(void (^)(NSError  *_Nullable, NSArray  *_Nullable))completionHandler;
+
+/**
+ *
+ * @abstract Updating the conversation delegate
+ *
+ *  @discussion when called, a new delegate is set
+ */
++ (void)updateConversationDelegate:(id<SKTConversationDelegate>)delegate;
 
 @end
 NS_ASSUME_NONNULL_END

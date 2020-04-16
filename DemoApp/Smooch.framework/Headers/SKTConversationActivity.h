@@ -8,43 +8,72 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  @abstract An activity type indicating that the appMaker started typing a response
+ *  @abstract An activity type indicating that a participant of the converation started typing a response
  */
-extern NSString const *SKTConversationActivityTypeTypingStart;
+extern NSString *const SKTConversationActivityTypeTypingStart;
 
 /**
- *  @abstract An activity type indicating that the appMaker stopped typing a response
+ *  @abstract An activity type indicating that a participant of the converation stopped typing a response
  */
-extern NSString const *SKTConversationActivityTypeTypingStop;
+extern NSString *const SKTConversationActivityTypeTypingStop;
 
 /**
- *  @abstract An activity type indicating that the appMaker recently read the user message
+ *  @abstract An activity type indicating that a participant of the converation recently read the user message
+ *
+ *  This event type is triggered for the current user when the conversation is read on a different device. 
  */
-extern NSString const *SKTConversationActivityTypeConversationRead;
+extern NSString *const SKTConversationActivityTypeConversationRead;
+
+/**
+ *  @abstract An activity type indicating that the current user was added to a conversation
+ */
+extern NSString *const SKTConversationActivityTypeConversationAdded;
+
+/**
+ *  @abstract An activity type indicating that the current user was removed from a conversation
+ */
+extern NSString *const SKTConversationActivityTypeConversationRemoved;
+
+/**
+ *  @abstract An activity type indicating that another user was added to a conversation that the current user is part of
+ */
+extern NSString *const SKTConversationActivityTypeParticipantAdded;
+
+/**
+ *  @abstract An activity type indicating that another user was removed from a conversation that the current user is part of
+ */
+extern NSString *const SKTConversationActivityTypeParticipantRemoved;
 
 /**
  *  @abstract A key whose value is an NSString representing the appMaker name.
  *
  *  @discussion This key is used in the SKTConversationActivity data object.
  */
-extern NSString const *SKTConversationActivityDataNameKey;
+extern NSString *const SKTConversationActivityDataNameKey;
 
 /**
  *  @abstract A key whose value is an NSString representing the URL of the appMaker avatar.
  *
  *  @discussion This key is used in the SKTConversationActivity data object.
  */
-extern NSString const *SKTConversationActivityDataAvatarUrlKey;
+extern NSString *const SKTConversationActivityDataAvatarUrlKey;
 
 @interface SKTConversationActivity : NSObject
 
 /**
  *  @abstract the role of who is performing the typing activity
  */
-@property(readonly) NSString *role;
+@property(readonly, nullable) NSString *role;
 
 /**
- *  @abstract the type of activity that is being triggered. Could be either SKTConversationActivityTypeTypingStart, SKTConversationActivityTypeTypingStop or SKTConversationActivityTypeConversationRead
+ *  @abstract the type of activity that is being triggered. Could be either
+ *   - SKTConversationActivityTypeTypingStart
+ *   - SKTConversationActivityTypeTypingStop
+ *   - SKTConversationActivityTypeConversationRead
+ *   - SKTConversationActivityTypeConversationAdded
+ *   - SKTConversationActivityTypeConversationRemoved
+ *   - SKTConversationActivityTypeParticipantAdded
+ *   - SKTConversationActivityTypeParticipantRemoved
  */
 @property(readonly) NSString *type;
 
@@ -54,9 +83,21 @@ extern NSString const *SKTConversationActivityDataAvatarUrlKey;
 @property(readonly, nullable) NSDictionary *data;
 
 /**
+ *  @abstract conversationId for activity. Can be nil
+ */
+@property(readonly, nullable) NSString *conversationId;
+
+/**
  *  @abstract date when the appMaker last read user messages for activities of type SKTConversationActivityTypeConversationRead
  */
 @property(readonly, nullable) NSDate *appMakerLastRead;
+
+/**
+ * @abstract The appUserId if available, null otherwise
+ *
+ * available for SKTConversationActivityTypeParticipantAdded, SKTConversationActivityTypeParticipantRemoved
+ */
+@property(readonly, nullable) NSString *appUserId;
 
 @end
 NS_ASSUME_NONNULL_END
