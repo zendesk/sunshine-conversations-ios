@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		L69CDrjyvqeARbFu3zuGUxIVHQg=
+		9g3bv0vRJwfOhpRV1mmykyEcMjs=
 		</data>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
 		<data>
@@ -14,11 +14,15 @@
 		</data>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		VeT56K498W0Q3I3Mq+fKl7Cijd8=
+		O5rOBdwo0+ESbtLZgn2AXRtRDjg=
 		</data>
 		<key>Headers/SKTConversationActivity.h</key>
 		<data>
-		UQiN6G7h0mWsZj1ND+wSYayJ2S4=
+		kg6qDYL+N3yPISdeWq0ack720ow=
+		</data>
+		<key>Headers/SKTConversationListDelegate.h</key>
+		<data>
+		M45f1aFGjcpgn/K11kT9AFzEb4M=
 		</data>
 		<key>Headers/SKTCoordinates.h</key>
 		<data>
@@ -30,7 +34,7 @@
 		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
-		zf2lPnZ5zJ7pgPT+t4xAA9eXISY=
+		ZEs+kgXbj9vsV/iGraxA5Q+Xxjc=
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
@@ -42,23 +46,23 @@
 		</data>
 		<key>Headers/SKTParticipant.h</key>
 		<data>
-		S6jo6CBaRBieThJbZ1KJdjtpjjQ=
+		rieL/CL098zoG+tSHKREPK1sABk=
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
-		D6y74PIGUZBDZhDubEuN1W8CHmM=
+		JGkYqohwM9BURemnegBoIW0lLzc=
 		</data>
 		<key>Headers/SKTUser.h</key>
 		<data>
-		DgkepTt5j6Q8fEmMOMl5vcmQ3Dk=
+		zdIsLcd6L+zEYy4PsgEICWV+lpY=
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		9nxAKSs2ecO6VJcrCR+YJ1mNN+M=
+		jgoS7qUgqh1ajT5mn/SdX+ohp/k=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XCjvEJpN6s0BHkBVrZ12gHFQw+Q=
+		X89GEtqUylkAhbccIFlQzUF4zqo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -96,21 +100,21 @@
 		</dict>
 		<key>defaultAvatar.png</key>
 		<data>
-		dC0hVzsusq1IsbKAxYBil77zI04=
+		OZrFqRvrN6tKT5LTwrfaSlOex8g=
 		</data>
 		<key>defaultAvatar@2x.png</key>
 		<data>
-		+Hb0xFs397MUCnjLW6ekeFwuiW4=
+		91Wh0HsQx2FIhmkMvubCeR87C2I=
 		</data>
 		<key>defaultAvatar@3x.png</key>
 		<data>
-		LoIqTU/bldKzqFTOsRx4iQ/fJX4=
+		pjvmRub+S81+lWD3rW9phEW3cKM=
 		</data>
 		<key>en.lproj/SmoochLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FRhNPQ3Dpb2UtP1is1wLmRhA4Xs=
+			1ndChTWcz8GC1g8g/ka3ZYUNrVo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -426,11 +430,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L69CDrjyvqeARbFu3zuGUxIVHQg=
+			9g3bv0vRJwfOhpRV1mmykyEcMjs=
 			</data>
 			<key>hash2</key>
 			<data>
-			A8KDN0cFZVnvyqTGJFAfAKMkOJ3ytz7iEBZWCfnvJAA=
+			9EELQEq9sOy29rZUoH272C/ene5SDjXdOCzgZyeiaiU=
 			</data>
 		</dict>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
@@ -448,22 +452,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VeT56K498W0Q3I3Mq+fKl7Cijd8=
+			O5rOBdwo0+ESbtLZgn2AXRtRDjg=
 			</data>
 			<key>hash2</key>
 			<data>
-			SZqkmwuOkKNLefYQ/mcb1eXlwwWNto3aThx0Z2E2OlQ=
+			Ek9x3w08BJmAMlQ3rIzgCrZRpsLSjuWGgP/oyGwob0c=
 			</data>
 		</dict>
 		<key>Headers/SKTConversationActivity.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UQiN6G7h0mWsZj1ND+wSYayJ2S4=
+			kg6qDYL+N3yPISdeWq0ack720ow=
 			</data>
 			<key>hash2</key>
 			<data>
-			yY3Ms0vwOLvQ737Jm4zAu10uluefPuCwG1cvbKJw7ig=
+			V6JtFoda7DK3F85nFs8a2UIqzdA0ylNrFPRw8gM4rO0=
+			</data>
+		</dict>
+		<key>Headers/SKTConversationListDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			M45f1aFGjcpgn/K11kT9AFzEb4M=
+			</data>
+			<key>hash2</key>
+			<data>
+			CnkvJTB2E1qVS3iPREyekqTfJs1dNd+VvniNTjWPDVA=
 			</data>
 		</dict>
 		<key>Headers/SKTCoordinates.h</key>
@@ -492,11 +507,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zf2lPnZ5zJ7pgPT+t4xAA9eXISY=
+			ZEs+kgXbj9vsV/iGraxA5Q+Xxjc=
 			</data>
 			<key>hash2</key>
 			<data>
-			pU73e0HVezCXYB8YWS8OXKX+EvvBW7Tk6dZSHwM8XiM=
+			2sgpaYt7bTj60YV6+3fOoqPPaWH3bz1D5M3mwFBa94s=
 			</data>
 		</dict>
 		<key>Headers/SKTMessageAction.h</key>
@@ -525,44 +540,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S6jo6CBaRBieThJbZ1KJdjtpjjQ=
+			rieL/CL098zoG+tSHKREPK1sABk=
 			</data>
 			<key>hash2</key>
 			<data>
-			jdhHPY854ADYQmuq8o6H4AuCzB/xjKGjCymIjYRCBOU=
+			gOmuDxZfk+NU7s/YdxCCJQV//y87w3O75mJe4OgjiTM=
 			</data>
 		</dict>
 		<key>Headers/SKTSettings.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			D6y74PIGUZBDZhDubEuN1W8CHmM=
+			JGkYqohwM9BURemnegBoIW0lLzc=
 			</data>
 			<key>hash2</key>
 			<data>
-			8PAEFcDzFo8DBCINkuSdiQ21QG7ulLmTZ1adZmhVCOo=
+			fToqAyfrUAKHxl6aYH0h+fWa6GNeaUQ4OlU0dNSrABI=
 			</data>
 		</dict>
 		<key>Headers/SKTUser.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DgkepTt5j6Q8fEmMOMl5vcmQ3Dk=
+			zdIsLcd6L+zEYy4PsgEICWV+lpY=
 			</data>
 			<key>hash2</key>
 			<data>
-			OpV4afL3r7citEFqgC8P8FWrXwa0kpVlFuqZ5aSoGVc=
+			hjp9rYMAl4PTSQVCaJ9QoiZfSNJB80eBpMQCatF5Pl4=
 			</data>
 		</dict>
 		<key>Headers/Smooch.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9nxAKSs2ecO6VJcrCR+YJ1mNN+M=
+			jgoS7qUgqh1ajT5mn/SdX+ohp/k=
 			</data>
 			<key>hash2</key>
 			<data>
-			yLXiJ0jafhLSdvCgwueXuY1izmvVwIVya2qaG6cyfTg=
+			DxquKs5IqgTymSOslXSCD/IaWsrKUFkA9Odn22tf7mE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -639,44 +654,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dC0hVzsusq1IsbKAxYBil77zI04=
+			OZrFqRvrN6tKT5LTwrfaSlOex8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			sh2IqWfmnMMF0IqAa406snEsTeW/sXb0whvHBzxroNE=
+			vycLOiz8GUIWLTmAXuBUqM8XuxWbxkA2YnEUwDnfYIc=
 			</data>
 		</dict>
 		<key>defaultAvatar@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+Hb0xFs397MUCnjLW6ekeFwuiW4=
+			91Wh0HsQx2FIhmkMvubCeR87C2I=
 			</data>
 			<key>hash2</key>
 			<data>
-			ovkP/v/m/F+fRK4nDWTtaC2X6Iln6MmgZpk4PI8/DHw=
+			wJzL52maBXDocB/a4+7MYu1BTCuWYvvYJnb45ZD5ojM=
 			</data>
 		</dict>
 		<key>defaultAvatar@3x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LoIqTU/bldKzqFTOsRx4iQ/fJX4=
+			pjvmRub+S81+lWD3rW9phEW3cKM=
 			</data>
 			<key>hash2</key>
 			<data>
-			C9ArnMPI6VI7Ax0SJTxQ+oRTxAaD9PCdOVwNJqoSlJY=
+			7sJspuKkjgToxucLPxYzacL1PMDzQjHG70kKCLGXcDo=
 			</data>
 		</dict>
 		<key>en.lproj/SmoochLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FRhNPQ3Dpb2UtP1is1wLmRhA4Xs=
+			1ndChTWcz8GC1g8g/ka3ZYUNrVo=
 			</data>
 			<key>hash2</key>
 			<data>
-			iEY3aOd4lH8iC1GxcNmue722d1aCJg4kvihrE0Qmwfw=
+			5tPErebdQhiE1ZKz8lxUqJcOYgWXZV+V6vieLYizquM=
 			</data>
 			<key>optional</key>
 			<true/>

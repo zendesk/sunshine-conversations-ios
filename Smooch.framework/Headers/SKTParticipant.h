@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSString *participantId;
 
 /**
- * @abstract The assigned appUserId for this participant.
+ * @abstract The assigned userId for this participant.
  */
-@property (readonly) NSString *appUserId;
+@property (readonly) NSString *userId;
 
 /**
  * @abstract The number of unread messages for this participant.

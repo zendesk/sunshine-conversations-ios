@@ -19,42 +19,42 @@ NS_ASSUME_NONNULL_BEGIN
 +(nullable instancetype)currentUser;
 
 /**
- *  @abstract Adds custom properties to the user. This info is used to provide more context around who a user is.
+ *  @abstract Adds custom metadata to the user. This info is used to provide more context around who a user is.
  *
  *  @discussion Keys must be of type NSString, and values must be of type NSString, NSNumber, or NSDate; any other type will be converted to NSString using the -description method.
  *
  *  Example:
  *
- *  `[user addProperties:@{ @"nickname" : @"Lil' Big Daddy Slim",  @"weight" : @650, @"premiumUser" : @YES }];`
+ *  `[user addMetadata:@{ @"nickname" : @"Lil' Big Daddy Slim",  @"weight" : @650, @"premiumUser" : @YES }];`
  *
- *  Changes to user properties are uploaded in batches at regular intervals, when the app is sent to the background, or when a message is sent.
+ *  Changes to user metadata are uploaded in batches at regular intervals, when the app is sent to the background, or when a message is sent.
  *
  *  This API is additive, and subsequent calls will override values for the provided keys.
  *
- *  @param properties The properties to set for the current user.
+ *  @param metadata The metadata to set for the current user.
  */
--(void)addProperties:(NSDictionary*)properties;
-
-/**
- *  @abstract The assigned appUserId for this user.
- *
- *  @discussion Unlike `userId`, this property is set automatically by Smooch, and is not configurable. This is analogous to `appUser._id` in the REST API response. A user is assigned an `appUserId` once they start a conversation or when an existing user is logged in by calling +login:jwt:completionHandler:.
- *
- *  @see Smooch
- */
-@property(readonly, nullable) NSString* appUserId;
+-(void)addMetadata:(NSDictionary*)metadata;
 
 /**
  *  @abstract The assigned userId for this user.
  *
+ *  @discussion Unlike `externalId`, this property is set automatically by Smooch, and is not configurable. This is analogous to `appUser._id` in the REST API response. A user is assigned an `userId` once they start a conversation or when an existing user is logged in by calling +login:jwt:completionHandler:.
+ *
+ *  @see Smooch
+ */
+@property(readonly, nullable) NSString* userId;
+
+/**
+ *  @abstract The assigned externalId for this user.
+ *
  *  @discussion This property is set by calling +login:jwt:completionHandler:.
  *
- *  Unlike `appUserId`, this value is assigned and managed by the developer, and is used to identify a user across devices and app installations.
+ *  Unlike `userId`, this value is assigned and managed by the developer, and is used to identify a user across devices and app installations.
  *
  *  @see SKTSettings
  *  @see Smooch
  */
-@property(readonly, nullable) NSString* userId;
+@property(readonly, nullable) NSString* externalId;
 
 /**
  *  @abstract The user's first name, to be used as part of the display name when sending messages.
@@ -62,9 +62,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(copy, nullable) NSString* firstName;
 
 /**
- *  @abstract The user's custom properties.
+ *  @abstract The user's custom metadata.
  */
-@property(copy, readonly) NSDictionary *properties;
+@property(copy, readonly) NSDictionary *metadata;
 
 /**
  *  @abstract The user's last name, to be used as part of the display name when sending messages.

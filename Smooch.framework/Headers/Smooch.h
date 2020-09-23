@@ -2,18 +2,19 @@
 //  Smooch.h
 //  Smooch
 //
-//  version : 8.0.2
+//  version : 9.0.0
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
 #import "SKTSettings.h"
 #import "SKTUser.h"
 #import "SKTParticipant.h"
+#import "SKTConversationListDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"8.0.2"
+#define SMOOCH_VERSION @"9.0.0"
 #define VENDOR_ID @"smooch"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
@@ -211,6 +212,17 @@ extern NSString* const SKTLogoutDidFailNotification;
 +(void)show;
 
 /**
+ *  @abstract Loads the conversation specified by the ID, and presents the Smooch conversation screen
+ *
+ *  @discussion Uses the top-most view controller of the `UIApplicationDelegate` as the presenting view controller.
+ *
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
+ *
+ *  @param conversationId The ID of the conversation to load
+ */
++(void)showConversationWithId:(NSString *)conversationId;
+
+/**
  *  @abstract Presents the Smooch conversation screen with prefilled text in the message input.
  *
  *  @discussion Uses the top-most view controller of the `UIApplicationDelegate` as the presenting view controller with prefilled text in the message input.
@@ -218,6 +230,19 @@ extern NSString* const SKTLogoutDidFailNotification;
  *  +initWithSettings:completionHandler: must have been called prior to calling this method.
  */
 +(void)showWithStartingText:(nullable NSString *)startingText;
+
+/**
+ *  @abstract Loads the conversation specified by the ID, and presents the Smooch conversation screen with prefilled text in the message input.
+ *
+ *  @discussion Uses the top-most view controller of the `UIApplicationDelegate` as the presenting view controller with prefilled text in the message input.
+ *
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
+ *
+ *  @param conversationId The ID of the conversation to load
+ *
+ *  @param startingText The text to prefill in the message input
+ */
++(void)showConversationWithId:(NSString *)conversationId andStartingText:(nullable NSString *)startingText;
 
 /**
  *  @abstract Dismisses the Smooch conversation, if shown.
@@ -246,6 +271,19 @@ extern NSString* const SKTLogoutDidFailNotification;
 +(void)showConversationFromViewController:(UIViewController*)viewController;
 
 /**
+ *  @abstract Loads the conversation specified by the ID, and presents the Smooch conversation screen, using the given view controller as presenting view controller.
+ *
+ *  @discussion In most cases, it is better to use +show. If you need more fine-grained control over which view controller is used as presenting view controller, use this method instead.
+ *
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
+ *
+ *  @param conversationId The ID of the conversation to load
+ *
+ *  @param viewController The view controller to use as the presenting view controller
+ */
++(void)showConversationWithId:(NSString *)conversationId fromViewController:(UIViewController*)viewController;
+
+/**
  *  @abstract Presents the Smooch conversation screen, using the given view controller as presenting view controller with prefilled text in the message input.
  *
  *  @discussion In most cases, it is better to use +show. If you need more fine-grained control over which view controller is used as presenting view controller, use this method instead.
@@ -253,6 +291,22 @@ extern NSString* const SKTLogoutDidFailNotification;
  *  +initWithSettings:completionHandler: must have been called prior to calling this method.
  */
 +(void)showConversationFromViewController:(UIViewController*)viewController withStartingText:(nullable NSString *)startingText;
+
+/**
+ *  @abstract Loads the conversation specified by the ID, and presents the Smooch conversation screen, using the given view controller as presenting view controller with prefilled text in the message input.
+ *
+ *  @discussion In most cases, it is better to use +show. If you need more fine-grained control over which view controller is used as presenting view controller, use this method instead.
+ *
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
+ *
+ *  @param conversationId The ID of the conversation to load
+ *
+ *  @param viewController The view controller to use as the presenting view controller
+ *
+ *  @param startingText The text to prefill in the message input
+ */
++(void)showConversationWithId:(NSString *)conversationId fromViewController:(UIViewController*)viewController andStartingText:(nullable NSString *)startingText;
+
 
 /**
  *  @abstract Creates and returns a Smooch conversation view controller.
@@ -268,6 +322,20 @@ extern NSString* const SKTLogoutDidFailNotification;
 +(nullable UIViewController*)newConversationViewController;
 
 /**
+ *  @abstract Creates and returns a Smooch conversation view controller, loading the conversation specified by the ID
+ *
+ *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose.
+ *
+ *  Note: It is the responsibility of the caller to show, hide, and maintain a reference to this view controller. Calling `close` will not dismiss a view controller created in this way.
+ *
+ *  @param conversationId The ID of the conversation to load
+ *
+ *  @param handler Completion handler which provides a UIViewController with the conversation loaded by the specified ID
+ */
++(void)newConversationViewControllerWithId:(NSString *)conversationId completionHandler:(nullable void(^)(NSError * _Nullable error, UIViewController * _Nullable viewController))handler;
+
+
+/**
  *  @abstract Creates and returns a Smooch conversation view controller with prefilled text in the message input.
  *
  *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose. The message input will be prefilled with the given `startingText`
@@ -279,6 +347,104 @@ extern NSString* const SKTLogoutDidFailNotification;
  *  @return A new instance of the Smooch conversation view controller class. Returns nil if +initWithSettings:completionHandler: hasn't been called
  */
 +(nullable UIViewController*)newConversationViewControllerWithStartingText:(nullable NSString *)startingText;
+
+/**
+ *  @abstract Creates and returns a Smooch conversation view controller with prefilled text in the message input, loading the conversation specified by the ID
+ *
+ *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose. The message input will be prefilled with the given `startingText`
+ *
+ *  Note: It is the responsibility of the caller to show, hide, and maintain a reference to this view controller. Calling `close` will not dismiss a view controller created in this way.
+ *
+ *  @param conversationId The ID of the conversation to load
+ *
+ *  @param startingText The text to prefill in the message input
+ *
+ *  @param handler Completion handler which provides a UIViewController with the conversation loaded by the specified ID
+ */
++(void)newConversationViewControllerWithId:(NSString *)conversationId startingText:(nullable NSString *)startingText completionHandler:(nullable void(^)(NSError * _Nullable error, UIViewController * _Nullable viewController))handler;
+
+/**
+ *  @abstract Presents the Smooch conversation list screen.
+ *
+ *  @discussion Uses the top-most view controller of the `UIApplicationDelegate` as the presenting view controller.
+ *
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
+ */
++(void)showConversationList;
+
+/**
+ *  @abstract Presents the Smooch conversation list screen without a create conversation button
+ *
+ *  @discussion Uses the top-most view controller of the `UIApplicationDelegate` as the presenting view controller.
+ *
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
+ */
++(void)showConversationListWithoutCreateConversationButton;
+
+/**
+ *  @abstract Dismisses the Smooch conversation list, if shown.
+ *
+ *  @discussion Note: If a view controller was created and presented using `newConversationViewController`, calling this method will have no effect.
+ *
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
+ */
++(void)closeConversationList;
+
+/**
+ *  @abstract Presents the Smooch conversation list screen, using the given view controller as presenting view controller.
+ *
+ *  @discussion In most cases, it is better to use +show. If you need more fine-grained control over which view controller is used as presenting view controller, use this method instead.
+ *
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
+ */
++(void)showConversationListFromViewController:(UIViewController*)viewController;
+
+/**
+ *  @abstract Presents the Smooch conversation list screen without a create conversation button, using the given view controller as presenting view controller.
+ *
+ *  @discussion In most cases, it is better to use +show. If you need more fine-grained control over which view controller is used as presenting view controller, use this method instead.
+ *
+ *  +initWithSettings:completionHandler: must have been called prior to calling this method.
+ */
++(void)showConversationListFromViewControllerWithoutCreateConversationButton:(UIViewController *)viewController;
+
+
+/**
+ *  @abstract Creates and returns a Smooch conversation list view controller.
+ *
+ *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose.
+ *
+ *  A view controller created in this way is tied to the current user's conversation at creation time. If the current user changes (i.e. by calling +login:jwt:completionHandler: or +logoutWithCompletionHandler:), the view controller is invalidated and must be recreated for the new user.
+ *
+ *  Note: It is the responsibility of the caller to show, hide, and maintain a reference to this view controller. Calling `close` will not dismiss a view controller created in this way.
+ *
+ *  @return A new instance of the Smooch conversation view controller class. Returns nil if +initWithSettings:completionHandler: hasn't been called
+ */
++(nullable UIViewController *)newConversationListViewController;
+
+/**
+ *  @abstract Creates and returns a Smooch conversation list view controller without a create conversation button.
+ *
+ *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose.
+ *
+ *  A view controller created in this way is tied to the current user's conversation at creation time. If the current user changes (i.e. by calling +login:jwt:completionHandler: or +logoutWithCompletionHandler:), the view controller is invalidated and must be recreated for the new user.
+ *
+ *  Note: It is the responsibility of the caller to show, hide, and maintain a reference to this view controller. Calling `close` will not dismiss a view controller created in this way.
+ *
+ *  @return A new instance of the Smooch conversation view controller class. Returns nil if +initWithSettings:completionHandler: hasn't been called
+ */
++(nullable UIViewController *)newConversationListViewControllerWithoutCreateConversationButton;
+
+/**
+ * @abstract Sets the conversation list delegate
+ *
+ *  @discussion The conversation list delegate is used to respond to events relating to the conversation list
+ *
+ *  @see SKTConversationListDelegate
+ *
+ *  @param delegate Can we an object conforming to SKTConversationListDelegate, or NULL, which would remove any existing delegate
+ */
++(void)setConversationListDelegate:(nullable id<SKTConversationListDelegate>)delegate;
 
 /**
  *  @abstract Sets the current user's first and last name to be used as a display name when sending messages.
@@ -322,10 +488,10 @@ extern NSString* const SKTLogoutDidFailNotification;
  *
  *  You may not call login while the conversation screen is shown. Doing so will result in a no-op.
  *
- *  @param userId The distinct id of the user to login. Must not be nil.
+ *  @param externalId The distinct id of the user to login. Must not be nil.
  *  @param jwt jwt used to prove the origin of the login request. Must not be nil.
  */
-+(void)login:(NSString*)userId jwt:(NSString*)jwt completionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))handler;
++(void)login:(NSString*)externalId jwt:(NSString*)jwt completionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))handler;
 
 /**
  *  @abstract Logs out the current user.
@@ -345,9 +511,48 @@ extern NSString* const SKTLogoutDidFailNotification;
  *
  *  This method is called automatically when starting a conversation via the -sendMessage: or -sendImage:withProgress:completion: methods, or when a user sends a message via the conversation view controller.
  *
- *  If a conversation already exists for the current user, this call is a no-op.
+ *  @deprecated use + createConversationWithName:description:iconUrl:metadata:completionHandler instead
  */
 +(void)startConversationWithCompletionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler;
+
+/**
+ * @abstract Create a conversation for the current user, optionally sending a message of type text as part of the conversation creation
+ *
+ * @discussion Creates a user and conversation on the server, allowing the business to reach out proactively to the user via the public API.
+ *
+ * Creating a conversation via this method will count as an active user conversation (AUC) whether messages are exchanged or not, which may incur cost based on your plan. It is strongly recommended to only call this method in the case where a message is likely to be sent.
+ *
+ * This method is called automatically when starting a conversation via the -sendMessage: or -sendImage:withProgress:completion: methods, or when a user sends a message via the conversation view controller.
+ *
+ * Note: Only a single message of type text can be sent as part of conversation creation. Multiple messages, or other types (e.g files, attachments) will cause this method to return an error.
+ *
+ * @param displayName A user-friendly name to label the conversation in the list (max length 100 characters)
+ * @param description A string describing the purpose of the conversation (max length 100 characters)
+ * @param iconUrl An iconUrl to display in the conversation list
+ * @param metadata A flat JSON Object that can only contain the following value types: string, number, boolean and null
+ * @param message An array containing a single SKTMessage type, to be sent as part of conversation creation. Only a message of type text can be sent as part of conversation creation. Multiple messages, or other types (e.g files, attachments) will cause this method to return an error.
+ * @param completionHandler An optional block to evaluate the result of the operation
+ */
+
++(void)createConversationWithName:(nullable NSString *)displayName description:(nullable NSString *)description iconUrl:(nullable NSString *)iconUrl metadata:(nullable NSDictionary *)metadata message:(nullable NSArray<SKTMessage *> *)message
+                completionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler;
+
+/**
+ * @abstract Updates the specified conversation for the current user.
+ *
+ * +initWithSettings:completionHandler: must have been called prior to calling this method.
+ *
+ * If the displayName, description, iconUrl, and metadata parameters are all nil, this is a no-op.
+ *
+ * @see SKTConversation
+ * @param conversationId the conversationId
+ * @param displayName A user-friendly name to label the conversation (max length 100 characters)
+ * @param description A string describing the purpose of the conversation (max length 100 characters)
+ * @param iconUrl An iconUrl to display in the conversation list
+ * @param metadata A flat JSON Object that can only contain the following value types: string, number, boolean and null
+ * @param completionHandler An optional block to evaluate the result of the operation
+ */
++(void)updateConversationById:(NSString *)conversationId withName:(nullable NSString *)displayName description:(nullable NSString *)description iconUrl:(nullable NSString *)iconUrl metadata:(nullable NSDictionary *)metadata completionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler;
 
 /**
  *  @abstract Toggles whether the input bar is displayed on the conversation view.
@@ -470,9 +675,9 @@ extern NSString* const SKTLogoutDidFailNotification;
 
 /**
  *
- * @abstract Loads a list of conversations
+ * @abstract Returns a list of conversations from storage.
  *
- * @discussion when called, returns an array of Conversation objects from storage
+ * @discussion Returns a list of SKTConversation objects from storage.
  *
  */
 + (void)getConversations:(void (^)(NSError  *_Nullable, NSArray  *_Nullable))completionHandler;
@@ -484,6 +689,24 @@ extern NSString* const SKTLogoutDidFailNotification;
  *  @discussion when called, a new delegate is set
  */
 + (void)updateConversationDelegate:(id<SKTConversationDelegate>)delegate;
+
+/**
+ *
+ * @abstract Loads a list of conversations
+ *
+ * @discussion Retrives the next 10 conversations from the server, and stores them.
+ *
+ */
++ (void)getMoreConversations:(void (^)(NSError * _Nullable))completionHandler;
+
+/**
+ *
+ * @abstract A boolean representing if the server has more conversations to load for the user, to support pagination.
+ *
+ * @discussion When called, returns a boolean indicating if the server has more conversations to load for the user.
+ *
+ */
++ (BOOL)hasMoreConversations;
 
 @end
 NS_ASSUME_NONNULL_END

@@ -90,6 +90,15 @@ extern NSString *const SKTMenuItemLocation;
 @property(nonatomic, strong) UIColor *conversationAccentColor;
 
 /**
+ *  @abstract The accent color for the conversation list screen.
+ *
+ *  @discussion Used as the color of the create conversation button
+ *
+ *  The default value is #00B0FF.
+ */
+@property(nonatomic, strong) UIColor *conversationListAccentColor;
+
+/**
  *  @abstract The text color for user messages.
  *
  *  @discussion Used as the text color of user message bubbles.

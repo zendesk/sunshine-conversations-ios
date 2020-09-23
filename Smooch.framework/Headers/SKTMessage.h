@@ -104,9 +104,9 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
 @property(nullable) NSString* textFallback;
 
 /**
- *  @abstract The name of the author. This property may be nil if no name could be determined.
+ *  @abstract The displayName of the author. This property may be nil if no displayName could be determined.
  */
-@property(nullable) NSString* name;
+@property(nullable) NSString* displayName;
 
 /**
  *  @abstract The url for the author's avatar image. May be nil
@@ -180,7 +180,7 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
 /**
  *  @abstract The role of the message.
  *
- *  @discussion Valid roles include `appUser`, `appMaker`, and `whisper`. Messages created with -initWithText: have role of `appUser`.
+ *  @discussion Valid roles include `appUser`, `business`, and `whisper`. Messages created with -initWithText: have role of `appUser`.
  */
 @property(readonly, nullable) NSString* role;
 
