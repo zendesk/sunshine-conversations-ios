@@ -2,7 +2,7 @@
 //  Smooch.h
 //  Smooch
 //
-//  version : 9.0.0
+//  version : 10.0.0
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"9.0.0"
+#define SMOOCH_VERSION @"10.0.0"
 #define VENDOR_ID @"smooch"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
@@ -507,7 +507,7 @@ extern NSString* const SKTLogoutDidFailNotification;
  *
  *  @discussion Creates a user and conversation on the server, allowing the business to reach out proactively to the user via the public API.
  *
- *  Creating a conversation via this method will count as an active user conversation (AUC) whether messages are exchanged or not, which may incur cost based on your plan. It is strongly recommended to only call this method in the case where a message is likely to be sent.
+ *  Creating a conversation via this method will count as a monthly active user (MAU) whether messages are exchanged or not, which may incur cost based on your plan. It is strongly recommended to only call this method in the case where a message is likely to be sent.
  *
  *  This method is called automatically when starting a conversation via the -sendMessage: or -sendImage:withProgress:completion: methods, or when a user sends a message via the conversation view controller.
  *
@@ -529,13 +529,13 @@ extern NSString* const SKTLogoutDidFailNotification;
  * @param displayName A user-friendly name to label the conversation in the list (max length 100 characters)
  * @param description A string describing the purpose of the conversation (max length 100 characters)
  * @param iconUrl An iconUrl to display in the conversation list
+ * @param avatarUrl An avatarUrl that is associated with the current user
  * @param metadata A flat JSON Object that can only contain the following value types: string, number, boolean and null
  * @param message An array containing a single SKTMessage type, to be sent as part of conversation creation. Only a message of type text can be sent as part of conversation creation. Multiple messages, or other types (e.g files, attachments) will cause this method to return an error.
  * @param completionHandler An optional block to evaluate the result of the operation
  */
 
-+(void)createConversationWithName:(nullable NSString *)displayName description:(nullable NSString *)description iconUrl:(nullable NSString *)iconUrl metadata:(nullable NSDictionary *)metadata message:(nullable NSArray<SKTMessage *> *)message
-                completionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler;
++(void)createConversationWithName:(nullable NSString *)displayName description:(nullable NSString *)description iconUrl:(nullable NSString *)iconUrl avatarUrl:(nullable NSString *)avatarUrl metadata:(nullable NSDictionary *)metadata message:(nullable NSArray<SKTMessage *> *)message completionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler;
 
 /**
  * @abstract Updates the specified conversation for the current user.

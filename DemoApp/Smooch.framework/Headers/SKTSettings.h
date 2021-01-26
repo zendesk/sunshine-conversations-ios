@@ -99,6 +99,14 @@ extern NSString *const SKTMenuItemLocation;
 @property(nonatomic, strong) UIColor *conversationListAccentColor;
 
 /**
+ *  @abstract The text color for carousels that appear in the conversation screen.
+ *
+ *  @discussion Used as the text color of the carousel text.
+ *
+ */
+@property(nonatomic, strong) UIColor *carouselTextColor;
+
+/**
  *  @abstract The text color for user messages.
  *
  *  @discussion Used as the text color of user message bubbles.
@@ -128,7 +136,7 @@ extern NSString *const SKTMenuItemLocation;
 /**
  *  @abstract Allow sending messages from the conversation view when offline
  *
- *  @discussion Setting this to `YES` allows the user to send messages even when the device is offline. It also prevents an network error banner from showing when offline.
+ *  @discussion Setting this to `YES` allows the user to send messages even when the device is offline. It also prevents an network error banner from showing when offline. This setting only applies to the conversation view.
  *
  *  Note that messages that are sent while offline will fail to send and the message will display an option for the user to retry
  */

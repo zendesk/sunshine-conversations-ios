@@ -3,17 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		270EE2E61B43091400218B06 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270EE2E51B43091400218B06 /* AssetsLibrary.framework */; };
 		270EE2E81B43091A00218B06 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270EE2E71B43091A00218B06 /* Photos.framework */; };
 		2777DBEC1B4AD03000AB9E6D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25348718F59E1A0065C6B4 /* AVFoundation.framework */; };
-		27CC866A1C77A34A00D3408B /* Smooch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CC86691C77A34A00D3408B /* Smooch.framework */; };
-		27CC866B1C77A34A00D3408B /* Smooch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27CC86691C77A34A00D3408B /* Smooch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27E9A8F71BF3D1B400CA6BFF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E9A8F61BF3D1B400CA6BFF /* CFNetwork.framework */; };
 		81B085A41A8025A20040E15D /* launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B085A61A8025A20040E15D /* launch.xib */; };
+		D3C6031D259CD16900C581E6 /* Smooch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C6031C259CD16900C581E6 /* Smooch.xcframework */; };
 		DC0B627F1857AA300062B17F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B627E1857AA300062B17F /* Foundation.framework */; };
 		DC0B62811857AA300062B17F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62801857AA300062B17F /* CoreGraphics.framework */; };
 		DC0B62831857AA300062B17F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B62821857AA300062B17F /* UIKit.framework */; };
@@ -37,7 +36,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				27CC866B1C77A34A00D3408B /* Smooch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,10 +45,9 @@
 /* Begin PBXFileReference section */
 		270EE2E51B43091400218B06 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		270EE2E71B43091A00218B06 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		27CC86671C77A1FE00D3408B /* Smooch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Smooch.framework; sourceTree = "<group>"; };
-		27CC86691C77A34A00D3408B /* Smooch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Smooch.framework; sourceTree = "<group>"; };
 		27E9A8F61BF3D1B400CA6BFF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		81B085A51A8025A20040E15D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/launch.xib; sourceTree = "<group>"; };
+		D3C6031C259CD16900C581E6 /* Smooch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Smooch.xcframework; sourceTree = "<group>"; };
 		DC0B627B1857AA300062B17F /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0B627E1857AA300062B17F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC0B62801857AA300062B17F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,8 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C6031D259CD16900C581E6 /* Smooch.xcframework in Frameworks */,
 				27E9A8F71BF3D1B400CA6BFF /* CFNetwork.framework in Frameworks */,
-				27CC866A1C77A34A00D3408B /* Smooch.framework in Frameworks */,
 				2777DBEC1B4AD03000AB9E6D /* AVFoundation.framework in Frameworks */,
 				270EE2E81B43091A00218B06 /* Photos.framework in Frameworks */,
 				270EE2E61B43091400218B06 /* AssetsLibrary.framework in Frameworks */,
@@ -101,7 +98,6 @@
 		DC0B62721857AA300062B17F = {
 			isa = PBXGroup;
 			children = (
-				27CC86691C77A34A00D3408B /* Smooch.framework */,
 				DC0B62841857AA300062B17F /* DemoApp */,
 				DCEF37A018C0DD7800B5DD25 /* Resources */,
 				DC0B627D1857AA300062B17F /* Frameworks */,
@@ -120,7 +116,7 @@
 		DC0B627D1857AA300062B17F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				27CC86671C77A1FE00D3408B /* Smooch.framework */,
+				D3C6031C259CD16900C581E6 /* Smooch.xcframework */,
 				270EE2E51B43091400218B06 /* AssetsLibrary.framework */,
 				DC25348718F59E1A0065C6B4 /* AVFoundation.framework */,
 				27E9A8F61BF3D1B400CA6BFF /* CFNetwork.framework */,
@@ -207,6 +203,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = DC0B62721857AA300062B17F;
@@ -346,7 +343,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
 				INFOPLIST_FILE = "DemoApp/DemoApp-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.smooch.DemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,7 +368,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
 				INFOPLIST_FILE = "DemoApp/DemoApp-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.smooch.DemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
