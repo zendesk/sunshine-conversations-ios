@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		nYk6xb1oIHmEZDG0nfRfNkd1fFo=
+		WUlvATP/Ci9a/F6cpf/4Wp0ck2w=
 		</data>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Headers/SKTParticipant.h</key>
 		<data>
-		rieL/CL098zoG+tSHKREPK1sABk=
+		PkBss2Vzhg1Bxte7enTYvSAtiMU=
 		</data>
 		<key>Headers/SKTSettings.h</key>
 		<data>
-		p6zqiPkvV+dBpWnqMuiO1hKVxSM=
+		i1HbBfToDfgZRMHXBhROQtRyk94=
 		</data>
 		<key>Headers/SKTUser.h</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		37tyoIgccUfn8xYEISrqiGrG2QI=
+		Tv6lBA+aFz2Y0XFbt4G4Lm44E5c=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gEz9OnGL3WJl2D4tp7fdD+bFusI=
+		xH4rfQxGQrISXo/R+z4EghcNCj0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -430,11 +430,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nYk6xb1oIHmEZDG0nfRfNkd1fFo=
+			WUlvATP/Ci9a/F6cpf/4Wp0ck2w=
 			</data>
 			<key>hash2</key>
 			<data>
-			4lM0veZbcuSkt+I8pz2ciaC3xqU0RTSy55YWX84OAIU=
+			pt2EKzFXxlC/W9Ji77DvF6Sp1YRbn+8KvYRmFkY+PL0=
 			</data>
 		</dict>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
@@ -540,22 +540,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rieL/CL098zoG+tSHKREPK1sABk=
+			PkBss2Vzhg1Bxte7enTYvSAtiMU=
 			</data>
 			<key>hash2</key>
 			<data>
-			gOmuDxZfk+NU7s/YdxCCJQV//y87w3O75mJe4OgjiTM=
+			WJFTv9AKLkMLnkAtLON8X0IaNjD2HOm39suzQ7nn69k=
 			</data>
 		</dict>
 		<key>Headers/SKTSettings.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			p6zqiPkvV+dBpWnqMuiO1hKVxSM=
+			i1HbBfToDfgZRMHXBhROQtRyk94=
 			</data>
 			<key>hash2</key>
 			<data>
-			tk0XEYk9TMwZM5s6qP8IO3gi6d9m+uBB/2W9D0qkIWc=
+			K9hQxTYONs+hMhGNX1h5LRcptvD+qDoRNC/Npf+wttg=
 			</data>
 		</dict>
 		<key>Headers/SKTUser.h</key>
@@ -573,11 +573,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			37tyoIgccUfn8xYEISrqiGrG2QI=
+			Tv6lBA+aFz2Y0XFbt4G4Lm44E5c=
 			</data>
 			<key>hash2</key>
 			<data>
-			ElPrlt+ZprLJFbx+ftpcvUaJnWOQfZpc9PDnLuhkZAg=
+			B3AeaO5NPekU7ftXD+GWK6qYD3oC9MV4XwwHH2owCvw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

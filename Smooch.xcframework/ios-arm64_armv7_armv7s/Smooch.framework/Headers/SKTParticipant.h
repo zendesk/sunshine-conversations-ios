@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSString *userId;
 
 /**
+ * @abstract The assigned userExternalId for this participant.
+ */
+@property (readonly) NSString * _Nullable userExternalId;
+
+/**
  * @abstract The number of unread messages for this participant.
  */
 @property NSNumber *unreadCount;

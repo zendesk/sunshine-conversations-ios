@@ -90,6 +90,15 @@ extern NSString *const SKTMenuItemLocation;
 @property(nonatomic, strong) UIColor *conversationAccentColor;
 
 /**
+ *  @abstract The accent color for the conversation screen in Dark Mode.
+ *
+ *  @discussion Used as the color of user message bubbles, as well as the color of the send button and text input caret.
+ *
+ *  The default value is #00B0FF.
+ */
+@property(nonatomic, strong) UIColor *conversationAccentColorDarkMode;
+
+/**
  *  @abstract The accent color for the conversation list screen.
  *
  *  @discussion Used as the color of the create conversation button
@@ -116,6 +125,15 @@ extern NSString *const SKTMenuItemLocation;
 @property(nonatomic, strong) UIColor *userMessageTextColor;
 
 /**
+ *  @abstract The text color for user messages in Dark Mode.
+ *
+ *  @discussion Used as the text color of user message bubbles.
+ *
+ *  The default value is #FFFFFF.
+ */
+@property(nonatomic, strong) UIColor *userMessageTextColorDarkMode;
+
+/**
  *  @abstract The status bar style to use on the conversation screen.
  *
  *  @discussion You should use this property if your app uses UIAppearance to style UINavigationBar, and your styling requires a specific status bar color.
@@ -123,6 +141,15 @@ extern NSString *const SKTMenuItemLocation;
  *  The default value is UIStatusBarStyleDefault.
  */
 @property UIStatusBarStyle conversationStatusBarStyle;
+
+/**
+ *  @abstract The status bar style to use on the conversation screen in Dark Mode.
+ *
+ *  @discussion You should use this property if your app uses UIAppearance to style UINavigationBar, and your styling requires a specific status bar color.
+ *
+ *  The default value is UIStatusBarStyleDefault.
+ */
+@property UIStatusBarStyle conversationStatusBarStyleDarkMode;
 
 /**
  *  @abstract The items to display in the conversation menu
@@ -209,7 +236,7 @@ extern NSString *const SKTMenuItemLocation;
  *
  *  @see SKTAuthenticationDelegate
  */
-@property(nullable) id<SKTAuthenticationDelegate> authenticationDelegate;
+@property(weak, nonatomic, nullable) id<SKTAuthenticationDelegate> authenticationDelegate;
 
 @end
 NS_ASSUME_NONNULL_END
