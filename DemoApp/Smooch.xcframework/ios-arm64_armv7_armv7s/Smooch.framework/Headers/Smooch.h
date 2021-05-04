@@ -2,7 +2,7 @@
 //  Smooch.h
 //  Smooch
 //
-//  version : 10.1.0
+//  version : 10.1.1
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"10.1.0"
+#define SMOOCH_VERSION @"10.1.1"
 #define VENDOR_ID @"smooch"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
