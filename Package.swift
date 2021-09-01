@@ -9,6 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "Smooch",
+            type: .dynamic,
             targets: ["Smooch"])
     ],
     targets: [
