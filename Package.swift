@@ -2,9 +2,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "Zendesk Sunshine Conversations",
+    name: "Smooch",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v8)
     ],
     products: [
         .library(
