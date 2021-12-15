@@ -48,5 +48,6 @@
   "9.0.0": "https://github.com/zendesk/sunshine-conversations-ios/releases/download/9.0.0/Smooch.framework.zip",
   "10.0.0": "https://github.com/zendesk/sunshine-conversations-ios/releases/download/10.0.0/Smooch.framework.zip",
   "10.1.0": "https://github.com/zendesk/sunshine-conversations-ios/releases/download/10.1.0/Smooch.framework.zip",
-  "10.1.1": "https://github.com/zendesk/sunshine-conversations-ios/releases/download/10.1.1/Smooch.framework.zip"
+  "10.1.1": "https://github.com/zendesk/sunshine-conversations-ios/releases/download/10.1.1/Smooch.framework.zip",
+  "10.1.2": "https://github.com/zendesk/sunshine-conversations-ios/releases/download/10.1.2/Smooch.xcframework.zip"
 }
