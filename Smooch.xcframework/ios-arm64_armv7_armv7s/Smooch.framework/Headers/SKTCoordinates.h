@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
+/// A class containing coordinate data.
 @interface SKTCoordinates : NSObject
 
 /**

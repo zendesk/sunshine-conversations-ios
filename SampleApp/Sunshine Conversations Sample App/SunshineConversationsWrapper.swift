@@ -21,6 +21,9 @@ final class SunshineConversationsWrapper {
 
     static let shared = SunshineConversationsWrapper()
 
+    private let conversationDelegate = ConversationDelegate()
+    private let authenticationDelegate = AuthenticationDelegate()
+
     deinit {
         Smooch.destroy()
     }
@@ -33,12 +36,10 @@ final class SunshineConversationsWrapper {
         settings.conversationAccentColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
 
         // Setup the authentication delegate.
-        let authenticationDelegate = AuthenticationDelegate()
         settings.authenticationDelegate = authenticationDelegate
 
         // Setup the conversation delegate.
-        let delegate = ConversationDelegate()
-        Smooch.update(delegate)
+        Smooch.update(conversationDelegate)
 
         Smooch.initWith(settings, completionHandler: completion)
     }

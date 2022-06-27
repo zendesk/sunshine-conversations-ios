@@ -2,7 +2,7 @@
 //  Smooch.h
 //  Smooch
 //
-//  version : 10.1.3
+//  version : 11.0.0
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"10.1.3"
+#define SMOOCH_VERSION @"11.0.0"
 #define VENDOR_ID @"smooch"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
@@ -171,7 +171,7 @@ extern NSString* const SKTLogoutDidCompleteNotification;
 extern NSString* const SKTLogoutDidFailNotification;
 
 /**
- *  @abstract The core class used for interacting with Smooch. Provides methods to initialize, configure, and interact with the library.
+ * @abstract The core class used for interacting with Smooch. Provides methods to initialize, configure, and interact with the library.
  */
 @interface Smooch : NSObject
 
@@ -686,9 +686,20 @@ extern NSString* const SKTLogoutDidFailNotification;
  *
  * @abstract Updating the conversation delegate
  *
- *  @discussion when called, a new delegate is set
+ * @discussion when called, a new delegate is set
  */
-+ (void)updateConversationDelegate:(id<SKTConversationDelegate>)delegate;
++ (void)updateConversationDelegate:(id<SKTConversationDelegate>)delegate __deprecated_msg("Use `setConversationDelegate` instead.");
+
+
+/**
+ *
+ * @abstract Set a conversation delegate may be used to receive callbacks when important changes happen in the conversation.
+ *
+ * @param delegate A conversation delegate conforming to `SKTConversationDelegate`.
+ *
+ * @discussion In a single conversation scenario, this delegate will be used for the single conversation. In a multi-conversation scenario, this delegate can be used to receive callbacks for changes in all conversations.
+ */
++ (void)setConversationDelegate:(id<SKTConversationDelegate>)delegate NS_SWIFT_NAME(setConversationDelegate(delegate:));
 
 /**
  *
