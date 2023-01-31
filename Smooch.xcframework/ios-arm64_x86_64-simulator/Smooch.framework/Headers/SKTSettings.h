@@ -64,6 +64,8 @@ extern NSString *const SKTMenuItemLocation;
  */
 @property(nonatomic, copy) NSString *integrationId;
 
+@property(nonatomic, copy) NSString *serviceBaseUrl;
+
 /**
  *  @abstract The auth code being used to authenticate as an existing user.
  *
