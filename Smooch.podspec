@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage              = "http://smooch.io"
   s.license               = { :type => "Commercial", :text => "Smooch Technologies Inc.  All rights reserved." }
   s.author                = { "Smooch Technologies Inc." => "help@smooch.io" }
-  s.source 	          = { :git => "https://github.com/zendesk/sunshine-conversations-ios", :tag => s.version }
+  s.source 	              = { :git => "https://github.com/zendesk/sunshine-conversations-ios.git", :tag => s.version }
   s.preserve_paths        = "Smooch.xcframework/*"
   s.frameworks            = "Smooch", "CoreText", "SystemConfiguration", "CoreTelephony", "Foundation", "CoreGraphics", "UIKit", "QuartzCore", "AssetsLibrary", "Photos", "AVFoundation", "CFNetwork"
   s.library               = "icucore"
