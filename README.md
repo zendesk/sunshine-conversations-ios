@@ -24,7 +24,7 @@ CocoaPods:
 
 Carthage:
 
-    binary "https://raw.githubusercontent.com/smooch/smooch-ios/master/Smooch.json"
+    github "zendesk/sunshine-conversations-ios" ~> 12.1.1
     carthage update
 
 Obj-C:
