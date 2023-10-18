@@ -24,7 +24,7 @@ CocoaPods:
 
 Carthage:
 
-    github "zendesk/sunshine-conversations-ios" ~> 12.1.1
+    github "zendesk/sunshine-conversations-ios" ~> VERSION_NUMBER
     carthage update
 
 Obj-C:
