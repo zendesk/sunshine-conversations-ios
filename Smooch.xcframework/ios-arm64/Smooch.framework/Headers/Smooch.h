@@ -719,5 +719,14 @@ extern NSString* const SKTLogoutDidFailNotification;
  */
 + (BOOL)hasMoreConversations;
 
+/**
+ *
+ * @abstract Clears the last known user from both memory and persistence, for the provided app id.
+ *
+ * @discussion When called, the last known user info are reset back to nil and deleted from persistence, for the provided app id.
+ *
+ */
++(void) forgetLastKnownUserForAppId:(NSString*)appId;
+
 @end
 NS_ASSUME_NONNULL_END
