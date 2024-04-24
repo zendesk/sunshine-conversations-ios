@@ -1,6 +1,0 @@
-framework module Smooch {
-  umbrella header "Smooch.h"
-
-  export *
-  module * { export * }
-}
