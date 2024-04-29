@@ -2,7 +2,7 @@
 //  Smooch.h
 //  Smooch
 //
-//  version : 12.2.1
+//  version : 12.2.2
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"12.2.1"
+#define SMOOCH_VERSION @"12.2.2"
 #define VENDOR_ID @"smooch"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
@@ -468,7 +468,7 @@ extern NSString* const SKTLogoutDidFailNotification;
 + (nullable SKTConversation *)conversation;
 
 /**
- * @abstract Get a conversationById. This is an asynchronous call and requires a callback to retrieve the result.
+ * @abstract Get a conversationById. This is an asynchronous call and requires a callback to retrieve the result. The callback may be called more than once.
  *
  * +initWithSettings:completionHandler: must have been called prior to calling this method.
  *

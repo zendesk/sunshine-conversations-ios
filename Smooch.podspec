@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "Smooch"
-  s.version               = "12.2.1"
+  s.version               = "12.2.2"
   s.summary               = "Build customer relationships that last"
   s.description           = "Smooch lets you have rich conversations with your users, right in your app or on your website."
   s.homepage              = "http://smooch.io"
