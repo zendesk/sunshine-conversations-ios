@@ -2,7 +2,7 @@
 //  Smooch.h
 //  Smooch
 //
-//  version : 12.2.2
+//  version : 12.3.0
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"12.2.2"
+#define SMOOCH_VERSION @"12.3.0"
 #define VENDOR_ID @"smooch"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
@@ -510,10 +510,8 @@ extern NSString* const SKTLogoutDidFailNotification;
  *  Creating a conversation via this method will count as a monthly active user (MAU) whether messages are exchanged or not, which may incur cost based on your plan. It is strongly recommended to only call this method in the case where a message is likely to be sent.
  *
  *  This method is called automatically when starting a conversation via the -sendMessage: or -sendImage:withProgress:completion: methods, or when a user sends a message via the conversation view controller.
- *
- *  @deprecated use + createConversationWithName:description:iconUrl:metadata:completionHandler instead
  */
-+(void)startConversationWithCompletionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler;
++(void)startConversationWithCompletionHandler:(nullable void(^)(NSError * _Nullable error, NSDictionary * _Nullable userInfo))completionHandler __attribute__((deprecated("Use + createConversationWithName:description:iconUrl:metadata:completionHandler instead.")));
 
 /**
  * @abstract Create a conversation for the current user, optionally sending a message of type text as part of the conversation creation
@@ -647,9 +645,8 @@ extern NSString* const SKTLogoutDidFailNotification;
  *  This method is called automatically if SKTSettings.enableAppDelegateSwizzling is set to YES.
  *
  *  @see SKTSettings
- *  @deprecated use +handleActionWithIdentifier:forRemoteNotification:withResponseInfo:completionHandler: instead.
  */
-+(void)handleUserNotificationActionWithIdentifier:(NSString *)identifier withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void (^)(void))completionHandler;
++(void)handleUserNotificationActionWithIdentifier:(NSString *)identifier withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void (^)(void))completionHandler __attribute__((deprecated("Use + handleActionWithIdentifier:forRemoteNotification:withResponseInfo:completionHandler: instead.")));
 
 /**
  *  @abstract A set of categories used for handling and displaying Smooch user notification actions.

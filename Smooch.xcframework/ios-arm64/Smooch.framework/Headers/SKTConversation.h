@@ -567,7 +567,7 @@ extern NSString * const SKTConversationActivityKey;
 /**
  * @abstract Notifies the delegate when the conversations list was updated
  *
- * @param NSArray<SKTConversation> The updated array of SKTConversation
+ * @param conversationList The updated array of SKTConversation
  */
 - (void)conversationListDidRefresh:(NSArray<SKTConversation *> *)conversationList;
 

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		4FQrr0cZ4PPZPMkQpv840h82UfY=
+		OD9fFa7AclfW0/dC96xuElguL2I=
 		</data>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/SKTConversation.h</key>
 		<data>
-		mHGtg73jPkI3LanbuEIkE2lDnQw=
+		BGRPT3z/GwZG3jNTUDC8V+fc9ws=
 		</data>
 		<key>Headers/SKTConversationActivity.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
-		NfiAyuEGqNkUsBfVyIAsl6OL57M=
+		fW2q0E2aMAYaHdI90/l5MpGu14A=
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		qgkwOS/ht15s+3u/uRxUCR3j0pw=
+		knu3LarKwmLEc8pko6afDn86e0c=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hXg4ZkWsyDCyDBvyOhGJ9ihteMg=
+		gvmxW/ELKL0oFbQsHPjDc8oWFcM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,11 +70,11 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		SZssWAnrTFtLDMYhMHtWiv7MbCM=
+		ssQ6soydIpjk3Zh8+tbFkhRs/4s=
 		</data>
 		<key>SmoochSDK.xcconfig</key>
 		<data>
-		WNWddAbKZFY32ln/1g6dzBmZUWw=
+		R4cFB+uKf5FVuHrfglET6aBitCk=
 		</data>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
 		<dict>
@@ -122,7 +122,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1ndChTWcz8GC1g8g/ka3ZYUNrVo=
+			4ROJPl9t2Fd6ZpM5Z4/2NyHKYDM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -438,7 +438,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			a/v7wygcgKqSTK/X/lQc4krKbWtNzR+6J5P0OmrQd/s=
+			OievP46UN/OF3A14fkzGSWq7TXgPzNN63paun2JiUkc=
 			</data>
 		</dict>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
@@ -452,7 +452,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8z0/KTpQ7naYFnH0O62iPgto5oz0yJWaZGKhJf9BfFI=
+			tn+K2FIEz0fj7SQ/z5EwNpJizi6cCJKJzo5ZNyNqLYw=
 			</data>
 		</dict>
 		<key>Headers/SKTConversationActivity.h</key>
@@ -487,7 +487,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ekas+cnAD/kWItNZfhfse47NmrzoNMVvl/AHYMwUIQE=
+			tNWkn17PplslLIWSRH5m1Z84XSsT1bK+y4s8VixN6Dk=
 			</data>
 		</dict>
 		<key>Headers/SKTMessageAction.h</key>
@@ -529,7 +529,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MoK1IFX07kugZFQucWDhfH2oGxzxEg2lbDA4OBmPY4U=
+			nirLNsNHoC/TbJ4BcYxx4exUQ0D+W/m98ytsiTzbfps=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -543,14 +543,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			krBT07yy5vyB4AV9RBhy5guXiL+cQJZ8X1M9EtyyNqA=
+			37zyFvGS8B/IFrCjDNcGV7py9/h2IpsV9/c2t+eEPh0=
 			</data>
 		</dict>
 		<key>SmoochSDK.xcconfig</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SD1ameiL2lP81k0psudglgBPc9B6I52SJayjdMG24+Q=
+			3M9wyGs4Cdcc6HGcbhXDpLjZaGcaHeDsCRdDrG/RRqY=
 			</data>
 		</dict>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
@@ -617,7 +617,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5tPErebdQhiE1ZKz8lxUqJcOYgWXZV+V6vieLYizquM=
+			9N3AE3l+nHv7lMRsP17ocnZRuh78FvD+7wWRB4PqXp4=
 			</data>
 			<key>optional</key>
 			<true/>
