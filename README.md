@@ -45,9 +45,9 @@ Smooch.initWith(SKTSettings(integrationId: "YOUR_INTEGRATION_ID")) { (error: Err
 Smooch.show()
 ```
 
-# Bugs
-Please submit bug reports to [Zendesk](https://support.zendesk.com/hc/en-us/articles/4408843597850) and be sure to consult our [Getting help section](https://developer.zendesk.com/documentation/zendesk-web-widget-sdks/getting_support_on_zendesk_mobile_sdks/) of our documentation.
-
 Our [Docs and full install guide](http://docs.smooch.io).
 
 Also, check out [Smooch Help Kit](https://github.com/smooch/smooch-helpkit-ios) for even more features!
+
+# Bugs
+Please submit bug reports to [Zendesk](https://support.zendesk.com/hc/en-us/articles/4408843597850) and be sure to consult our [Getting help section](https://developer.zendesk.com/documentation/zendesk-web-widget-sdks/getting_support_on_zendesk_mobile_sdks/) of our documentation.
