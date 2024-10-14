@@ -1,5 +1,7 @@
 # [Smooch](http://www.smooch.io)
 
+Please submit bug reports to [Zendesk](https://support.zendesk.com/hc/en-us/articles/4408843597850) and be sure to consult our [Getting help section](https://developer.zendesk.com/documentation/zendesk-web-widget-sdks/getting_support_on_zendesk_mobile_sdks/) of our documentation.
+
 [![Pod Version](http://img.shields.io/cocoapods/v/Smooch.svg)](http://cocoadocs.org/docsets/Smooch/)
 [![Platform](http://img.shields.io/cocoapods/p/Smooch.svg)](http://cocoadocs.org/docsets/Smooch/)
 [![License](http://img.shields.io/cocoapods/l/Smooch.svg)](http://smooch.io/terms.html)
