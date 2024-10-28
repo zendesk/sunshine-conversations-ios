@@ -58,11 +58,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		knu3LarKwmLEc8pko6afDn86e0c=
+		FnjBe0NAHpGjV44YqmoSsgTzbaY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gvmxW/ELKL0oFbQsHPjDc8oWFcM=
+		tjegLB9P5AKr6QDI/sKRVhwVBK8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>SmoochSDK.xcconfig</key>
 		<data>
-		R4cFB+uKf5FVuHrfglET6aBitCk=
+		YCPtDjEEYcHu0cbM+2fa/Py68tM=
 		</data>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
 		<dict>
@@ -529,7 +529,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nirLNsNHoC/TbJ4BcYxx4exUQ0D+W/m98ytsiTzbfps=
+			cG7TtdnMN0W4j4mqA2UKjQWtkidf3/cx0HFuErUdZ0I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -550,7 +550,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3M9wyGs4Cdcc6HGcbhXDpLjZaGcaHeDsCRdDrG/RRqY=
+			dOiHZy2hBvsbdCazLRq/AFErJNgP7MI8AZLK88n4R4U=
 			</data>
 		</dict>
 		<key>ar.lproj/SmoochLocalizable.strings</key>

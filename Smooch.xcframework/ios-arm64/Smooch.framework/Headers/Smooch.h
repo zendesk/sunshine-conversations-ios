@@ -2,7 +2,7 @@
 //  Smooch.h
 //  Smooch
 //
-//  version : 12.3.0
+//  version : 12.4.0
 
 #import <Foundation/Foundation.h>
 #import "SKTConversation.h"
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol UNUserNotificationCenterDelegate;
 
-#define SMOOCH_VERSION @"12.3.0"
+#define SMOOCH_VERSION @"12.4.0"
 #define VENDOR_ID @"smooch"
 
 FOUNDATION_EXPORT double SmoochVersionNumber;
@@ -720,10 +720,19 @@ extern NSString* const SKTLogoutDidFailNotification;
  *
  * @abstract Clears the last known user from both memory and persistence, for the provided app id.
  *
- * @discussion When called, the last known user info are reset back to nil and deleted from persistence, for the provided app id.
+ * @discussion When called, the last known user info are reset back to nil and deleted from persistence, for the provided app id. This should be called before the initialization, it will have no effect otherwise.
  *
  */
-+(void) forgetLastKnownUserForAppId:(NSString*)appId;
++(void) forgetLastKnownUserForAppId:(NSString*)appId __attribute__((deprecated("This method is deprecated. Use resetLastKnownAuthenticatedUser instead.")));
+
+/**
+ *
+ * @abstract Clears the last known authenticated user from both memory and persistence.
+ *
+ * @discussion When called, the last known user info are reset back to nil and deleted from persistence. This should be called before the initialization, it will have no effect otherwise.
+ *
+ */
++(void)resetLastKnownAuthenticatedUser;
 
 @end
 NS_ASSUME_NONNULL_END
