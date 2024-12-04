@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/SKTMessage.h</key>
 		<data>
-		fW2q0E2aMAYaHdI90/l5MpGu14A=
+		r8yQgiAmi9suOPI7FCpAMHXada8=
 		</data>
 		<key>Headers/SKTMessageAction.h</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		FnjBe0NAHpGjV44YqmoSsgTzbaY=
+		9IS7gb1mDbJINNqOOGLSw6ZWles=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tjegLB9P5AKr6QDI/sKRVhwVBK8=
+		T1dukz8aWJswk9b9wlbiiEeR728=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>SmoochSDK.xcconfig</key>
 		<data>
-		YCPtDjEEYcHu0cbM+2fa/Py68tM=
+		bTqCebtaPJriLMeF6/B0DvLGQtY=
 		</data>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
 		<dict>
@@ -487,7 +487,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tNWkn17PplslLIWSRH5m1Z84XSsT1bK+y4s8VixN6Dk=
+			cLizVZY9fBtS+AvizaP/vlRpfmHHGisd/K+wD9oI7GE=
 			</data>
 		</dict>
 		<key>Headers/SKTMessageAction.h</key>
@@ -529,7 +529,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cG7TtdnMN0W4j4mqA2UKjQWtkidf3/cx0HFuErUdZ0I=
+			9D4mu6sKcpn1POzSWN2dOZNgINB6QS9dNEEaOCDhIJk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -550,7 +550,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dOiHZy2hBvsbdCazLRq/AFErJNgP7MI8AZLK88n4R4U=
+			K183B5iP+jrkpE0YZJR3YO5Na/+AwTNiLDYUDf3HGAc=
 			</data>
 		</dict>
 		<key>ar.lproj/SmoochLocalizable.strings</key>

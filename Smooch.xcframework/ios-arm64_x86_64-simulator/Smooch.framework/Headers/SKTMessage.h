@@ -155,6 +155,11 @@ typedef NS_ENUM(NSInteger, SKTMessageUploadStatus) {
 @property(nullable) NSString* mediaUrl;
 
 /**
+ *  @abstract The attachment id, if applicable. Returns nil if the message doesn't contains private attachment
+ */
+@property(nullable) NSString* attachmentId;
+
+/**
  *  @abstract The size of the media asset in bytes. May be nil.
  */
 @property(nullable) NSNumber* mediaSize;
