@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		OD9fFa7AclfW0/dC96xuElguL2I=
+		P9S9KK0KNrSUVyjG8ML3CkCDw7k=
 		</data>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Headers/Smooch.h</key>
 		<data>
-		9IS7gb1mDbJINNqOOGLSw6ZWles=
+		xf9R8SW7IB2FNc1lTFA3C0NcD4U=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		T1dukz8aWJswk9b9wlbiiEeR728=
+		/9yMsc/SJtDlLv0ZqaXJmEb1UTo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>SmoochSDK.xcconfig</key>
 		<data>
-		bTqCebtaPJriLMeF6/B0DvLGQtY=
+		s7S5ZM2z9TBxYLNRfL+y/J/lh2o=
 		</data>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
 		<dict>
@@ -122,7 +122,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4ROJPl9t2Fd6ZpM5Z4/2NyHKYDM=
+			qG6gnWPm2bwD/YE4/pHa0S/7570=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -438,7 +438,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OievP46UN/OF3A14fkzGSWq7TXgPzNN63paun2JiUkc=
+			8YbVtsjC3Y5Nbs+B8DXKwrp5yQX+UxQR/kazux6aL0s=
 			</data>
 		</dict>
 		<key>Headers/SKTAuthenticationDelegate.h</key>
@@ -529,7 +529,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9D4mu6sKcpn1POzSWN2dOZNgINB6QS9dNEEaOCDhIJk=
+			1fBnlYsfOUPLcKtUtE3CHpJuBaAE+niZzwDQDU6EEEg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -550,7 +550,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			K183B5iP+jrkpE0YZJR3YO5Na/+AwTNiLDYUDf3HGAc=
+			0djd6l7rtzU4Ajr3ebP3HVe66YpdznHgWuAVsS1Lvho=
 			</data>
 		</dict>
 		<key>ar.lproj/SmoochLocalizable.strings</key>
@@ -617,7 +617,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9N3AE3l+nHv7lMRsP17ocnZRuh78FvD+7wWRB4PqXp4=
+			rXe9jJbO26IE2bnjtigL5hIyHhFxSkXsbDFWy25Bo+I=
 			</data>
 			<key>optional</key>
 			<true/>
